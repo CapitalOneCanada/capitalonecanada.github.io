@@ -9,31 +9,29 @@
 <script type="text/javascript" src="tools/jquery.min.js"></script>
 <script type="text/javascript" src="tools/jquery.countdown.js"></script>
 <script type="text/javascript">
-	$(function () {
-	var austDay = new Date();
-	austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 01);
-	$('#defaultCountdown').countdown({until: austDay});
-	$('#year').text(austDay.getFullYear());
-});
+function redirect(site){
+		if(site == 'twitter')
+		{
+	var win=window.open('https://twitter.com/capitaloneio', '_blank');
+    win.focus();	
+        }
+    };
 </script>
 </head>
 <body>
 <div id="shim"></div>
 <div id="content">
-<div class="logo"><h1><span>CapitalOne.IO</span></h1></div>	
+<div class="logo"><h1><span>CapitalOne.IO</span></h1>	
 	<div class="right_side">
 		<div class="right_content">
-			<h2>Our OSS Offerings Coming Soon</h2>
-			<!--<div id="defaultCountdown"></div>
+			<h2><pre>Our OSS Offerings Coming Soon </pre></h2>
+			<div id="defaultCountdown"></div>
 			<ul class="social">
-				<li><a href="#" class="fb"></a></li>
+		
 				<li><a href="#" class="tw"></a></li>
-				<li><a href="#" class="lin"></a></li>
+				
 			</ul>
-			<form class="email" action="">
-				<input class="get_notified" type="text" onfocus="if(this.value=='Get Notified (Email Address)') this.value='';" onblur="if(this.value=='' || this.value==' ') this.value='Get Notified (Email Address)';" value="Get Notified (Email Address)"/>
-				<input type="button" class="go" />
-			</form>-->
+			
 		</div>
 	</div>
 </div>

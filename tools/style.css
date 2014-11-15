@@ -65,7 +65,7 @@ text-align: center;
 h2{
 padding: 0px 3px;
 line-height: normal;
-background: #fff;
+#background: #fff;
 font-size: 18px;
 font-weight: 200;
 float: left;
@@ -91,7 +91,7 @@ margin: 0 auto;
 
 .right_content{
 width: 900px;
-background: url(../images/blackish.png) repeat;
+#background: url(../images/blackish.png) repeat;
 height: 50px;
 padding: 23px 0 23px 40px;
 }
