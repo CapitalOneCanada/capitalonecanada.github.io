@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Coming Soon</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link href="tools/style.css" rel="stylesheet" type="text/css" />
+<link href="tools/jquery.countdown.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="tools/jquery.min.js"></script>
+<script type="text/javascript" src="tools/jquery.countdown.js"></script>
+<script type="text/javascript">
+	$(function () {
+	var austDay = new Date();
+	austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 01);
+	$('#defaultCountdown').countdown({until: austDay});
+	$('#year').text(austDay.getFullYear());
+});
+</script>
+</head>
+<body>
+<div id="shim"></div>
+<div id="content">
+<div class="logo"><h1><span>CapitalOne.IO</span></h1></div>	
+	<div class="right_side">
+		<div class="right_content">
+			<h2>Our OSS Offerings Coming Soon</h2>
+			<!--<div id="defaultCountdown"></div>
+			<ul class="social">
+				<li><a href="#" class="fb"></a></li>
+				<li><a href="#" class="tw"></a></li>
+				<li><a href="#" class="lin"></a></li>
+			</ul>
+			<form class="email" action="">
+				<input class="get_notified" type="text" onfocus="if(this.value=='Get Notified (Email Address)') this.value='';" onblur="if(this.value=='' || this.value==' ') this.value='Get Notified (Email Address)';" value="Get Notified (Email Address)"/>
+				<input type="button" class="go" />
+			</form>-->
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
