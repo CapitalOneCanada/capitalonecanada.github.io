@@ -5,7 +5,7 @@ url: "http://capitalone.io"
 twitter: capitalonelabs
 github:  capitalone
 permalink: /:categories/:title/
-analyticsEnabled: false
+analyticsEnabled: true
 
 # Build settings
 markdown: kramdown
