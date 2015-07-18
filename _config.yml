@@ -1,0 +1,24 @@
+# Site settings
+title: Capital One Engineering
+baseurl: ""
+url: "http://capitalone.io"
+twitter: capitalonelabs
+github:  capitalone
+permalink: /:categories/:title/
+analyticsEnabled: false
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+
+collections:
+  authors:
+  projects:
+
+defaults:
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: posts   # limit to posts
+    values:
+      is_post: true # automatically set is_post=true for all posts

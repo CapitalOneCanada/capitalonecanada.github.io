@@ -1,0 +1,43 @@
+---
+layout: page
+permalink: /open-source/
+title: Code
+---
+
+<section id="oss">
+  <section id="intro">
+    While we've been active in maintaining open source projects we haven't traditionally released our own open source projects. That changes today! We're approaching our work with an eye to open source. We'll outline all our projects here as the library continues to grow. We look forward to working with many of you!
+  </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="container">
+      {% assign projects = site.projects | sort: 'title' %}
+      {% for project in projects | sort: 'title' %}
+        {% assign loopindex = forloop.index | modulo: 2 %}
+        {% if loopindex == 1 %}
+          <div class="row">
+        {% endif %}
+          <div class="full column">
+            <article>
+              <header>
+                <h3>{{ project.title }}</h3>
+              </header> 
+              <p class="excerpt">{{ project.content }}</p>
+              <div class="centered">
+                <a href="{{ project.source_url }}" class="button regressive">View on {{ project.source }}</a>
+              </div>
+            </article>
+          </div>
+        {% if loopindex == 0 %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  <section id="contributing">
+    <h2>Contributing</h2>
+    <p>
+      As a bit of housekeeping, our legal department requires that you fill out our <a href="https://docs.google.com/forms/d/19LpBBjykHPox18vrZvBbZUcK6gQTj7qv1O5hCduAZFU/edit" target="_blank">CPL</a> prior to us accepting any pull requests.
+    </p>
+  </section>
+</section>

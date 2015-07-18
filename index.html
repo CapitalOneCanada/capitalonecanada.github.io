@@ -1,25 +1,35 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Capital One Open Source Software Contributions">
-    
-    <title>Capital One ♥ Open Source</title>
+---
+layout: default
+---
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-    <div class="content">
-        <h1 class="logo">Open Source @ Capital One</h1>
-        <h2 class="coming-soon">
-            <span>Want to solve interesting problems and contribute to open source projects as a technologist at Capital One? <a href="http://www.capitalonecareers.com" title="Apply for a job at Capital One">Join us!</a></span>
-        </h2>
-        <ul class="social">
-            <li><a href="https://twitter.com/capitaloneio" class="tw" target="_blank"></a></li>
-        </ul>
+<section id="main">
+  <section id="post_list">
+    <div class="wrap cf">
+      {% for post in site.posts %}
+        {% assign author = site.authors | where:"name",post.author | first %}
+        
+        <article>
+          <header>
+            <div class="author cf">
+              <div class="pic"><img src="{{ author.image | prepend: site.baseurl }}" alt="{{ author.name }}"></div>
+              <p class="name"><strong>{{ author.name }}</strong><span>{{ author.job_title }}</span></p>
+            </div>
+            <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+            <div class="details">
+              <time><span class="icon icon-clock"></span>{{ post.date | date: "%b %-d, %Y" }}</time>
+              <p class="tags"><span class="icon icon-tag"></span>
+                {% for tag in post.tags %}
+                  {{ tag }}{% unless forloop.last %}, {% endunless %}
+                {% endfor %}
+              </p>
+            </div>
+          </header> 
+          <p class="excerpt">{{ post.excerpt }}</p>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="read_more">Read More</a>
+        </article>
+      {% endfor %}
+      
     </div>
-</body>
-</html>
+    
+  </section>
+</section>

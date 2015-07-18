@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+{% assign author = site.authors | where:"name",page.author | first %}
+
+<div class="post">
+	<section id="main">
+		<div class="wrap cf">
+			<article>
+				{{ content }}
+			</article>
+			<aside class="author">
+				<h2>Posted {{ page.date | date: "%b %-d, %Y" }} by...</h2>
+				<div class="lefty cf">
+					<div class="pic"><img src="{{ author.image | prepend: site.baseurl }}" alt="{{ author.name }}"></div>
+					<p class="name"><strong>{{ author.name }}</strong><span>{{ author.job_title }}</span></p>
+				</div>
+				<ul class="righty cf">
+					{% if author.twitter != null %}
+						<li><a href="http://twitter.com/{{ author.twitter }}"><span class="icon-twitter"></span>Twitter</a></li>
+					{% endif %}
+
+					{% if author.github != null %}
+						<li><a href="http://github.com/{{ author.github }}"><span class="icon-github"></span>GitHub</a></li>
+					{% endif %}
+
+					{% if author.linkedin != null %}
+						<li><a href="{{ author.linkedin }}"><span class="icon-linkedin"></span>LinkedIn</a></li>
+					{% endif %}
+				</ul>
+			</aside>
+		</div>	
+	</section>
+</div>
