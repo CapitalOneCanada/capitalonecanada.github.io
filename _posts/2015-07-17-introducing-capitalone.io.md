@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "@everyone, introducing CapitalOne.io"
-date: 2015-07-17 16:00:00
+date: 2015-07-17 21:35:00
 author: Rob Alexander
 tags: engineering blog
 category: blog
