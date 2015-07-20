@@ -6,8 +6,9 @@ div.centered							{ text-align: center; }
 
 .wrap									{ width:90%; max-width:620px; margin:0 auto; position:relative; }
 
-#top_header								{ height:330px; width:100%; background:#008bc1 url(../assets/img/hero_bg.jpg) center top no-repeat; background-size:cover; position:relative; }
-#top_header .logo						{ margin:0 auto; padding-top:36px; display:block; width:126px; height:auto; }
+#top_header								{ width:100%; background:#008bc1 url(../assets/img/hero_bg.jpg) center top no-repeat; background-size:cover; position:relative; padding-bottom:70px; }
+#top_header .content					{ padding: 20px; }
+#top_header .logo						{ margin:0 auto; display:block; width:126px; height:auto; }
 
 #main_nav								{ position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.5); }
 #main_nav a								{ display:block; float:left; font-size:18px; line-height:70px; color:#fff; padding:0 15px; transition:all ease-out 200ms; }
@@ -21,7 +22,6 @@ div.centered							{ text-align: center; }
 #main_nav a.c1_logo:hover				{ background:none; }
 #main_nav a.c1_logo	img					{ width:48px; height:auto; position:relative; top:10px; display:block; }
 
-#main									{ padding:30px 0 40px; }
 #main #intro							{ margin:0 0 50px; }
 h1										{ font-family:"ProxLight","Helvetica Neue Light","Helvetica Neue",Arial,sans-serif; font-size:40px; line-height:48px; margin:0 0 8px -2px; }
 h2										{ font-family:"ProxLight","Helvetica Neue Light","Helvetica Neue",Arial,sans-serif; font-size:20px; line-height:28px; color:#8C99A3; margin:0; }
@@ -61,21 +61,22 @@ footer img								{ float:right; width:111px; height:auto; }
 
 #mobile_nav								{ display:none }
 
-.post #top_header						{ text-align:center; padding-top: 15px; }
-.post h1								{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; color:#fff; font-size:48px; line-height:54px; }
-.post #top_header .details				{ font-size:11px; line-height:20px; text-transform:uppercase; letter-spacing:1px; color:#fff; margin:10px 0 20px; }
+.post #top_header						{ text-align:center; }
+.post #top_header .details				{ font-size:11px; line-height:20px; text-transform:uppercase; letter-spacing:1px; color:#fff; }
 .post #top_header .details time			{ display:inline-block; }
 .post #top_header .details .tags		{ padding-left:25px; display:inline-block; }
 .post #top_header .details .icon		{ padding:1px 5px 1px 1px; position:relative; top:1px; font-weight:bold; }
 .post #top_header .excerpt				{ font-family:"ProxLight","Helvetica Neue Light","Helvetica Neue",Arial,sans-serif; margin-bottom:16px; }
 .post #top_header .read_more			{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; }
+.post #main								{ padding: 20px 0; }
 .post #main p							{ margin-bottom:20px; }
 .post #main img							{ width:auto; max-width:100%; height:auto; display:block; margin:0 auto 20px; }
 
 .post aside.tags						{ margin-bottom:40px; }
 .post aside:last-child					{ margin-bottom:20px; }
-.post h2								{ font-family:"ProxSemibold","Helvetica Neue",Arial,sans-serif; font-size:24px; font-weight: bold; line-height:32px; color:#022E46; border-bottom:1px solid #c2c0c5; margin-bottom:20px; }
-.post h3								{ font-size: 20px; font-weight: bold; }
+.post h1								{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; color:#fff; font-size:42px; line-height:48px; }
+.post h2								{ font-family:"ProxSemibold","Helvetica Neue",Arial,sans-serif; font-size:32px; font-weight: bold; line-height:32px; color:#022E46; border-bottom:1px solid #c2c0c5; margin-bottom:20px; }
+.post h3								{ font-size: 28px; font-weight: bold; }
 
 .post #main .tags li					{ display:inline-block; margin:0 3px 5px 0; }
 .post #main .tags li:last-child			{ margin-right:0; }
@@ -99,20 +100,21 @@ footer img								{ float:right; width:111px; height:auto; }
 .post .button.progressive				{ margin:0 0 40px 0; }
 
 .page #top_header						{ text-align:center; padding-top: 15px; }
-.page h1								{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; color:#000; font-size:48px; line-height:54px; }
 .page #top_header .details				{ font-size:11px; line-height:20px; text-transform:uppercase; letter-spacing:1px; color:#fff; margin:10px 0 20px; }
 .page #top_header .details time			{ display:inline-block; }
 .page #top_header .details .tags		{ padding-left:25px; display:inline-block; }
 .page #top_header .details .icon		{ padding:1px 5px 1px 1px; position:relative; top:1px; font-weight:bold; }
 .page #top_header .excerpt				{ font-family:"ProxLight","Helvetica Neue Light","Helvetica Neue",Arial,sans-serif; margin-bottom:16px; }
 .page #top_header .read_more			{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; }
+.page #main								{ padding: 20px 0; }
 .page #main p							{ margin-bottom:20px; }
 .page #main img							{ width:auto; max-width:100%; height:auto; display:block; margin:0 auto 20px; }
 
 .page aside.tags						{ margin-bottom:40px; }
 .page aside:last-child					{ margin-bottom:20px; }
-.page h2								{ font-family:"ProxSemibold","Helvetica Neue",Arial,sans-serif; font-size:24px; line-height:32px; color:#022E46; border-bottom:1px solid #c2c0c5; margin-bottom:20px; }
-.page h3								{ font-size: 20px; font-weight: bold; }
+.page h1								{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; color:#000; font-size:42px; line-height:48px; }
+.page h2								{ font-family:"ProxSemibold","Helvetica Neue",Arial,sans-serif; font-size:32px; line-height:32px; color:#022E46; border-bottom:1px solid #c2c0c5; margin-bottom:20px; }
+.page h3								{ font-size: 28px; font-weight: bold; }
 
 .page #main .tags li					{ display:inline-block; margin:0 3px 5px 0; }
 .page #main .tags li:last-child			{ margin-right:0; }
@@ -148,17 +150,17 @@ footer img								{ float:right; width:111px; height:auto; }
 }
 
 @media screen and (max-width:640px) {
-	body								{ font-size:16px; line-height:20px; }
+	body								{ font-size:18px; line-height:20px; }
 	
-	#top_header							{ height:250px; }
-	#top_header .logo					{ width:93px; padding-top:28px; }
+	#top_header .content				{ padding: 35px 20px; }
+	#top_header .logo					{ width:93px; }
 	
 	#main_nav a							{ display:none; }
 	#main_nav a.menu					{ display:block; float:left; margin-left:-15px; }
 	#main_nav a.button					{ display:block; }
 
 	h1									{ font-size:28px; line-height:36px; }
-	.post h1							{ font-size:28px; line-height:36px; padding-top:36px; }
+	.post h1							{ font-size:28px; line-height:36px; }
 	h2									{ font-size:16px; line-height:20px; }
 	
 	#post_list .sorting a				{ font-size:16px; }
