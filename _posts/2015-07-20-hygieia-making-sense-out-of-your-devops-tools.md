@@ -40,4 +40,4 @@ We are actively building new features and enhancements, and are asking for feedb
 
 Going forward we are hoping for contributions from Open Source communities as well as commercial tools vendor. 
 
-The product will be launched during OSCON July 20-24, 2015 in Portland. Source download link will be posted here at that time.
+The product will be launched during OSCON July 20-24, 2015 in Portland and is available on [Github](https://github.com/capitalone/Hygieia).
