@@ -19,7 +19,7 @@ When designing and building the dashboard, we focused on making it simple to con
 
 Our DevOps dashboard, now known as Hygieia, is used extensively across Capital One, and we’re pleased to now offer it to you.
 
-One of the [Thee Ways of DevOps](http://itrevolution.com/the-three-ways-principles-underpinning-devops/) as described by Gene Kim is “Amplify Feedback Loop”. Hygieia is meant to amplify and shorten the feedback loop.
+One of the [Three Ways of DevOps](http://itrevolution.com/the-three-ways-principles-underpinning-devops/) as described by Gene Kim is “Amplify Feedback Loop”. Hygieia is meant to amplify and shorten the feedback loop.
  
 Here is a sample view of a dashboard configured for a real-life application:
 
