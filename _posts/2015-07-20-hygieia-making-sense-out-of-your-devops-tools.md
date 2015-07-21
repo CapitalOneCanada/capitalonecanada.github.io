@@ -9,7 +9,7 @@ category: blog
 
 Tools are a big part of today's Agile and DevOps methodologies. A typical project deals with Agile Project Management tool, Source Control, Continuous Integration (CI) tool, Testing tools, Static Code Analysis and Security Scanning tools, Deployment and Monitoring tools to name a few. Large enterprises and complex systems sometimes use multiple CI, Testing and Scanning tools. Each of these has nice dashboards to present key information stored in it. But what is lacking is a single, comprehensive end-to-end view of the state of a delivery pipeline in near real time. 
 
-At Capital One, believe that while tools, automation and collaboration are very important, a continuous feedback loop is critical to DevOps success. 
+At Capital One, we believe that while tools, automation and collaboration are very important, a continuous feedback loop is critical to DevOps success. 
 
 We looked for such a visualization tool in the commercial market as well as in the Open Source community. There are some excellent commercial Application Lifecycle Management (ALM) tools that allow one to visualize traceability between stories, code, tests and builds. These tools, however, do not cross over from build to deployment, meaning they do not provide visibility into deployment activities in the same dashboard. There are some good commercial Operations tools that provide visibility into server and applications’ run-time health, metrics, analytics, etc. These also do not provide visibility into the development and build activities. Open source tools/frameworks, such as Grafana, provide generic framework to build a dashboard, but collecting data from the DevOps tools is still a challenge.
 
