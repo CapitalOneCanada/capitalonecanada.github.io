@@ -18,15 +18,15 @@ layout: default
 				</div>
 				<ul class="righty cf">
 					{% if author.twitter != null %}
-						<li><a href="http://twitter.com/{{ author.twitter }}"><span class="icon-twitter"></span>Twitter</a></li>
+						<li><a href="http://twitter.com/{{ author.twitter }}" target="_blank"><span class="icon-twitter"></span>Twitter</a></li>
 					{% endif %}
 
 					{% if author.github != null %}
-						<li><a href="http://github.com/{{ author.github }}"><span class="icon-github"></span>GitHub</a></li>
+						<li><a href="http://github.com/{{ author.github }}"target="_blank"><span class="icon-github"></span>GitHub</a></li>
 					{% endif %}
 
 					{% if author.linkedin != null %}
-						<li><a href="{{ author.linkedin }}"><span class="icon-linkedin"></span>LinkedIn</a></li>
+						<li><a href="{{ author.linkedin }}"target="_blank"><span class="icon-linkedin"></span>LinkedIn</a></li>
 					{% endif %}
 				</ul>
 			</aside>
