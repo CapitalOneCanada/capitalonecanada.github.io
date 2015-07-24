@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "WWDC 2015: A Month of Playtime"
-date: 2015-07-24 09:00:00
+date: 2015-07-23 23:20:00
 author: Natasha Murashev
 tags: [ios, mobile, wwdc]
 category: blog
