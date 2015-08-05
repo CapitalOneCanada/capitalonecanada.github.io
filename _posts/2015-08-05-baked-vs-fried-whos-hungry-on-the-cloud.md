@@ -3,7 +3,7 @@ layout: post
 title: "Baked vs. Fried – Who’s Hungry on the Cloud?"
 date: 2015-08-05 10:00:00
 author: Terren Peterson
-tags: [cloud]
+tags: [cloud, AWS, devops, automation]
 category: blog
 ---
 
