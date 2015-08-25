@@ -14,9 +14,9 @@ title: Code
       {% assign projects = site.projects | sort: 'title' %}
       {% for project in projects | sort: 'title' %}
         {% assign loopindex = forloop.index | modulo: 2 %}
-        {% if loopindex == 1 %}
+
           <div class="row">
-        {% endif %}
+
           <div class="full column">
             <article>
               <header>
