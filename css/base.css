@@ -41,9 +41,9 @@ h2										{ font-family:"ProxLight","Helvetica Neue Light","Helvetica Neue",Ar
 #post_list article h3 a:hover			{ text-decoration:none; }
 #post_list article img					{ width:100%; height:auto; display:block; margin-bottom:24px; }
 #post_list article .details				{ font-size:11px; line-height:20px; text-transform:uppercase; letter-spacing:1px; color:#67747F; margin-bottom:20px; }
-#post_list article .details time		{ display:inline-block; }
+#post_list article .details time		{ display:inline-block; padding-right: 25px; }
 #post_list article .details .icon		{ padding:1px 5px 1px 1px; position:relative; top:1px; font-weight:bold; }
-#post_list article .details .tags		{ padding-left:25px; display:inline-block; }
+#post_list article .details .tags		{ display:inline-block; }
 #post_list article .excerpt				{ font-family:"ProxLight","Helvetica Neue Light","Helvetica Neue",Arial,sans-serif; margin-bottom:16px; }
 #post_list article .read_more			{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; }
 
