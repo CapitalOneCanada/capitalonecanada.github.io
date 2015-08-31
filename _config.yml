@@ -10,6 +10,7 @@ analyticsEnabled: true
 # Build settings
 markdown: kramdown
 highlighter: pygments
+exclude: ['utils']
 
 collections:
   authors:
