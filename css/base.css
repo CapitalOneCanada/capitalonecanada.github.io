@@ -77,6 +77,7 @@ footer img								{ float:right; width:111px; height:auto; }
 
 .post aside.tags						{ margin-bottom:40px; }
 .post aside:last-child					{ margin-bottom:20px; }
+.post em								{ font-style: italic; }
 .post h1								{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; color:#fff; font-size:42px; line-height:48px; }
 .post h2								{ font-family:"ProxSemibold","Helvetica Neue",Arial,sans-serif; font-size:32px; font-weight: bold; line-height:32px; color:#022E46; border-bottom:1px solid #c2c0c5; margin-bottom:20px; }
 .post h3								{ font-size: 28px; font-weight: bold; line-height: 30px; }
@@ -119,6 +120,7 @@ footer img								{ float:right; width:111px; height:auto; }
 
 .page aside.tags						{ margin-bottom:40px; }
 .page aside:last-child					{ margin-bottom:20px; }
+.page em								{ font-style: italic; }
 .page h1								{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; color:#000; font-size:42px; line-height:48px; }
 .page h2								{ font-family:"ProxSemibold","Helvetica Neue",Arial,sans-serif; font-size:32px; line-height:32px; color:#022E46; border-bottom:1px solid #c2c0c5; margin-bottom:20px; }
 .page h3								{ font-size: 28px; font-weight: bold; }
