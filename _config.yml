@@ -8,7 +8,9 @@ permalink: /:categories/:title/
 analyticsEnabled: true
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "disable_indented_code_blocks", "autolink", "strikethrough", "highlight", "superscript", "tables", "footnotes", "with_toc_data"]
 highlighter: pygments
 exclude: ['utils']
 
