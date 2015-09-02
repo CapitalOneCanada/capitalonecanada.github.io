@@ -190,6 +190,7 @@ Swift 2.0 prevents protocols from containing aliases that reference themselves; 
 ```
 protocol Furniture {
     typealias M: Material
+    typealias M2: Material
     typealias T: Furniture
     
     func mainMaterial() -> M
