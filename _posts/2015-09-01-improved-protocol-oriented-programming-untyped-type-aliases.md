@@ -116,7 +116,7 @@ struct Lamp: Furniture {
 The above code assumes `M` (which could have been any unused identifier) is unknown within the protocol but should be consistent once inside any implementation. So in this example, changing only one return type would cause an error:
 
 ```
-struct Stool: Furniture { <<< does not conform to Furniture
+struct Stool: Furniture { // <<< does not conform to Furniture
     func mainMaterial() -> String {
         return "Wood"
     }
@@ -136,7 +136,7 @@ struct Metal: Material {}
 struct Cotton: Material {}
 ```
 
-Now we modify our `Furniture` protocol to for M to be `Material`:
+Now we modify our `Furniture` protocol for `M` to conform to `Material`:
 
 ```
 protocol Furniture {
@@ -173,7 +173,7 @@ protocol Furniture {
 The other slightly unintuitive thing is that neither `mainMaterial()` nor `secondaryMaterial()` can be declared to return `Material`. For example, the following code will not work:
 
 ```
-struct Chair: Furniture { <<< does not conform to Furniture
+struct Chair: Furniture { // <<< does not conform to Furniture
     func mainMaterial() -> Material {
         return Wood()
     }
