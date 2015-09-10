@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Writing SOLID Code (SOLID Design Principles Reflected in the Enterprise API Framework)"
-date: 2015-09-10 09:30:00
+date: 2015-09-10 12:00:00
 author: Qiang Xue
 tags: [framework, RESTful API, design patterns, SOLID]
 category: blog
