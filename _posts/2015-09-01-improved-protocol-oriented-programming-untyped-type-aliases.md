@@ -285,7 +285,6 @@ final class Lamp: Furniture {
 
 This concludes the first part of the series on this topic. We covered how the type of a `typealias` can be inferred by the compiler. We also learned how to leverage this feature to create new types of constraints when creating protocols. Finally, we learned how Self has special caveats in these contexts. 
 
-In the next part of the series, we will explore how class inheritance introduces new problems. These problems are crucial to overcome if you plan to build on top of existing data structures that leverage generics.
+In the next part of the series, available [here](http://www.capitalone.io/blog/improved-protocol-oriented-programming-untyped-type-aliases-part-2/), we will explore how class inheritance introduces new problems. These problems are crucial to overcome if you plan to build on top of existing data structures that leverage generics.
 
 At Capital One, we are excited at the new constructs that Swift enables. We strive to leverage the latest and greatest technologies and are working hard to give back to the community in the form of insights, knowledge, and [open source](https://github.com/capitalone). I hope that this article demystifies some of the darker corners of Swift for you, but if you have any questions, please reach out!
-
