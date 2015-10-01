@@ -21,20 +21,20 @@ When attempting to perform inheritance with a generic class, things can get tric
 
 To illustrate, let's create a Pet and Inspector concept.
 
-```
+```swift
 class Pet {}
 class Inspector<P> {}
 ```
 
 `Inspector` is a generic class that has an unused generic type called `P`. In theory, you could use `Inspector` like this:
 
-```
+```swift
 let inspector = Inspector<Pet>()
 ```
 
 In this case, within `Inspector`, any usage of `P` would need to adhere to `Pet`’s protocol. Things feel a little strange when you extend Inspector and add a new generic concept. The parent class can have its own generic, but its generic is completely unrelated to the child:
 
-```
+```swift
 class FurnitureInspector<C: Chair>: Inspector<C> {
     func getMaterials(thing: C) -> Wood {
         return thing.mainMaterial()
@@ -44,20 +44,20 @@ class FurnitureInspector<C: Chair>: Inspector<C> {
 
 It may not be immediately obvious that `C` is actually extending `Chair` in this example. This means `Chair` cannot be defined as a struct and must be a class. You may also be surprised to know that the generic definition provided to `Inspector` can be unrelated to `FurnitureInspector`’s:
 
-```
+```swift
 class FurnitureInspector<C: Chair>: Inspector<Pet> {
 ```
 
 You would then use this class like this:
 
-```
+```swift
 let inspector = FurnitureInspector<Chair>()
 inspector.getMaterials(Chair())
 ```
 
 When dealing with concrete types as a generic, an interesting thing happens. You are able to omit their inclusion in the implementation. The previous two lines are equivalent to the following:
 
-```
+```swift
 let inspector = FurnitureInspector()
 inspector.getMaterials(Chair())
 ```
@@ -67,20 +67,20 @@ Because `<C: Chair>` is a concrete class, it is inferred that it is being provid
 ## A Type Alias as a Return Type
 The return type of `inspector.mainMaterial()` is `Wood` because `Chair` was used, but what happens if it was `Lamp` instead? As in:
 
-```
+```swift
 let inspector = FurnitureInspector()
-inspector.getMaterials(Lamp()) <<< Error
+inspector.getMaterials(Lamp()) // <<< Error
 ```
 
 This code errors because `FurnitureInspector` expects `C = Chair`. We need to alter the generic declaration so that it supports `Lamp` OR `Chair`. But it is more difficult than that; changing `C`'s type from `Chair` to `Furniture` is not enough. Pay special attention to this line in `getMaterials()`:
 
-```
+```swift
 func getMaterials(thing: C) -> Wood {
 ```
 
 Do you see the problem? It is expecting `Wood` to always return, but we cannot guarantee that as soon as we change `C` to be something more generic than `Chair` (for example, `Lamp` is made of `Glass`). To get around this, we have to access the type alias directly (pay special attention to the `C.M` line):
 
-```
+```swift
 class FurnitureInspector<C: Furniture>: Inspector<Pet> {
     func getMaterials(thing: C) -> C.M {
         return thing.mainMaterial()
@@ -96,7 +96,7 @@ inspector2.getMaterials(Lamp())
 
 The change to `<C: Furniture>` forces us to provide a concrete class (as mentioned earlier). We also use the type alias name directly, which you can see as `C.M`. This correlates to this line in `Furniture`:
 
-```
+```swift
 typealias M: Material
 ```
 
@@ -110,7 +110,7 @@ So far, we’ve learned how to constrain a `typealias`. When implementing an act
 
 Let’s say we add a new `typealias` to `Furniture` called `A`:
 
-```
+```swift
 protocol Furniture {
     typealias A
     func label() -> A
@@ -120,7 +120,7 @@ protocol Furniture {
 
 And then we implement `label()`:
 
-```
+```swift
 class Chair: Furniture {
     func label() -> Int {
         return 0
@@ -138,7 +138,7 @@ class Lamp: Furniture {
 
 Again, we are relying on Swift to infer the type of `A`. In this case, we have elected for different signatures between `Chair` and `Lamp`. Now for changes to the generic constraint:
 
-```
+```swift
 class FurnitureInspector<C: Furniture where C.A == Int> {
     func calculateLabel(thing: C) -> C.A {
         return thing.label()
@@ -146,12 +146,12 @@ class FurnitureInspector<C: Furniture where C.A == Int> {
 }
 
 let inspector1 = FurnitureInspector<Chair>()
-let inspector2 = FurnitureInspector<Lamp>() <<< Error
+let inspector2 = FurnitureInspector<Lamp>() // <<< Error
 ```
 
 In the above code, `FurnitureInspector` requires that `C` (instance of `Furniture`) implements a method `label()` that returns an `Int`. The second inspector fails because `Lamp` implements a `label()` method that returns something that is not an `Int`. Much like before, we could even constrain the protocol’s definition of `A`. For example, we can constrain it to `Any` just to show it can be done:
 
-```
+```swift
 protocol Furniture {
     typealias A: Any
     func label() -> A
@@ -166,7 +166,7 @@ In the previous article, we looked at objects in charge of initializing themselv
 
 Here is an example of a service responsible for building furniture:
 
-```
+```swift
 ////// Error
 class FurnitureMaker<C: Furniture> {
     func make() -> C {
@@ -190,7 +190,7 @@ The above code breaks because C does not have any initializers according to Xcod
 
 In order to fix the above code, we must add it into the protocol:
 
-```
+```swift
 protocol Furniture {
     init()
     // rest of protocol ... 
@@ -201,7 +201,7 @@ protocol Furniture {
 
 Then we need to add `init()` declarations to each `Furniture` definition:
 
-```
+```swift
 class Chair: Furniture {
     required init() {}
     
@@ -220,7 +220,7 @@ class Lamp: Furniture {
 
 Now we can use our factories:
 
-```
+```swift
 let chairMaker = FurnitureMaker<Chair>()
 let chair1 = chairMaker.make()
 let chair2 = chairMaker.make()
@@ -233,7 +233,7 @@ lampMaker.material(lamp) // returns Glass
 
 Earlier, we discovered that if a concrete class is used in a generic class declaration, we can omit it during initialization. We can actually clean up the implementation at the expense of the class declaration (note that in Swift 1.x, you need `<C:Chair>` added to `ChairMaker`'s declaration):
 
-```
+```swift
 class ChairMaker: FurnitureMaker<Chair> {}
 
 let betterChairMaker = ChairMaker()

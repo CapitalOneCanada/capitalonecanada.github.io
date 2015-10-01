@@ -15,7 +15,7 @@ Before we can explore the purpose of an untyped `typealias`, we will briefly dis
 
 A generic is a way is to limit a variable to a specific protocol at compile time. This means avoiding run time checks (`let` ... `as`). For example, let’s say we create a consistent interface between two types for "adding one."
 
-```
+```swift
 extension Int {
     func addOne() -> Int {
         return self + 1
@@ -31,7 +31,7 @@ extension String {
 
 Then, we wrap these in an increment method that works with both interfaces:
 
-```
+```swift
 func increment(foo: Any) -> Any {
     if let fooStr = foo as? String {
         return fooStr.addOne()
@@ -49,7 +49,7 @@ increment(1.0) // <== this causes a runtime error
 
 This particular code is dangerous because you wouldn’t catch the issue while compiling (e.g., a production bug). Another approach might leverage a generic. First, you would add a protocol to the previous extensions:
 
-```
+```swift
 protocol CanAddOne {
     func addOne() -> Self
 }
@@ -69,7 +69,7 @@ extension String: CanAddOne {
 
 And now you could rewrite the increment method to check if the argument conforms to `CanAddOne`:
 
-```
+```swift
 func incrementBetter<T: CanAddOne>(foo: T) -> T {
     return foo.addOne()
 }
@@ -87,7 +87,7 @@ The problem is that generics and protocols do not play well together in Swift. T
 
 Did you know you could write a [`typealias`](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Declarations.html#//apple_ref/doc/uid/TP40014097-CH34-ID361) in a protocol without specifying what it is an alias for? For example, in the following code, `M` is inferred in the implementation. Notice how `Chair` and `Lamp` have different return types for the methods in question. 
 
-```
+```swift
 protocol Furniture {
     typealias M
     func mainMaterial() -> M
@@ -115,7 +115,7 @@ struct Lamp: Furniture {
 
 The above code assumes `M` (which could have been any unused identifier) is unknown within the protocol but should be consistent once inside any implementation. So in this example, changing only one return type would cause an error:
 
-```
+```swift
 struct Stool: Furniture { // <<< does not conform to Furniture
     func mainMaterial() -> String {
         return "Wood"
@@ -128,7 +128,7 @@ struct Stool: Furniture { // <<< does not conform to Furniture
 
 In the above examples, `M` can be anything, but we can actually constrain it. For example, let’s create some structures representing materials.
 
-```
+```swift
 protocol Material {}
 struct Wood: Material {}
 struct Glass: Material {}
@@ -138,7 +138,7 @@ struct Cotton: Material {}
 
 Now we modify our `Furniture` protocol for `M` to conform to `Material`:
 
-```
+```swift
 protocol Furniture {
     typealias M: Material
     func mainMaterial() -> M
@@ -148,7 +148,7 @@ protocol Furniture {
 
 Our `Chair` and `Lamp` structures immediately complain about not conforming to the protocol. Here’s an example of a fixed `Chair` structure:
 
-```
+```swift
 struct Chair: Furniture {
     func mainMaterial() -> Wood {
         return Wood()
@@ -161,7 +161,7 @@ struct Chair: Furniture {
 
 Swift correctly recognizes that the intended value of `M` is `Wood`, an implementation of `Material`. If you want `mainMaterial()` and `secondaryMaterial()` to return different types, you would need to change the `Furniture` protocol accordingly:
 
-```
+```swift
 protocol Furniture {
     typealias M: Material
     typealias M2: Material
@@ -172,7 +172,7 @@ protocol Furniture {
 
 The other slightly unintuitive thing is that neither `mainMaterial()` nor `secondaryMaterial()` can be declared to return `Material`. For example, the following code will not work:
 
-```
+```swift
 struct Chair: Furniture { // <<< does not conform to Furniture
     func mainMaterial() -> Material {
         return Wood()
@@ -187,7 +187,7 @@ struct Chair: Furniture { // <<< does not conform to Furniture
 
 Swift 2.0 prevents protocols from containing aliases that reference themselves; however, in Swift 1.2, the mentioned pattern is valid. This type of constraint in a generic is useful in patterns such as Factory. Let’s examine how we might add a static factory method to Furniture’s protocol in Swift 1.x+:
 
-```
+```swift
 protocol Furniture {
     typealias M: Material
     typealias M2: Material
@@ -201,7 +201,7 @@ protocol Furniture {
 
 In Swift 2+, there are two approaches to self-referencing protocols. The first is to create a separate protocol entirely.
 
-```
+```swift
 protocol HouseholdThing { }
 protocol Furniture: HouseholdThing {
     typealias M: Material
@@ -216,7 +216,7 @@ protocol Furniture: HouseholdThing {
 
 In this protocol, we are now expecting `factory()` to return a `HouseholdThing`. Here’s how this might look on `Chair`:
 
-```
+```swift
 struct Chair: Furniture {
     func mainMaterial() -> Wood {
         return Wood()
@@ -232,7 +232,7 @@ struct Chair: Furniture {
 
 While this code models a very popular design pattern (`Factory`), it doesn't quite work as you would expect. There is a major drawback in Swift regarding how `typealias` (as opposed to a true generic) seems to work: it is not possible to force a method to return an instance of itself. To better illustrate, look carefully at the same method in `Lamp`:
 
-```
+```swift
 struct Lamp: Furniture {
     func mainMaterial() -> Glass {
         return Glass()
@@ -251,7 +251,7 @@ Notice: `factory()` in `Lamp` is returning `Chair` and still conforms to the pro
 
 The second way to have a protocol reference itself in Swift 2+, is to use `Self`:
 
-```
+```swift
 protocol Furniture {
     typealias M: Material
     typealias M2: Material
@@ -264,7 +264,7 @@ protocol Furniture {
 
 For structures, this will solve the issue and the compiler will now recognize that `factory()` does not return the intended return type. For a class, [Swift 2.0 lets you](http://www.infoq.com/news/2015/06/protocol-oriented-swift) mark it as `final` to properly take advantage of `Self`:
 
-```
+```swift
 final class Lamp: Furniture {
     func mainMaterial() -> Glass {
         return Glass()
