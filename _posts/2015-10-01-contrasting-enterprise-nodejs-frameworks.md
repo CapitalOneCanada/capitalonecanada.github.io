@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Contrasting Enterprise Node.js/Io.js Frameworks: Hapi vs. Kraken vs. Sails.js vs. Loopback"
+title: "Contrasting Enterprise Node.js Frameworks: Hapi vs. Kraken vs. Sails.js vs. Loopback"
 date: 2015-10-01 16:15:00
 author: Azat Mardan
-tags: [node.js, io.js, hapi, kraken, sails.js, loopback]
+tags: [node.js, hapi, kraken, sails.js, loopback]
 category: blog
 ---
 
