@@ -150,6 +150,11 @@ footer img								{ float:right; width:111px; height:auto; }
 
 .page #oss article						{ margin-bottom: 20px; }
 
+table									{ width: 90%; margin: 15px 5% 15px 5%; }
+table td 								{ padding: 5px; }
+table tr    							{ border-bottom: 1px solid #c2c0c5; }
+table tr:last-child 					{ border: 0px; }
+
 @media screen and (min-width:1023px) {
 	#post_list article .author			{ position:absolute; text-align:right; right:104%; top:38px; width:180px; }
 	#post_list article .author .pic		{ float:right; }
