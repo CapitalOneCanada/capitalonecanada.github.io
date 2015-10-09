@@ -5,6 +5,7 @@ date: 2015-10-01 16:15:00
 author: Azat Mardan
 tags: [node.js, hapi, kraken, sails.js, loopback]
 category: blog
+redirect_from: /blog/contrasting-enterprise-nodejs-iojs-frameworks/
 ---
 
 [Node.js](https://nodejs.org)/[Io.js](https://iojs.org) is a non-blocking I/O platform based on the JavaScript language. It has been capturing the hearts and minds of software developers for the past couple of years. It has been doing this not only for developers in startups And small companies, but more interestingly for enterprise developers as well. For example, *PayPal, LinkedIn, Walmart, Netflix, eBay, Uber and other tech giants switched from Java and the likes to Node*. Its popularity is attributed to better performance and having one language (JavaScript) for all layers: back-end, database and front-end.
