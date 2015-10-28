@@ -1,6 +1,5 @@
 # Site settings
 title: Capital One Engineering
-baseurl: ""
 url: "http://capitalone.io"
 twitter: capitalonelabs
 github:  capitalone
@@ -13,6 +12,10 @@ redcarpet:
  extensions: ["no_intra_emphasis", "fenced_code_blocks", "disable_indented_code_blocks", "autolink", "strikethrough", "highlight", "superscript", "tables", "footnotes", "with_toc_data"]
 highlighter: pygments
 exclude: ['utils']
+
+safe: false
+gems:
+  - jekyll-redirect-from
 
 collections:
   authors:
