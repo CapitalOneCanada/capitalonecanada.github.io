@@ -33,7 +33,7 @@ Over the last couple of years, Cloud has become central to our technology strate
 * **Talent** – Our forward-leaning approach to Cloud technology helps us attract great talent and we have thousands of jobs we need to fill with Cloud engineers.
 
 ## Interested in Learning More?
-Capital One has made great strides and investments to become a software tech company, utilizing AWS and Cloud technology is just one of them.  As we’re transforming the industry, we’re also transforming our technology organization. We’re increasing in-house engineering teams and reducing dependencies on licensed software built by third parties. Our engineers create solutions that drive the future of banking using modern technology and data solutions like Open Source, Cloud, Big Data, APIs, etc.
+Capital One has made great strides and investments to become a software tech company, utilizing AWS and Cloud technology is just one of them.  As we’re transforming the industry, we’re also transforming our technology organization. We’re increasing in-house engineering teams and reducing dependencies on licensed software built by third parties. Our engineers create solutions that drive the future of banking using modern technology and data solutions like Open Source, Cloud, Big Data, APIs, etc. See how Capital One is using AWS as a technology strategy. Watch Rob’s full presentation [here](https://youtu.be/D5-ifl7KJ00?t=1089). 
 
 If you are interested in the solving challenges with some of the best technology leaders, please check out some of the [exciting openings]( https://www.linkedin.com/company/capital-one/careers) we currently have.
 
