@@ -9,7 +9,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     blankslate (2.1.2.4)
-    celluloid (0.16.1)
+    celluloid (0.16.0)
       timers (~> 4.0.0)
     classifier-reborn (2.0.3)
       fast-stemmer (~> 1.0)
@@ -47,7 +47,7 @@ GEM
       net-dns (~> 0.6)
       public_suffix (~> 1.4)
       typhoeus (~> 0.7)
-    hitimes (1.2.2)
+    hitimes (1.2.3)
     html-pipeline (1.9.0)
       activesupport (>= 2)
       nokogiri (~> 1.4)
@@ -116,7 +116,7 @@ GEM
     sass (3.4.16)
     terminal-table (1.5.2)
     thread_safe (0.3.5)
-    timers (4.0.1)
+    timers (4.0.4)
       hitimes
     toml (0.1.2)
       parslet (~> 1.5.0)
@@ -137,3 +137,6 @@ DEPENDENCIES
   nokogiri
   pygments.rb
   redcarpet
+
+BUNDLED WITH
+   1.10.6
