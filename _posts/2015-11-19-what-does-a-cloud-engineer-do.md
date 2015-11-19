@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What Does A Cloud Engineer Do?"
-date: 2015-11-19 11:15:00
+date: 2015-11-19 14:40:00
 author: Fred Ye
 tags: [cloud, engineering]
 category: blog
