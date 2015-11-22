@@ -8,6 +8,8 @@ category: blog
 ---
 [Protocol-Oriented Programming](https://developer.apple.com/videos/wwdc/2015/?id=408) is crucial to writing great Swift code. But the reusability of a protocol is greatly restricted because Swift explicitly disallows adding generics to one. This can be overcome by using an untyped typealias as a generic — something most Swift developers have never seen.
 
+<!--more-->
+
 *This is the first of a two-part series that explores the topic of using a typealias as a generic inside protocols. We recommend you copy and paste the sample code into Xcode as you read along, or you can use the accompanying [Playground file](https://github.com/michikono/swift-using-typealiases-as-generics-1).*
 
 ## A Generic Crash Course

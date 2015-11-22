@@ -9,6 +9,8 @@ category: blog
 
 Okay, so this post really isn't about food, rather it's about a key concept in how to manage infrastructure on the Cloud.  As we evolve processes for how to automate the provisioning of infrastructure, there are different approaches we can adopt in how to manage the scripting.  Baked & Fried are catchy terms that are used in the industry to describe different automation techniques, and this blog gives some more background on the relative merits of each, and how we're approaching this.
 
+<!--more-->
+
 ## Background
 Everyone uses terms a little differently, so I’ll reiterate a few of the basics here.  First, I’m making distinctions between instances and images.  For a technology like AWS, the image would be the AMI, and the instance would be EC2.  In the context of this post, distribution relates to the Linux kernel distributions – i.e., RedHat, Ubuntu, AWS.
 

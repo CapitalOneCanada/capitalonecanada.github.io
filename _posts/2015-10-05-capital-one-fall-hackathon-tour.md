@@ -10,6 +10,8 @@ I love Fall... leafs change color, our oppressive DC humidity becomes tolerable 
 
 Each year, approximately 50,000 students participate in a variety of college hackathons -- and as an employer that always keeps an eye out for the brightest up and coming talent, these events tend to be some of the best places to look.
 
+<!--more-->
+
 We’re currently planning to send the team out to 18 of our favorite events.  If you’re a student attending one of the hackathons below be sure to come by the Capital One booth to meet the team, get some mentoring help with your project, or better yet give our API "Nessie" a spin (as seen on [DevPost.com]( http://studenthackers.devpost.com/) as one of their top trending API’s and Technologies seen on campus).
 
 ![Capital One Mentor team @ bitcamp 2015]({{ site.baseurl }}/assets/posts/fall-hackathon-tour/capitalone-bitcamp-2015.jpeg)

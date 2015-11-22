@@ -11,6 +11,8 @@ category: blog
 
 In the last article, we learned how a `typealias` can serve as a generic when not explicitly set to a specific type. 
 
+<!--more-->
+
 It turns out that adding inheritance (and classes) to the mix causes new problems. These problems are crucial to overcome if you plan to build on top of existing data structures that leverage generics. By the end, you should understand how to use the strategies covered to achieve common design patterns. To follow along, it is expected that you know the basics around [generics](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Generics.html#//apple_ref/doc/uid/TP40014097-CH26-ID180) and [type aliases](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Declarations.html#//apple_ref/doc/uid/TP40014097-CH34-ID361).
 
 *We recommend you copy and paste the sample code into Xcode as you read along, or you can use the accompanying [Playground file](https://github.com/michikono/swift-using-typealiases-as-generics-2).*

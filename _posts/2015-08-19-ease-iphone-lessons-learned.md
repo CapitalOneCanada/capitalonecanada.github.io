@@ -9,6 +9,8 @@ category: blog
 
 It has been about one month since my team released version 5 of the Capital One iPhone app. The project to convert our hybrid app into a fully native one has taken us over a year, and our journey has been full of growth, change, and learning.
 
+<!--more-->
+
 We've faced many issues during the beta releases of Xcode 6 and Swift, and while we can write a book about the 101+ things we've been through, that would make for a really long blog post. Here are just a few of the things that we've learned.
 
 ![EASE iPhone Team Photo]({{ site.baseurl }}/assets/posts/ease-iphone-lessons-learned/team-photo.png)

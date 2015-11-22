@@ -10,6 +10,8 @@ redirect_from: /blog/contrasting-enterprise-nodejs-iojs-frameworks/
 
 [Node.js](https://nodejs.org)/[Io.js](https://iojs.org) is a non-blocking I/O platform based on the JavaScript language. It has been capturing the hearts and minds of software developers for the past couple of years. It has been doing this not only for developers in startups And small companies, but more interestingly for enterprise developers as well. For example, *PayPal, LinkedIn, Walmart, Netflix, eBay, Uber and other tech giants switched from Java and the likes to Node*. Its popularity is attributed to better performance and having one language (JavaScript) for all layers: back-end, database and front-end.
 
+<!--more-->
+
 As with any new platform, there are a lot of Node.js/Io.js frameworks to choose from. However, before we proceed, we need to define what *enterprise* means. For the sake of simplicity, an enterprise project is one where you have teams of more than 10 developers working on it, where you have huge traffic to handle and high stakes, meaning the services must be running 24x7x365.
 
 Judging frameworks is highly subjective. When it comes to building enterprise-level applications, we need to consider some of the following things:

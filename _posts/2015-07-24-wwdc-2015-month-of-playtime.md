@@ -9,6 +9,8 @@ category: blog
 
 Our Mobile Engineering team had a very strong presence at Apple's annual [World Wide Developer Conference (WWDC)](https://developer.apple.com/videos/wwdc/2015/) this year. We woke up at 4am to stand in line together for the keynote, learned about the newest iOS, Swift, WatchOS breakthroughs, met mobile engineers from all over the world, attended the Walk the Moon concert, and proudly sponsored the [James Dempsey and the Breakpoints concert](https://ti.to/jdbp/live-near-wwdc-2015) and the [WWDC Girls Lunch](http://www.eventbrite.com/e/women-at-wwdc-lunch-2015-edition-tickets-17103838040)!
 
+<!--more-->
+
 ![James Dempsey and Capital One Mobile]({{ site.baseurl }}/assets/posts/james-dempsey-breakpoints.png)
 
 Now, a month later, our mobile engineers have been playing around with the latest and greatest. Here is what we're most excited about!

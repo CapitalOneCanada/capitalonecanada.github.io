@@ -8,6 +8,8 @@ category: blog
 ---
 I felt extremely privileged to have the opportunity to represent Capital One as part of this year’s keynote at [AWS re:Invent](https://reinvent.awsevents.com/) this October. Most people know Capital One as a credit card company, and we’re one of the largest in the US with more than 65 million accounts. Some also know that we’re one of the nation’s largest banks – number 7 in the U.S. by assets - and that we’re the nation’s leading digital bank.
 
+<!--more-->
+
 ![Rob Alexander Presenting at AWS re:Invent]({{ site.baseurl }}/assets/posts/why-capital-one-attended-aws-re-Invent-2015/rob-re-invent-presentation.png)
 
 Few realize, however, that underpinning our credit card and banking services is a technology company. I was honored to help introduce the re:Invent attendees to this critical, but often less seen, face of Capital One. Our products are intangible: software and data. Our customers overwhelmingly apply for our products through digital channels and are serviced through those channels. Digital is truly changing the way we interact with our money, and what is especially striking is the degree to which mobile has become the preferred channel of interaction for our customers. In fact our customers now use our mobile apps twice as frequently than online.

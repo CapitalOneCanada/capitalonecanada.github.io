@@ -7,7 +7,7 @@ tags: [analytic garage, docker, big data, mesos, hadoop, open source]
 category: blog
 ---
 
-As part of Capital One's Data strategy, we have embarked on an overall technology transformation to ensure our analytic leadership as we move to the world of Big Data. The key objectives of this strategy include:
+As part of Capital One's Data strategy, we have embarked on an overall technology transformation to ensure our analytic leadership as we move to the world of Big Data. <!--more--> The key objectives of this strategy include:
 
 * Build an analytics architecture centered on a Hadoop-based Enterprise Data Hub
 * Empower our associates to dream and disrupt by providing them access to state-of-the-art tools, unconstrained data and processing
