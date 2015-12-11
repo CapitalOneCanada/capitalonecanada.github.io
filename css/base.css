@@ -107,6 +107,9 @@ footer img								{ float:right; width:111px; height:auto; }
 
 .post .button.progressive				{ margin:0 0 40px 0; }
 
+.post .container 						{ position: relative; width: 100%; height: 0; padding-bottom: 56.25%; }
+.post .video 							{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
 .page #top_header						{ text-align:center; padding-top: 15px; }
 .page #top_header .details				{ font-size:11px; line-height:20px; text-transform:uppercase; letter-spacing:1px; color:#fff; margin:10px 0 20px; }
 .page #top_header .details time			{ display:inline-block; }
