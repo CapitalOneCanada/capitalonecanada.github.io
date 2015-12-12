@@ -9,6 +9,8 @@ category: blog
 
 API professionals talk a lot about concepts like “Design First” and “API First”, all of which are great platitudes if you’re starting your API from scratch. However, most of us don’t work for brand new companies with zero APIs in our stack. It’s much more common to start your API program journey with a bunch of APIs built for internal use in developer-led projects that weren’t initially designed for close public scrutiny.
 
+<!--more-->
+
 Like your coworker who works from home, these internal APIs thought they could sit around wearing sweats and eating junk food all day. As long as they read requests and gave responses, appearances wouldn’t matter, right?
 
 But no. Now your management team thinks this API could be their next big product release. The next Slack even! Instead of sitting in the internal confines of the company, your API needs to get out and *mingle* with the public. But is it ready for the spotlight or does it need some serious grooming beforehand?
