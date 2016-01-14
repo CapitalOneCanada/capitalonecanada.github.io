@@ -1,7 +1,13 @@
 body									{ font-family:"ProxReg","Helvetica Neue",Arial,sans-serif; font-size:18px; line-height:28px; color:#022E46; background:#fff; }
 a										{ color:#008bc1; text-decoration:none; }
 a:hover									{ text-decoration:underline; }
-div.centered							{ text-align: center; }
+div.centered							{ text-align:center; }
+div.italic								{ font-style:italic; }
+div.bold								{ font-weight:bold; }
+ul ul,
+ul ol,
+ol ol,
+ol ul 									{ margin: 0; }
 
 .wrap									{ width:90%; max-width:620px; margin:0 auto; position:relative; }
 
@@ -84,7 +90,8 @@ footer img								{ float:right; width:111px; height:auto; }
 .post ul, ol 							{ margin-bottom: 20px; }
 .post ul li, ol li 						{ padding-left: 1em; text-indent: -1em; } 
 .post ul li								{ list-style: disc inside;  }
-.post ol li								{ list-style: decimal inside; }
+.post ol li 							{ list-style: decimal inside; }
+.post ol li ul li						{ list-style: disc inside;  }
 
 .post #main .tags li					{ display:inline-block; margin:0 3px 5px 0; }
 .post #main .tags li:last-child			{ margin-right:0; }
