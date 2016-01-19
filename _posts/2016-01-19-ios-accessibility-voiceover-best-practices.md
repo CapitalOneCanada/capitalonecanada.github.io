@@ -8,7 +8,7 @@ category: blog
 ---
 Here at Capital One, we are working hard to write “best in class” financial services applications for all users - including our users with disabilities. Over the past six months, I have had the opportunity to work on the Capital One Mobile for iPhone application. Specifically, I have been heavily involved in our user experience for VoiceOver (VO) users. VO, for the uninitiated, is Apple’s screen reader technology, which can be used by blind and low vision users to get the most from their mobile devices.<!--more--> While a great benefit to the vision impaired community, all users can benefit from the VO experience. For example, I have personally used our VO experience on the Capital One Mobile for iPhone application to pay my credit bill while I was in the car and unable to look at the screen. *To learn more about VoiceOver and accessibility check out Apple’s documentation [here](http:/www.apple.com/accessibility/ios/voiceover/).*
 
-Lets talk about making applications accessible and the best practices we discovered as a part of our journey on the Capital One Mobile for iPhone application. For the scope of this article I will focus on two areas:
+Let's talk about making applications accessible and the best practices we discovered as a part of our journey on the Capital One Mobile for iPhone application. For the scope of this article I will focus on two areas:
 
 * Taking a holistic approach to accessibility.
 * Developer best practices.
@@ -19,7 +19,7 @@ Early in the development process we discovered we needed to consider the VO expe
 
 Simply adding “make screen accessible” to your acceptance criteria was not enough to design the kind of application we had in mind for our users. So we took a deep look at our approach and decided on some changes to our development process. What we found was that everyone on the project wanted to make our application accessible, but we didn’t know the WCAG guidelines as thoroughly as we should have. To do this, we needed to “demystify” accessibility, and with this consideration in mind, we wrote a development process where design, requirements writing, development, testing, and auditing would all play an equally important role in making our application more accessible. 
 
-Since not everyone on the team was well versed in the Title III of the Americans with Disabilities Act, we came up with several points of emphasis for design and requirements writing to help get the application closer to accessible before submitting to our Digital Accessibility Team (subject matter experts) for review. See below for more details.
+Since not everyone on the team was well versed in the [Title III of the Americans with Disabilities Act](http://www.ada.gov/t3hilght.htm), we came up with several points of emphasis for design and requirements writing to help get the application closer to accessible before submitting to our Digital Accessibility Team (subject matter experts) for review. See below for more details.
 
 ### Design
 
@@ -38,6 +38,7 @@ In each story there is a section for accessibility related requirements. We deci
 2. *Traits:* Define each frame’s trait(s) to correspond with the `accessibilityTraits` for iOS (Button, Heading, Static Text, etc.).
 3. *Additional Context:* Add additional context if needed to correspond with the `accessibilityHint` (Use sparsely, only add if necessary and not redundant to the label.).
 4. *Value/State:* Define the elements value/state if applicable (Not Enabled, Selected, etc.).
+
 These additions to how we conceive of design and requirements writing have been instrumental in building stronger accessibility acceptance criteria for each of our screens and UI stories. 
 
 What does this look like on the screen?
@@ -52,10 +53,10 @@ What does this look like on the screen?
   * *Trait = Heading*
 3. VO Text = “Username”
   * *Trait = Textfield*
-  * *Value = <value entered into textfield>*
+  * *Value = &lt;value entered into textfield&gt;*
 4. VO Text = “Password”
   * *Trait = Textfield*
-  * *Value =<value entered into textfield> (*** in this case)*
+  * *Value = &lt;value entered into textfield&gt; (*** in this case)*
 5. VO Text = “Remember Me”
   * *Trait = Switch Button*
   * *Value = selected or unselected*
@@ -65,7 +66,7 @@ What does this look like on the screen?
   * *Trait = Button*
 8. VO Text = “Security & Privacy”
   * *Trait = Button*
-9. VO Text = “Version <x.y.z>”
+9. VO Text = “Version &lt;x.y.z&gt;”
   * *Trait = Label*
 10. VO Text = “Capital One 360 PIN Sign in”
   * *Trait = Button*
@@ -78,7 +79,7 @@ Time for the nitty gritty! In my journey through the Capital One Mobile for iPho
 
 1. If the content on the screen is static, use Interface Builder to configure accessibility options.
 
-![Accessibility in Interface Builder]({{ site.baseurl }}/assets/posts/ios-accessibility-voiceover-best-practices/interface-builder-accessibility.png)
+	![Accessibility in Interface Builder]({{ site.baseurl }}/assets/posts/ios-accessibility-voiceover-best-practices/interface-builder-accessibility.png)
 
 2. If the content on the page is dynamic, use code to configure accessibility options.
 3. Attributed Strings do not always play nice with the VO screen reader. We found the screen reader will take multiple swipes to read through a string of this type. Sometimes this is an advantage, but in the case of reading out currency amounts it creates a problem. To solve this problem we created an extension on String called `formatCurrencyForVoiceOver`. The following is a set of functions that can be used to create a user-friendly currency string for voice over users.  In order to use simply call `formatCurrencyForVoiceOver` on your string (ex: `myAttributedCurrencyString`.`formatCurrencyForVoiceOver()`).
