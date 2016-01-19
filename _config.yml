@@ -5,7 +5,7 @@ twitter: capitalonelabs
 github:  capitalone
 permalink: /:categories/:title/
 analyticsEnabled: true
-excerpt_separator: "<!--more-->"
+excerpt_separator: <!--more-->
 
 # Build settings
 markdown: redcarpet

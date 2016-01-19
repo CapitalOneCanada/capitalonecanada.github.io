@@ -8,7 +8,7 @@ layout: default
 	<section id="main">
 		<div class="wrap cf">
 			<article>
-				{{ content }}
+				{{ content | remove_first: '&lt;!--more--&gt;'}}
 			</article>
 			<aside class="author">
 				<h2>Posted {{ page.date | date: "%b %-d, %Y" }} by...</h2>

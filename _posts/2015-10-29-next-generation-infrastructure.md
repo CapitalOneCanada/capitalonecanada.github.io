@@ -6,7 +6,9 @@ author: Biba Helou
 tags: [cloud]
 category: blog
 ---
-Infrastructure. It takes too long to build. It's expensive. It's hard to manage. It's inflexible. It gets in the way of innovation. <!--more-->
+Infrastructure. It takes too long to build. It's expensive. It's hard to manage. It's inflexible. It gets in the way of innovation.
+
+<!--more-->
 
 Not here. 
 
