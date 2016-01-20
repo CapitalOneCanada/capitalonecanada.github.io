@@ -82,7 +82,7 @@ Time for the nitty gritty! In my journey through the Capital One Mobile for iPho
 	![Accessibility in Interface Builder]({{ site.baseurl }}/assets/posts/ios-accessibility-voiceover-best-practices/interface-builder-accessibility.png)
 
 2. If the content on the page is dynamic, use code to configure accessibility options.
-3. Attributed Strings do not always play nice with the VO screen reader. We found the screen reader will take multiple swipes to read through a string of this type. Sometimes this is an advantage, but in the case of reading out currency amounts it creates a problem. To solve this problem we created an extension on String called `formatCurrencyForVoiceOver`. The following is a set of functions that can be used to create a user-friendly currency string for voice over users.  In order to use simply call `formatCurrencyForVoiceOver` on your string (ex: `myAttributedCurrencyString`.`formatCurrencyForVoiceOver()`).
+3. Attributed Strings do not always play nice with the VO screen reader. We found the screen reader will take multiple swipes to read through a string of this type. Sometimes this is an advantage, but in the case of reading out currency amounts it creates a problem. To solve this problem we created an extension on String called `formatCurrencyForVoiceOver`. The following is a set of functions that can be used to create a user-friendly currency string for voice over users.  In order to use simply call `formatCurrencyForVoiceOver` on your string (ex: `myAttributedCurrencyString.formatCurrencyForVoiceOver()`).
 
 	```swift
 	import UIKit
