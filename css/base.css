@@ -9,7 +9,7 @@ ul ul,
 ul ol,
 ol ol,
 ol ul 									{ margin: 0; }
-li code									{ margin-bottom: 10px; }
+code									{ margin-bottom: 10px; }
 
 .wrap									{ width:90%; max-width:620px; margin:0 auto; position:relative; }
 
@@ -77,7 +77,7 @@ footer img								{ float:right; width:111px; height:auto; }
 .post #top_header .read_more			{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; }
 
 .post #main								{ padding: 20px 0; }
-.post #main p							{ margin-bottom:20px; }
+.post #main p							{ margin-bottom: 10px; }
 .post #main img							{ width:auto; max-width:100%; height:auto; display:block; margin:0 auto 20px; }
 
 .post article .contributor				{ width:56px; height:56px; display:block; border-radius:50%; overflow:hidden; position:relative; z-index:4; float:left; margin: 0 8px 0 0}
@@ -127,7 +127,7 @@ footer img								{ float:right; width:111px; height:auto; }
 .page #top_header .excerpt				{ font-family:"ProxLight","Helvetica Neue Light","Helvetica Neue",Arial,sans-serif; margin-bottom:16px; }
 .page #top_header .read_more			{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; }
 .page #main								{ padding: 20px 0; }
-.page #main p							{ margin-bottom:20px; }
+.page #main p							{ margin-bottom: 10px; }
 .page #main img							{ width:auto; max-width:100%; height:auto; display:block; margin:0 auto 20px; }
 
 .page aside.tags						{ margin-bottom:40px; }
