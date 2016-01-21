@@ -5,6 +5,9 @@ date: 2016-01-19 15:40:00
 author: Nick Sheehan
 tags: [ios, accessibility, voiceover]
 category: blog
+images:
+  accessible-wireframe: /assets/posts/ios-accessibility-voiceover-best-practices/accessible-wireframe-markup.png
+  interface-builder: /assets/posts/ios-accessibility-voiceover-best-practices/interface-builder-accessibility.png
 ---
 Here at Capital One, we are working hard to write “best in class” financial services applications for all users - including our users with disabilities. Over the past six months, I have had the opportunity to work on the Capital One Mobile for iPhone application. Specifically, I have been heavily involved in our user experience for VoiceOver (VO) users. VO, for the uninitiated, is Apple’s screen reader technology, which can be used by blind and low vision users to get the most from their mobile devices.<!--more--> While a great benefit to the vision impaired community, all users can benefit from the VO experience. For example, I have personally used our VO experience on the Capital One Mobile for iPhone application to pay my credit bill while I was in the car and unable to look at the screen. *To learn more about VoiceOver and accessibility check out Apple’s documentation [here](http:/www.apple.com/accessibility/ios/voiceover/).*
 
@@ -45,7 +48,7 @@ What does this look like on the screen?
 
 ## Example of Accessible Wireframe and Accessibility Acceptance Criteria
 
-![Accessibility in Interface Builder]({{ site.baseurl }}/assets/posts/ios-accessibility-voiceover-best-practices/accessible-wireframe-markup.png)
+[![Accessibility in Interface Builder]({{ site.baseurl | append:page.images.accessible-wireframe }})]({{ site.baseurl | append:page.images.accessible-wireframe }})
 
 1. VO Text = “Capital One”
   * *Trait = Heading*
@@ -79,7 +82,7 @@ Time for the nitty gritty! In my journey through the Capital One Mobile for iPho
 
 1. If the content on the screen is static, use Interface Builder to configure accessibility options.
 
-	![Accessibility in Interface Builder]({{ site.baseurl }}/assets/posts/ios-accessibility-voiceover-best-practices/interface-builder-accessibility.png)
+	[![Accessibility in Interface Builder]({{ site.baseurl | append:page.images.interface-builder }})]({{ site.baseurl | append:page.images.interface-builder }})
 
 2. If the content on the page is dynamic, use code to configure accessibility options.
 3. Attributed Strings do not always play nice with the VO screen reader. We found the screen reader will take multiple swipes to read through a string of this type. Sometimes this is an advantage, but in the case of reading out currency amounts it creates a problem. To solve this problem we created an extension on String called `formatCurrencyForVoiceOver`. The following is a set of functions that can be used to create a user-friendly currency string for voice over users.  In order to use simply call `formatCurrencyForVoiceOver` on your string (ex: `myAttributedCurrencyString.formatCurrencyForVoiceOver()`).

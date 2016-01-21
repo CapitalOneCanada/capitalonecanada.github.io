@@ -5,6 +5,8 @@ date: 2015-12-17 17:06:00
 author: Javed Roshan
 tags: [fast data, go, docker, cassandra]
 category: blog
+images:
+  solution-stack: /assets/posts/fast-data-platform-capital-one/solution-stack.png
 ---
 
 Data and data analysis are two of the founding principles on which Capital One’s success is built. As a digital leader and major player in the finance industry, our applications require speed, accuracy, and the ability to handle, store, and analyze huge amounts of data. After being hired as a Director, Data Services earlier this year, I spent time exploring the current data landscape in our Financial Services (FS) organization with an eye towards process optimization. From this in-depth analysis, I was able to identify key areas in the landscape where data processing could be made more efficient, helping Capital One to deliver on the speed, accuracy, and digital capacity our customer’s require.
@@ -82,7 +84,7 @@ We are using Mesos to manage the cloud infrastructure and Marathon as the schedu
 
 The configs for the services and other run-time information is hosted in Consul. Services self-discover themselves using the configs stored in Consul. They also store their intermediate state for any recovery to restart the processing from the last state.
 
-![Solution Stack]({{ site.baseurl }}/assets/posts/fast-data-platform-capital-one/solution-stack.png)
+[![Solution Stack]({{ site.baseurl | append: page.images.solution-stack }})]({{ site.baseurl | append: page.images.solution-stack }})
 
 ## Cassandra Summit 2015 (Santa Clara, CA)
 

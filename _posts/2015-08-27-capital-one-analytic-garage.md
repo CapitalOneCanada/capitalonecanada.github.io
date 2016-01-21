@@ -5,6 +5,11 @@ date: 2015-08-27 09:50:00
 author: Santosh Bardwaj
 tags: [analytic garage, docker, big data, mesos, hadoop, open source]
 category: blog
+images:
+  evolution: /assets/posts/analytics-garage/analytic-garage-evolution.png
+  environment-snapshot: /assets/posts/analytics-garage/environment-snapshot.png
+  execution-time: /assets/posts/analytics-garage/execution-time.png
+  banner: /assets/posts/analytics-garage/analytic-garage-banner.png
 ---
 
 As part of Capital One's Data strategy, we have embarked on an overall technology transformation to ensure our analytic leadership as we move to the world of Big Data. <!--more--> The key objectives of this strategy include:
@@ -24,11 +29,11 @@ Capital One's Data Engineering team developed the 'Analytic Garage' as part of t
 
 Further, the Docker Analytic Garage was integrated with the rest of the Big Data ecosystem. This enabled the Analytic Garage to be part of the 'satellite region' with high-speed access to the Hadoop Data Lake and ensured it was governed by appropriate Data management controls.
 
-![Dashboard]({{ site.baseurl }}/assets/posts/analytics-garage/analytic-garage-evolution.png)
+[![Dashboard]({{ site.baseurl | append: page.images.evolution }})]({{ site.baseurl | append: page.images.evolution }})
 
 To increase adoption of the Analytic Garage, the engineering team enhanced the capability of this platform by incorporating the functionalities into a self-service portal, which gave the users a UI to self-deploy analytic sandboxes and integration with Kerberos, providing a single sign-on experience for the users. 
 
-![Dashboard]({{ site.baseurl }}/assets/posts/analytics-garage/environment-snapshot.png)
+[![Dashboard]({{ site.baseurl | append: page.images.environment-snapshot }})]({{ site.baseurl | append: page.images.environment-snapshot }})
 
 As we were designing the analytic sandbox image, we had an option of developing individual images for each tool. This approach would have meant we'd have more than 30-40 different container images, resulting in complexity orchestrating model development across multiple containers.  To minimize complexity of adoption, we created a virtual private server by integrating multiple analytic services into a single Docker image, providing our users a familiar data-centric sandbox environment.
 
@@ -38,12 +43,12 @@ Security on the Analytic Garage was setup to audit both changes to the sandbox i
 
 When we proposed the concept of container-based sandboxes, our analysts were skeptical about the performance and scalability of this platform. We had tested running analytics on Virtual Machines (VMs) and found the performance to be inadequate.  Given the performance sensitivity of many of our analytic/statistical models, it was critical that the performance penalty on the Docker Analytic Garage be kept to a minimum. We were very pleased when we saw the performance on the Analytic Garage was virtually on par with bare metal and this gave us the confidence to test intensive models on this platform.
 
-![Dashboard]({{ site.baseurl }}/assets/posts/analytics-garage/execution-time.png)
+[![Dashboard]({{ site.baseurl | append: page.images.execution-time }})]({{ site.baseurl | append: page.images.execution-time }})
 
 ## What's in your wallet?
 
 As the usage of the Analytic Garage expanded, we wanted to extend the functionality of this platform and be available in the back pockets of our users (Literally!!) to test and deploy new tools without having to connect to the server farm.  We leveraged 'Boot2Docker' to create a complete data-analytic stack with a comprehensive list of analytic tools, operational data stores, and Hadoop build, all packaged in a USB drive. The team is putting finishing touches on the 'Analytic Garage in your wallet' and is working toward offering this to others as an open source contribution.  We'll soon share more about when it will be available.
 
-![Dashboard]({{ site.baseurl }}/assets/posts/analytics-garage/analytic-garage-banner.png)
+[![Dashboard]({{ site.baseurl | append: page.images.banner }})]({{ site.baseurl | append: page.images.banner }})
 
 We are working on expanding the use of this platform to a larger group of users and minimizing some of the orchestration complexity by migrating to a Docker only stack. 

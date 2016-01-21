@@ -5,6 +5,9 @@ date: 2015-09-03 16:00:00
 author: Michi Kono
 tags: [swift, ios, mobile, protocal oriented programming]
 category: blog
+images:
+  xcode-autosuggestion: /assets/posts/improved-protocol-oriented-programming-untyped-type-aliases/swift-typealias-generics-code1.png
+  construction-error: /assets/posts/improved-protocol-oriented-programming-untyped-type-aliases/swift-typealias-generics-code2.png 
 ---
 
 *This is part two of a series that explores the topic of using a typealias as a generic inside protocols. Part one can be found [here](http://www.capitalone.io/blog/improved-protocol-oriented-programming-untyped-type-aliases/).*
@@ -104,7 +107,7 @@ typealias M: Material
 
 The `C` is defined in the `FurnitureInspector` and could have been any other name. In fact, Xcode should have autosuggested `M` as you typed in `C`:
 
-![Dashboard]({{ site.baseurl }}/assets/posts/improved-protocol-oriented-programming-untyped-type-aliases/swift-typealias-generics-code1.png)
+[![Xcode Autosuggestion]({{ site.baseurl | append: page.images.xcode-autosuggestion }})]({{ site.baseurl | append: page.images.xcode-autosuggestion }})
 
 ## Constraining Generics using WHERE
 
@@ -188,7 +191,7 @@ The above code does NOT work, but we’ll fix that. It’s actually very close t
 
 The above code breaks because C does not have any initializers according to Xcode.
 
-![Dashboard]({{ site.baseurl }}/assets/posts/improved-protocol-oriented-programming-untyped-type-aliases/swift-typealias-generics-code2.png)
+[![Construction Error]({{ site.baseurl | append: page.images.construction-error }})]({{ site.baseurl | append: page.images.construction-error }})
 
 In order to fix the above code, we must add it into the protocol:
 

@@ -5,6 +5,10 @@ date: 2015-12-11 17:00:00
 author: Lorinda Brandon
 tags: [API]
 category: blog
+images:
+  what-problem: /assets/posts/inside-out-taking-api-public/WhatProblem.jpeg
+  come-in: /assets/posts/inside-out-taking-api-public/ComeIn.jpeg
+
 ---
 
 API professionals talk a lot about concepts like “Design First” and “API First”, all of which are great platitudes if you’re starting your API from scratch. However, most of us don’t work for brand new companies with zero APIs in our stack. It’s much more common to start your API program journey with a bunch of APIs built for internal use in developer-led projects that weren’t initially designed for close public scrutiny.
@@ -39,7 +43,7 @@ How does this relate to making presentable APIs? When you’re told to build an 
 
 Part of answering your API’s *Why* is understanding your customers’ *Why*. API customers are using your tools to drive their own product development. Your API is a building block, to best serve their needs you have to understand not only what they’re building, but also who they are, and what they’re looking for from your API.
 
-![What Problem?]({{ site.baseurl }}/assets/posts/inside-out-taking-api-public/WhatProblem.jpeg)
+[![What Problem?]({{ site.baseurl | append: page.images.what-problem }})]({{ site.baseurl | append: page.images.what-problem }})
 
 For example, API professionals talk a lot about the Developer Experience  - a very important topic in our industry. But *why* is it important? The Developer Experience begins with, you guessed it, the developer. But not all developers are from the same tribe and to properly target your API you’ll need to know for whom you’re designing. 
 
@@ -83,7 +87,7 @@ This is also where you should make your sandbox plans. The best way to keep your
 
 I was recently talking to a group of students at the [Defrag conference](http://defragcon.com) in Colorado. They run a fairly successful hackathon group called [HackCU](https://www.facebook.com/letsHackCU/), but were struggling with the business focuses of the post-hackathon world – *you built this thing, now what do you do with it?*
 
-![Come In]({{ site.baseurl }}/assets/posts/inside-out-taking-api-public/ComeIn.jpeg)
+[![Come In]({{ site.baseurl | append: page.images.come-in }})]({{ site.baseurl | append: page.images.come-in }})
 
 This is a common problem in the API space too – you have a mandate to externalize your APIs so you clean them up, make them pretty, follow all the advice you’ve heard about presentability and best practices and put it out there. You’re so proud...
 

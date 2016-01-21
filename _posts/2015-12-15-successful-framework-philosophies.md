@@ -5,6 +5,10 @@ date: 2015-12-15 16:05:00
 author: Qiang Xue
 tags: [frameworks]
 category: blog
+images:
+  framework-app-lib: /assets/posts/successful-framework-philosophies/framework-app-lib.png
+  sinatra-pipeline: /assets/posts/successful-framework-philosophies/sinatra-pipeline.png
+  sails-mvc: /assets/posts/successful-framework-philosophies/sails-mvc.png
 ---
 
 During the past decade we’ve seen many software frameworks pop up. Frameworks such as [Spring](http://spring.io/) and [Ruby on Rails](http://rubyonrails.org) have become so successful that mastering them means opening the door to numerous job opportunities. However, for every framework that succeeds, there are even more that fade away without being noticed by most developers. [Wikipedia](https://en.wikipedia.org/wiki/Software_framework) listed 67 web frameworks on January 1, 2008. As of today however, more than two thirds of them have either fallen off the list or haven’t been updated for over three years. As the creator of the [Yii framework](http://www.yiiframework.com), I’ve spent a lot of time investigating various frameworks and understanding why some have succeeded and others failed. In this post, I will describe some of my findings on the philosophies that have shaped those successful frameworks.
@@ -19,7 +23,7 @@ To build a successful framework it’s important to understand what a framework 
 
 A defining characteristic of a framework is the so-called [inversion of control](http://martinfowler.com/bliki/InversionOfControl.html). A framework usually plays the role of the main program in orchestrating and calling application code. The flow of control is inverted here – it calls me rather than me calling the framework. The diagram below illustrates the relationships between frameworks, libraries, and applications. Note that frameworks often provide ready-to-use features in terms of libraries to help developers build applications even faster.
 
-![Framework, Library and App Relationship]({{ site.baseurl }}/assets/posts/successful-framework-philosophies/framework-app-lib.png)
+[![Framework, Library and App Relationship]({{ site.baseurl | append: page.images.framework-app-lib }})]({{ site.baseurl | append: page.images.framework-app-lib }})
 
 The foremost reason that frameworks are useful for developers is how they improve productivity and help improve code quality. For example, modern frameworks (e.g. [Play](https://www.playframework.com/), [django](https://www.djangoproject.com/)), often provide code generation tools or boilerplates to help jump-start new projects immediately. Also, well-designed frameworks usually have baked-in security measures that help prevent developers from committing typical security flaws. 
 
@@ -75,7 +79,7 @@ Here the term monolithic refers to frameworks built as a single unit with a tigh
 
 Modern frameworks tend to be loosely coupled in their architecture. Full-stack frameworks (e.g. [Spring](http://spring.io/)) have evolved into frameworks composed of loosely coupled components that can be used independently or swapped with third-party ones. Specialized frameworks are built by explicit contracts to support better [interoperability](https://en.wikipedia.org/wiki/Interoperability), which makes applications less dependent on specific frameworks. For example, a very popular flavor of web routing framework are the so-called “Sinatra-type frameworks”, such as [Sinatra](http://www.sinatrarb.com/), [Express.js](http://expressjs.com/), and [Martini](http://martini.codegangsta.io/). These frameworks use the following middleware pipeline architecture to support request routing and handling in web applications. The frameworks themselves are very small, but the open architecture allows them to be enriched without limit by all kinds of middleware components.
 
-![Sinatra Pipeline]({{ site.baseurl }}/assets/posts/successful-framework-philosophies/sinatra-pipeline.png)
+[![Sinatra Pipeline]({{ site.baseurl | append: page.images.sinatra-pipeline }})]({{ site.baseurl | append: page.images.sinatra-pipeline }})
 
 ### Be Consistent
 
@@ -131,7 +135,7 @@ Convention over configuration was first popularized in the [Ruby on Rails](http:
 
 Many MVC frameworks use convention over configuration to route requests to particular pieces of code. As shown in the diagram below, the [Sails.js framework](http://sailsjs.org/) uses a convention where a request for the `/we/say/hi` URL will be routed to the `hi` action of the `SayController` controller class located under the `controllers/we` directory. By following this convention, developers no longer need to define the routing rules for controller actions. However, should a developer want to use a different routing rule, they can still do so by explicitly binding a route to a controller action.
 
-![Sails.js Request Routing]({{ site.baseurl }}/assets/posts/successful-framework-philosophies/sails-mvc.png)
+[![Sails.js Request Routing]({{ site.baseurl | append: page.images.sails-mvc }})]({{ site.baseurl | append: page.images.sails-mvc }})
 
 Convention over configuration helps reduce the amount of code that needs to be written. However, it can come at the cost of introducing additional rules developers need to follow. Also, it also tends to conflict with the "explicit over implicit" philosophy discussed earlier. In fact, while earlier versions of the Spring framework used a similar routing convention to Sails.js, Spring now requires developers to explicitly specify the mappings via annotations. Therefore, judicious judgment should be taken when deciding whether to introduce new rules to support convention over configuration.
 

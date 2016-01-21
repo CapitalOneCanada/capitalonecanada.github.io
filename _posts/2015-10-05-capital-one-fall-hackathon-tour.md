@@ -5,6 +5,8 @@ date: 2015-10-05 14:15:00
 author: Jason Valentino
 tags: [hackathons]
 category: blog
+images:
+  bitcamp: /assets/posts/fall-hackathon-tour/capitalone-bitcamp-2015.jpeg
 ---
 I love Fall... leafs change color, our oppressive DC humidity becomes tolerable and best of all: Hackathon season kicks back up.
 
@@ -14,7 +16,7 @@ Each year, approximately 50,000 students participate in a variety of college hac
 
 We’re currently planning to send the team out to 18 of our favorite events.  If you’re a student attending one of the hackathons below be sure to come by the Capital One booth to meet the team, get some mentoring help with your project, or better yet give our API "Nessie" a spin (as seen on [DevPost.com]( http://studenthackers.devpost.com/) as one of their top trending API’s and Technologies seen on campus).
 
-![Capital One Mentor team @ bitcamp 2015]({{ site.baseurl }}/assets/posts/fall-hackathon-tour/capitalone-bitcamp-2015.jpeg)
+[![Capital One Mentor team @ bitcamp 2015]({{ site.baseurl | append: page.images.bitcamp }})]({{ site.baseurl | append: page.images.bitcamp }})
 
 ### Tour Dates:
 | | |

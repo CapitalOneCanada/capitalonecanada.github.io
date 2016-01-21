@@ -5,6 +5,8 @@ date: 2015-10-29 11:15:00
 author: Biba Helou
 tags: [cloud]
 category: blog
+images:
+  aws-marketplace: /assets/posts/next-generation-infrastructure/aws-marketplace.jpeg
 ---
 Infrastructure. It takes too long to build. It's expensive. It's hard to manage. It's inflexible. It gets in the way of innovation.
 
@@ -16,7 +18,7 @@ Here at Capital One, you won’t find a traditional bank IT department, and you 
 
 My team is charged with harnessing new technology so that our infrastructure can be an incubator for innovation, an accelerator to bring new capabilities to our customers, a trailblazer creating system that allow us to nimbly adapt to demand, and armor protecting our systems and data. Cloud is central to how we are doing that. Attending conferences like, [AWS re:Invent](https://reinvent.awsevents.com/), which took place in early October, are a chance for me to find out how others are using AWS and the Cloud to fuel innovation, raise the bar on quality, lower cost, and raise performance. It’s also a chance to share how Capital One is building a robust infrastructure, enabling self-service access, and hiring the best talent in the field.
 
-![AWS Marketplace]({{ site.baseurl }}/assets/posts/next-generation-infrastructure/aws-marketplace.jpeg)
+[![AWS Marketplace]({{ site.baseurl | append: page.images.aws-marketplace }})]({{ site.baseurl | append: page.images.aws-marketplace }})
 
 ## Fostering a Robust Infrastructure
 To keep our digital servicing channels "always on" for our customers, we need plenty of capacity that can expand and grow in tandem with our needs, as well as provide resiliency for when individual components fail.  Over the years, we’ve weighed the tradeoffs of carrying backup components and consistently lean towards having extra equipment provisioned ahead of any incident so that outages are eliminated or minimized. The elasticity and availability of the Cloud is a game changer for us. No longer will we have to build and maintain a stadium for Super Bowl Sunday. Or put in the language of our business, no longer will we have to build a data center for Cyber Monday. 
