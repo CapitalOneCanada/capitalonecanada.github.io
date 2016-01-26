@@ -62,11 +62,13 @@ h2										{ font-family:"ProxLight","Helvetica Neue Light","Helvetica Neue",Ar
 #post_list article .author p strong		{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; font-size:20px; line-height:20px; }
 #post_list article .author p span		{ display:block; font-size:11px; line-height:11px; text-transform:uppercase; letter-spacing:1px; color:#67747F; }
 
+#post_list div .excerpt_hidden			{ display:none; }
+
 footer									{ width:100%; padding:20px 0 36px; background:#F2F2F3; }
 footer p								{ float:left; width:75%; font-size:14px; line-height:20px; color:#7A8792; }
 footer img								{ float:right; width:111px; height:auto; }
 
-#mobile_nav								{ display:none }
+#mobile_nav								{ display:none; }
 
 .post #top_header						{ text-align:center; }
 .post #top_header .details				{ font-size:11px; line-height:20px; text-transform:uppercase; letter-spacing:1px; color:#fff; }
