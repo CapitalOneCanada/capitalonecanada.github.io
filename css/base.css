@@ -65,8 +65,9 @@ h2										{ font-family:"ProxLight","Helvetica Neue Light","Helvetica Neue",Ar
 #post_list div .excerpt_hidden			{ display:none; }
 
 footer									{ width:100%; padding:20px 0 36px; background:#F2F2F3; }
-footer p								{ float:left; width:75%; font-size:14px; line-height:20px; color:#7A8792; }
-footer img								{ float:right; width:111px; height:auto; }
+footer p								{ float:left; width:70%; font-size:14px; line-height:20px; color:#7A8792; }
+footer links                            { float:right; width:auto; font-size:14px; line-height:20px; }
+footer img								{ float:right; width:111px; height:auto; margin-bottom:10px; margin-right:54px}
 
 #mobile_nav								{ display:none; }
 
