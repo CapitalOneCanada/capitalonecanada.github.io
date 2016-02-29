@@ -1,8 +1,8 @@
 # Site settings
-title: Capital One Engineering
-url: "http://capitalone.io"
-twitter: capitalonelabs
-github:  capitalone
+title: Capital One Canada Engineering
+url: "http://tech.capitalone.ca/"
+twitter: capitalonecanada
+github:  capitalonecanada
 permalink: /:categories/:title/
 analyticsEnabled: true
 excerpt_separator: <!--more-->
