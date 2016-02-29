@@ -209,7 +209,8 @@ table tr:last-child 					{ border: 0px; }
 	
 	.post .button.progressive			{ width:100%; }
 	
-	footer p							{ float:none; width:100%; }
+	footer p							{ float:none; width:100%; margin-bottom:10px; }
+    footer links                        { float:none; }
 	footer img							{ float:none; margin-bottom:10px; }
 	
 	#mobile_nav							{ display:none; position:fixed; top:0; left:0; bottom:0; right:0; background:rgba(52,70,85,0.97); z-index:999; transition:all ease-out 200ms; }
