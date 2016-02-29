@@ -13,9 +13,9 @@ code									{ margin-bottom: 10px; }
 
 .wrap									{ width:90%; max-width:620px; margin:0 auto; position:relative; }
 
-#top_header								{ width:100%; background:#008bc1 url(../assets/img/hero_bg.jpg) center top no-repeat; background-size:cover; position:relative; padding-bottom:70px; }
-#top_header .content					{ padding: 20px; }
-#top_header .logo						{ margin:0 auto; display:block; width:126px; height:auto; }
+#top_header								{ width:100%; height:204px; background:#008bc1 url(../assets/img/hero_bg.jpg) center top no-repeat; background-size:cover; position:relative; padding-bottom:70px; }
+#top_header .content					{ padding: 35px 0; }
+#top_header .logo						{ margin:0 auto; display:block; width:470px; height:auto; }
 
 #main_nav								{ position:absolute; bottom:0; left:0; width:100%; background:rgba(218,209,214,1); }
 #main_nav a								{ display:block; float:left; font-size:18px; line-height:70px; color:#2c3a48; padding:0 15px; transition:all ease-out 200ms; }
@@ -184,9 +184,6 @@ table tr:last-child 					{ border: 0px; }
 
 @media screen and (max-width:640px) {
 	body								{ font-size:18px; line-height:20px; }
-	
-	#top_header .content				{ padding: 35px 20px; }
-	#top_header .logo					{ width:93px; }
 	
 	#main_nav a							{ display:none; }
 	#main_nav a.menu					{ display:block; float:left; margin-left:-15px; }
