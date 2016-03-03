@@ -25,7 +25,9 @@ layout: default
             </div>
           </header> 
           <p class="excerpt">{{ post.excerpt }}</p>
-          <a href="{{ post.url | prepend: site.baseurl }}" class="read_more">Read More</a>
+          {% if post.content contains '&lt;!--more--&gt;' %}
+            <a href="{{ post.url | prepend: site.baseurl }}" class="read_more">Read More</a>
+          {% endif %}
         </article>
       {% endfor %}
       
