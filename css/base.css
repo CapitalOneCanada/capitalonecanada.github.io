@@ -108,11 +108,11 @@ footer img								{ float:right; width:111px; height:auto; margin-bottom:10px; m
 .post .author .lefty					{ width:55%; float:left; }
 .post .author .pic						{ width:56px; height:56px; display:block; border-radius:50%; overflow:hidden; position:relative; z-index:4; float:left; }
 .post .author .pic img					{ width:100%; height:auto; }
-.post .author p							{ display:block; padding-top:12px; position:relative; float:left; margin-left:15px; }
+.post .author p							{ display:block; position:relative; float:left; margin-left:15px; }
 .post .author p strong					{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; font-size:20px; line-height:20px; }
 .post .author p span					{ display:block; font-size:11px; line-height:11px; text-transform:uppercase; letter-spacing:1px; color:#67747F; }
 
-.post .author .righty					{ width:45%; float:right; text-align:right; padding-top:15px; }
+.post .author .righty					{ width:45%; float:right; text-align:right; }
 .post .author .righty li				{ display:inline-block; }
 .post .author .righty li a				{ margin-left:10px; font-size:11px; line-height:14px; text-transform:uppercase; letter-spacing:1px; }
 .post .author .righty li a:hover		{ text-decoration:none; }
