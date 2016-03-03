@@ -13,7 +13,7 @@ code									{ margin-bottom: 10px; }
 
 .wrap									{ width:90%; max-width:620px; margin:0 auto; position:relative; }
 
-#top_header								{ width:100%; /*height:204px;*/ background:#003362 url(../assets/img/hero_bg.jpg) center top no-repeat; background-size:cover; position:relative; padding-bottom:70px; }
+#top_header								{ width:100%; /*height:204px;*/ background:#003362 url(../assets/img/hero_bg.jpg) center top no-repeat; background-size:cover; position:relative; padding-bottom:45px; }
 #top_header .content					{ padding: 20px; /*35px 0;*/ }
 #top_header .logo						{ margin:0 auto; display:block; width:460px; height:auto; }
 #top_header .logo_sml img				{ margin-bottom: 10px; width:460px; }
@@ -91,7 +91,7 @@ footer img								{ float:right; width:111px; height:auto; margin-bottom:10px; m
 .post aside.tags						{ margin-bottom:40px; }
 .post aside:last-child					{ margin-bottom:20px; }
 .post em								{ font-style: italic; }
-.post h1								{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; color:#fff; font-size:42px; line-height:48px; margin-top: -10px }
+.post h1								{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; color:#fff; font-size:30px; line-height:42px; margin-top: -10px }
 .post h2								{ font-family:"ProxSemibold","Helvetica Neue",Arial,sans-serif; font-size:32px; font-weight: bold; line-height:32px; color:#022E46; border-bottom:1px solid #c2c0c5; margin-bottom:20px; }
 .post h3								{ font-size: 28px; font-weight: bold; line-height: 30px; }
 .post ul, ol 							{ margin-bottom: 20px; }
@@ -194,7 +194,7 @@ table tr:last-child 					{ border: 0px; }
 	#main_nav a.button					{ display:block; }
 
 	h1									{ font-size:28px; line-height:36px; }
-        .post h1							{ font-size:28px; line-height:36px; /*margin-top: 0; margin-bottom:20px;*/ }
+        .post h1							{ font-size:28px; line-height:36px; }
 	.post h3							{ padding-bottom: 8px; }
 	h2									{ font-size:16px; line-height:20px; }
 	
@@ -202,15 +202,11 @@ table tr:last-child 					{ border: 0px; }
 	#post_list article h3				{ font-size:24px; line-height:28px; }
 	
 
-#top_header .logo                       { width:387px; }
 #top_header .logo_sml img				{ margin:0px auto 20px; display:block; width:300px; height:auto; }
-/*	.post #top_header .logo_sml img		{ display:none; }*/
-/*    .post #top_header .content          { padding 35px 35px; }*/
 	.post .author .lefty,
 	.post .author .righty				{ width:100%; float:none; text-align:center; padding-top:5px; }
 	.post .author .pic					{ float:none; margin:0 auto; }
 	.post .author p						{ margin-left:0; float:none; }
-	/*.post article .contributor			{ width: 100%; text-align: center;}*/
 	
 	.post .button.progressive			{ width:100%; }
 	
@@ -242,6 +238,8 @@ table tr:last-child 					{ border: 0px; }
 }
 
 @media screen and (max-width:400px) {
+    #top_header .logo                       { width:280px; }
+    #top_header .logo_sml img               { width:280px; }
 	.post #top_header .details time			{ display:block; }
 	.post #top_header .details .tags		{ padding-left:0; display:block; }
 }
