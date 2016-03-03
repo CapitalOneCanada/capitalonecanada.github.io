@@ -43,7 +43,7 @@ h2										{ font-family:"ProxLight","Helvetica Neue Light","Helvetica Neue",Ar
 #post_list .sorting input				{ float:right; width:0; transition:all ease-out 200ms; border:none; outline:none; font-size:20px; line-height:32px; margin-bottom:-2px; background:none; opacity:0; }
 #post_list .sorting input.show			{ width:180px; padding-left:10px; opacity:1; }
 
-#post_list article						{ padding-top:40px; padding-bottom: 24px; position:relative; border-bottom:1px solid #c2c0c5; }
+#post_list article						{ padding-top:40px; position:relative; border-bottom:1px solid #c2c0c5; }
 #post_list article:last-child			{ border-bottom:none; }
 #post_list article h3					{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; font-size:28px; line-height:32px; margin-bottom:13px; }
 #post_list article h3 a					{ color:#0F3950; }
@@ -54,7 +54,7 @@ h2										{ font-family:"ProxLight","Helvetica Neue Light","Helvetica Neue",Ar
 #post_list article .details .icon		{ padding:1px 5px 1px 1px; position:relative; top:1px; font-weight:bold; }
 #post_list article .details .tags		{ display:inline-block; }
 #post_list article .excerpt				{ font-family:"ProxLight","Helvetica Neue Light","Helvetica Neue",Arial,sans-serif; margin-bottom:16px; }
-#post_list article .read_more			{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; }
+#post_list article .read_more			{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; display:block; padding-bottom:24px; }
 
 #post_list article .author				{ margin-bottom:20px; transition:all ease-out 200ms; }
 #post_list article .author .pic			{ width:56px; height:56px; display:block; border-radius:50%; overflow:hidden; position:relative; z-index:4; float:left; }
