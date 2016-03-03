@@ -1,0 +1,31 @@
+# Site settings
+title: Capital One Canada Engineering
+url: "http://tech.capitalone.ca/"
+twitter: capitalonecanada
+github:  capitalonecanada
+permalink: /:categories/:title/
+analyticsEnabled: true
+excerpt_separator: <!--more-->
+
+# Build settings
+markdown: redcarpet
+redcarpet:
+ extensions: ["no_intra_emphasis", "fenced_code_blocks", "disable_indented_code_blocks", "autolink", "strikethrough", "highlight", "superscript", "tables", "footnotes", "with_toc_data"]
+highlighter: pygments
+exclude: ['utils']
+
+safe: false
+gems:
+  - jekyll-redirect-from
+
+collections:
+  authors:
+  projects:
+
+defaults:
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: posts   # limit to posts
+    values:
+      is_post: true # automatically set is_post=true for all posts
