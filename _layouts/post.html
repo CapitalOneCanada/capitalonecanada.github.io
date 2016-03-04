@@ -11,7 +11,7 @@ layout: default
 				{{ content | remove_first: '&lt;!--more--&gt;'}}
 			</article>
 			<aside class="author">
-				<h2>Posted {{ page.date | date: "%b %-d, %Y" }} by...</h2>
+				<h2>Posted {{ page.date | date: "%B %-d, %Y" }} by...</h2>
 				<div class="lefty cf">
 					<div class="pic"><img src="{{ author.image | prepend: site.baseurl }}" alt="{{ author.name }}"></div>
 					<p class="name"><strong>{{ author.name }}</strong><span>{{ author.job_title }}</span></p>
