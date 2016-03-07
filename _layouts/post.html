@@ -9,7 +9,7 @@ layout: default
 		<div class="wrap cf">
             <h1>{{ page.title }}</h1>
             <div class="details">
-                <time><span class="icon icon-clock"></span>{{ page.date | date: "%b %-d, %Y" }}</time>
+                <time><span class="icon icon-clock"></span>{{ page.date | date: "%B %-d, %Y" }}</time>
                 <p class="tags"><span class="icon icon-tag"></span>
                 {% for tag in page.tags %}
                 {{ tag }}{% unless forloop.last %}, {% endunless %}
@@ -20,7 +20,7 @@ layout: default
 				{{ content | remove_first: '&lt;!--more--&gt;'}}
 			</article>
 			<aside class="author">
-				<h2>Posted {{ page.date | date: "%b %-d, %Y" }} by...</h2>
+				<h2>Posted {{ page.date | date: "%B %-d, %Y" }} by...</h2>
 				<div class="lefty cf">
 					<div class="pic"><img src="{{ author.image | prepend: site.baseurl }}" alt="{{ author.name }}"></div>
 					<p class="name"><strong>{{ author.name }}</strong><span>{{ author.job_title }}</span></p>
