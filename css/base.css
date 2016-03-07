@@ -13,8 +13,8 @@ code									{ margin-bottom: 10px; }
 
 .wrap									{ width:90%; max-width:620px; margin:0 auto; position:relative; }
 
-#top_header								{ width:100%; /*height:204px;*/ background:#003362 url(../assets/img/hero_bg.jpg) center top no-repeat; background-size:cover; position:relative; padding-bottom:45px; }
-#top_header .content					{ padding: 20px; /*35px 0;*/ }
+#top_header								{ height:205px; /*height:204px;*/ background:#003362 url(../assets/img/hero_bg.jpg) center top no-repeat; background-size:cover; position:relative; padding-bottom:45px; }
+#top_header .content					{ padding: 20px; padding-top: 60px; }
 #top_header .logo						{ margin:0 auto; display:block; width:90%; max-width: 620px; height:auto; }
 #top_header .logo_sml img				{ margin:0 auto; display:block; width:90%; max-width: 620px; height:auto; }
 
@@ -189,7 +189,7 @@ table tr:last-child 					{ border: 0px; }
 @media screen and (max-width:640px) {
 	body								{ font-size:18px; }
 
-	#top_header .content				{ padding: 20px; }
+	#top_header .content				{ padding: 20px; padding-top: 60px; }
 	
 	#main_nav a							{ display:none; }
 	#main_nav a.menu					{ display:block; float:left; margin-left:-15px; }
@@ -204,7 +204,7 @@ table tr:last-child 					{ border: 0px; }
 	#post_list article h3				{ font-size:24px; line-height:28px; }
 	
 
-#top_header .logo_sml img				{ margin:0px auto 20px; display:block; width:300px; height:auto; }
+#top_header .logo_sml img				{ margin:0 auto; display:block; width:90%; max-width: 620px; height:auto; }
 	.post .author .lefty,
 	.post .author .righty				{ width:100%; float:none; text-align:center; padding-top:5px; }
 	.post .author .pic					{ float:none; margin:0 auto; }
