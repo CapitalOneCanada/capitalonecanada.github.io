@@ -16,7 +16,7 @@ code									{ margin-bottom: 10px; }
 #top_header								{ width:100%; /*height:204px;*/ background:#003362 url(../assets/img/hero_bg.jpg) center top no-repeat; background-size:cover; position:relative; padding-bottom:45px; }
 #top_header .content					{ padding: 20px; /*35px 0;*/ }
 #top_header .logo						{ margin:0 auto; display:block; width:90%; max-width: 620px; height:auto; }
-#top_header .logo_sml img				{ margin-bottom: 10px; width:460px; }
+#top_header .logo_sml img				{ margin:0 auto; display:block; width:90%; max-width: 620px; height:auto; }
 
 #main_nav								{ position:absolute; bottom:0; left:0; width:100%; background:rgba(218,209,214,1); }
 #main_nav a								{ display:block; float:left; font-size:18px; line-height:45px; color:#2c3a48; padding:0 15px; transition:all ease-out 200ms; }
@@ -51,7 +51,6 @@ h2										{ font-family:"ProxLight","Helvetica Neue Light","Helvetica Neue",Ar
 #post_list article img					{ width:100%; height:auto; display:block; margin-bottom:24px; }
 #post_list article .details				{ font-size:11px; line-height:20px; text-transform:uppercase; letter-spacing:1px; color:#67747F; margin-bottom:13px; }
 #post_list article .details time		{ display:inline-block; padding-right: 25px; }
-#post_list article .details .icon		{ padding:1px 5px 1px 1px; position:relative; top:1px; font-weight:bold; }
 #post_list article .details .tags		{ display:inline-block; }
 #post_list article .excerpt				{ font-family:"ProxLight","Helvetica Neue Light","Helvetica Neue",Arial,sans-serif; margin-bottom:16px; }
 #post_list article .read_more			{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; display:block; padding-bottom:24px; }
@@ -64,6 +63,8 @@ h2										{ font-family:"ProxLight","Helvetica Neue Light","Helvetica Neue",Ar
 #post_list article .author p span		{ display:block; font-size:11px; line-height:11px; text-transform:uppercase; letter-spacing:1px; color:#67747F; }
 
 #post_list div .excerpt_hidden			{ display:none; }
+
+.details .icon                          { padding:1px 5px 1px 1px; position:relative; top:1px; font-weight:bold; }
 
 footer									{ width:100%; padding:20px 0 36px; background:#F2F2F3; }
 footer p								{ float:left; width:70%; font-size:14px; line-height:20px; color:#7A8792; }
@@ -82,7 +83,8 @@ footer img								{ float:right; width:111px; height:auto; margin-bottom:10px; m
 /*.post #top_header .content              { padding: 0 0; }*/
 
 .post #main								{ padding: 20px 0; }
-.post #main p							{ margin-bottom: 10px; }
+.post #main .details                    { font-size: 11px; line-height: 20px; text-transform: uppercase; letter-spacing: 1px; color: #67747F; margin-bottom: 13px; }
+.post #main .details p					{ display:inline-block; padding-left:25px}
 .post #main img							{ width:auto; max-width:100%; height:auto; display:block; margin:0 auto 20px; }
 
 .post article .contributor				{ width:56px; height:56px; display:block; border-radius:50%; overflow:hidden; position:relative; z-index:4; float:left; margin: 0 8px 0 0}
@@ -91,7 +93,7 @@ footer img								{ float:right; width:111px; height:auto; margin-bottom:10px; m
 .post aside.tags						{ margin-bottom:40px; }
 .post aside:last-child					{ margin-bottom:20px; }
 .post em								{ font-style: italic; }
-.post h1								{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; color:#fff; font-size:30px; line-height:42px; margin-top: -10px }
+.post h1								{ font-family: "ProxSemibold", "Helvetica Neue Bold", "Helvetica Neue", Arial, sans-serif; font-size: 28px; line-height: 32px; margin-bottom: 13px; padding-top:20px; }
 .post h2								{ font-family:"ProxSemibold","Helvetica Neue",Arial,sans-serif; font-size:32px; font-weight: bold; line-height:32px; color:#022E46; border-bottom:1px solid #c2c0c5; margin-bottom:20px; }
 .post h3								{ font-size: 28px; font-weight: bold; line-height: 30px; }
 .post ul, ol 							{ margin-bottom: 20px; }
