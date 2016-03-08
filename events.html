@@ -1,0 +1,45 @@
+---
+layout: page
+permalink: /events/
+title: Events
+---
+
+<section id="oss">
+    <section id="intro">
+        We’ve got lots of opportunities for students to meet our recruiters and learn more about our company and job opportunities in person. Check out our schedule below to find out when we’ll be on your campus recruiting or holding a case competition!
+    </section>
+    <section id="events">
+        <h2>Upcoming Events</h2>
+        <div class="container">
+            {% assign events = site.events | sort: 'start_date' %}
+            {% assign curr_date = site.time | date: '%s' %}
+            {% for event in events %}
+            {% assign end_date = event.end_date | date: '%s' %}
+            {% if curr_date <= end_date %}
+                <article>
+                <header>
+                    <h3>{{ event.title }}</h3>
+                </header>
+                <table>
+                    <tr>
+                        <td>Start Date:</td>
+                        <td>{{ event.start_date | date: "%B %-d, %Y at %l:%M %p" }}</td>
+                    </tr>
+                    <tr>
+                        <td>End Date:</td>
+                        <td>{{ event.end_date | date: "%B %-d, %Y at %l:%M %p" }}</td>
+                    </tr>
+                    <tr>
+                        <td>Location:</td>
+                        <td>{{ event.location }} </td>
+                    </tr>
+                </table>
+                <p class="excerpt">{{ event.content }}</p>
+                <a href="{{ event.source_url }}" class="button regressive">View on {{ event.source }}</a>
+                </article>
+                {% endif %}
+                {% endfor %}
+                </div>
+    </section>
+    
+</section>

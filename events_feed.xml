@@ -1,0 +1,42 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title | xml_escape }} Events</title>
+    <description>{{ site.description | xml_escape }}</description>
+    <link>{{ site.url }}{{ site.baseurl }}/</link>
+    <atom:link href="{{ "/events_feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <generator>Jekyll v{{ jekyll.version }}</generator>
+    {% assign events = site.events | sort: 'start_date' %}
+    {% assign curr_date = site.time | date: '%s' %}
+    {% for event in events %}
+        {% assign end_date = event.end_date | date: '%s' %}
+        {% if curr_date <= end_date %}
+          <item>
+            <title>{{ event.title | xml_escape }}</title>
+            <description>{{ event.content | xml_escape }}</description>
+            <startDate>{{ event.start_date | date_to_rfc822 }}</startDate>
+            <endDate>{{ event.end_date | date_to_rfc822 }}</endDate>
+            <location>{{ event.xmlLocation }}</location>
+            {% if event.source_url == blank %}
+                <link>{{ events | prepend: site.baseurl | prepend: site.url }}</link>
+                <guid isPermaLink="true">{{ events | prepend: site.baseurl | prepend: site.url }}</guid>
+            {% else %}
+                <link>{{ event.source_url }}</link>
+                <guid isPermaLink="true">{{ event.source_url }}</guid>
+            {% endif %}
+            {% for tag in event.tags %}
+            <tag>{{ tag | xml_escape }}</tag>
+            {% endfor %}
+            {% for cat in event.categories %}
+            <category>{{ cat | xml_escape }}</category>
+            {% endfor %}
+          </item>
+        {% endif %}
+    {% endfor %}
+  </channel>
+</rss>
