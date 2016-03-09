@@ -4,7 +4,7 @@ title: "Beyond Products: Creating Value, Differentiation, and Impact through Ser
 start_date: 2016-03-24 18:00:00 EST
 end_date: 2016-03-24 20:00:00 EST
 
-xmlLocation: "MaRS Discovery District, 101 College St, Toronto, ON M5G 1L7, Canada"
+xmlLocation: "MaRS Discovery District,\n 101 College St,\n Toronto, ON M5G 1L7, Canada"
 location: "MaRS Discovery District <br>101 College St<br>Toronto, ON M5G 1L7, Canada"
 
 source: "EventBrite"
