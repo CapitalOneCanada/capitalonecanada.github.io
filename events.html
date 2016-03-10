@@ -1,0 +1,38 @@
+---
+layout: page
+permalink: /events/
+title:
+---
+
+<section id="oss">
+    <section id="events">
+        <h2>Upcoming Events</h2>
+        <div class="container">
+            {% assign events = site.events | sort: 'start_date' %}
+            {% assign curr_date = site.time | date: '%s' %}
+            {% for event in events %}
+            {% assign end_date = event.end_date | date: '%s' %}
+            {% if curr_date <= end_date %}
+                <article>
+                <header>
+                    <h3>{{ event.title }}</h3>
+                </header>
+                <table>
+                    <tr>
+                        <td>When:</td>
+                        <td>{{ event.start_date | date: "%A, %B %-d, %Y from %-I:%M %p" }} to {{event.end_date | date: "%-I:%M %p"}}</td>
+                    </tr>
+                    <tr>
+                        <td>Where:</td>
+                        <td>{{ event.location }} </td>
+                    </tr>
+                </table>
+                <p class="excerpt">{{ event.content }}</p>
+                <a href="{{ event.source_url }}" class="button regressive" target="_blank">Get Tickets</a>
+                </article>
+                {% endif %}
+                {% endfor %}
+                </div>
+    </section>
+    
+</section>
