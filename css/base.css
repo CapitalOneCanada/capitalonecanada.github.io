@@ -12,6 +12,7 @@ ol ul 									{ margin: 0; }
 code									{ margin-bottom: 10px; }
 
 .wrap									{ width:90%; max-width:620px; margin:0 auto; position:relative; }
+footer .wrap.cf				{ max-width: 75%; min-width: 620px; }
 
 #top_header								{ height:205px; /*height:204px;*/ background:#003362 url(../assets/img/hero_bg.jpg) center top no-repeat; background-size:cover; position:relative; padding-bottom:45px; }
 #top_header .content					{ padding: 20px; padding-top: 60px; }
@@ -72,9 +73,9 @@ h2										{ font-family:"ProxLight","Helvetica Neue Light","Helvetica Neue",Ar
 .details .icon                          { padding:1px 5px 1px 1px; position:relative; top:1px; font-weight:bold; }
 
 footer									{ width:100%; padding:20px 0 36px; background:#F2F2F3; }
-footer p								{ float:left; width:70%; font-size:14px; line-height:20px; color:#7A8792; }
-footer links                            { float:right; width:auto; font-size:14px; line-height:20px; }
-footer img								{ float:right; width:111px; height:auto; margin-bottom:10px; margin-right:54px}
+footer p								{ float:right; width: -webkit-calc(100% - 179px); width: -moz-calc(100% - 179px); width: calc(100% - 179px); font-size:14px; line-height:20px; color:#7A8792; }
+footer links                            { float:left; width:169px; padding-right: 10px; font-size:14px; line-height:20px; }
+footer img								{ float:left; width:111px; height:auto; margin-bottom:10px; margin-right:54px}
 
 #mobile_nav								{ display:none; }
 
@@ -104,7 +105,7 @@ footer img								{ float:right; width:111px; height:auto; margin-bottom:10px; m
 .post h3								{ font-size: 28px; font-weight: bold; line-height: 30px; }
 .post h4                                { font-family:"ProxSemibold","Helvetica Neue",Arial,sans-serif; font-size:22px; padding-top: 30px;}
 .post ul, ol 							{ margin-bottom: 20px; }
-.post ul li, ol li 						{ padding-left: 1em; text-indent: -1em; margin-bottom: 10px; } 
+.post ul li, ol li 						{ padding-left: 1em; text-indent: -1em; margin-bottom: 10px; }
 .post ul li								{ list-style: disc inside; }
 .post ol li 							{ list-style: decimal inside; }
 .post ol li ul li						{ list-style: disc inside; }
@@ -151,7 +152,7 @@ footer img								{ float:right; width:111px; height:auto; margin-bottom:10px; m
 .page h2								{ font-family:"ProxSemibold","Helvetica Neue",Arial,sans-serif; font-size:32px; line-height:32px; color:#022E46; margin-bottom:20px; }
 .page h3								{ font-size: 28px; }
 .page ul, ol 							{ margin-bottom: 20px; }
-.page ul li, ol li 						{ padding-left: 1em; text-indent: -1em; } 
+.page ul li, ol li 						{ padding-left: 1em; text-indent: -1em; }
 .page ul li								{ list-style: disc inside;  }
 .page ol li								{ list-style: decimal inside; }
 
@@ -188,16 +189,17 @@ table tr:last-child 					{ border: 0px; }
 	#post_list article:hover .author p	{ top:0; opacity:1; }
 }
 
-@media screen and (max-width:720px) and (min-width:641px) { 
+@media screen and (max-width:720px) and (min-width:641px) {
 	#main_nav a.c1_logo					{ display:none; }
 	#main_nav a.c1_logo + a				{ margin-left:-15px; }
 }
 
 @media screen and (max-width:640px) {
 	body								{ font-size:18px; }
+	footer .wrap.cf				{ max-width: 90%; min-width: 90%}
 
 	#top_header .content				{ padding: 20px; padding-top: 60px; }
-	
+
 	#main_nav a							{ display:none; }
 	#main_nav a.menu					{ display:block; float:left; margin-left:-15px; }
 	#main_nav a.button					{ display:block; }
@@ -206,23 +208,23 @@ table tr:last-child 					{ border: 0px; }
         .post h1							{ font-size:28px; line-height:36px; }
 	.post h3							{ padding-bottom: 8px; }
 	h2									{ font-size:16px; line-height:20px; }
-	
+
 	#post_list .sorting a				{ font-size:16px; }
 	#post_list article h3				{ font-size:24px; line-height:28px; }
-	
+
 
 #top_header .logo_sml img				{ margin:0 auto; display:block; width:90%; max-width: 620px; height:auto; }
 	.post .author .lefty,
 	.post .author .righty				{ width:100%; float:none; text-align:center; padding-top:5px; }
 	.post .author .pic					{ float:none; margin:0 auto; }
 	.post .author p						{ margin-left:0; float:none; }
-	
+
 	.post .button.progressive			{ width:100%; }
-	
-	footer p							{ float:none; width:100%; margin-bottom:10px; }
-    footer links                        { float:none; }
-	footer img							{ float:none; margin-bottom:10px; }
-	
+
+	footer p							{ float:right; width:100%; margin-bottom:10px; }
+  footer links                        { float:left; }
+	footer img							{ float:left; margin-bottom:10px; }
+
 	#mobile_nav							{ display:none; position:fixed; top:0; left:0; bottom:0; right:0; background:rgba(52,70,85,0.97); z-index:999; transition:all ease-out 200ms; }
 	#mobile_nav.show					{ display:block; }
         #mobile_nav .logo					{ margin:0 auto; padding-top:35px; display:block; width:90%; height:auto; margin-bottom:32px; }
