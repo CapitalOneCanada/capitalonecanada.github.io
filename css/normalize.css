@@ -589,6 +589,7 @@ th {
 
 .button.regressive {
     background-color: #0D74AF;
+    letter-spacing: normal;
 }
 
 .button.destructive {

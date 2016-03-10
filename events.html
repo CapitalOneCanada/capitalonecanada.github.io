@@ -6,7 +6,7 @@ title:
 
 <section id="oss">
     <section id="events">
-        <h2>Upcoming</h2>
+        <h2>Upcoming Events</h2>
         <div class="container">
             {% assign events = site.events | sort: 'start_date' %}
             {% assign curr_date = site.time | date: '%s' %}
@@ -28,7 +28,7 @@ title:
                     </tr>
                 </table>
                 <p class="excerpt">{{ event.content }}</p>
-                <a href="{{ event.source_url }}" class="button regressive">Get Tickets</a>
+                <a href="{{ event.source_url }}" class="button regressive" target="_blank">Get Tickets</a>
                 </article>
                 {% endif %}
                 {% endfor %}

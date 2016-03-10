@@ -6,4 +6,17 @@
         <a href="{{ site.baseurl }}/events">EVENTS</a>
 		<a href="#" class="menu"><span class="icon-menu"></span>MENU</a>
 	</div>
+
+    <script>
+        (function() {
+            var pgurl = window.location.pathname
+            if(pgurl.length > 1){
+                pgurl = pgurl.slice(0,-1);
+            }
+            $("#main_nav a").each(function(){
+                               if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
+                               $(this).addClass("selected");
+            })
+        })();
+    </script>
 </nav>
