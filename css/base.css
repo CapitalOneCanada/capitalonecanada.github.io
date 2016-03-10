@@ -12,7 +12,7 @@ ol ul 									{ margin: 0; }
 code									{ margin-bottom: 10px; }
 
 .wrap									{ width:90%; max-width:620px; margin:0 auto; position:relative; }
-footer .wrap.cf				{ max-width: 75%; min-width: 620px; }
+footer .wrap.cf                         { max-width: 75%; min-width: 620px; }
 
 #top_header								{ height:205px; /*height:204px;*/ background:#003362 url(../assets/img/hero_bg.jpg) center top no-repeat; background-size:cover; position:relative; padding-bottom:45px; }
 #top_header .content					{ padding: 20px; padding-top: 60px; }
@@ -74,8 +74,8 @@ h2										{ font-family:"ProxLight","Helvetica Neue Light","Helvetica Neue",Ar
 .details .icon                          { padding:1px 5px 1px 1px; position:relative; top:1px; font-weight:bold; }
 
 footer									{ width:100%; padding:20px 0 36px; background:#F2F2F3; }
-footer p								{ float:right; width: -webkit-calc(100% - 179px); width: -moz-calc(100% - 179px); width: calc(100% - 179px); font-size:14px; line-height:20px; color:#7A8792; }
-footer links                            { float:left; width:169px; padding-right: 10px; font-size:14px; line-height:20px; }
+footer p								{ float:right; width: -webkit-calc(100% - 185px); width: -moz-calc(100% - 185px); width: calc(100% - 185px); font-size:14px; line-height:20px; color:#7A8792; }
+footer links                            { float:left; width:175px; padding-right: 10px; font-size:14px; line-height:20px; }
 footer img								{ float:left; width:111px; height:auto; margin-bottom:10px; margin-right:54px}
 
 #mobile_nav								{ display:none; }
