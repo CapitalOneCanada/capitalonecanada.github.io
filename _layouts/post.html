@@ -7,7 +7,12 @@ layout: default
 <div class="post">
 	<section id="main">
 		<div class="wrap cf">
+            {% if page.theme != nil %}
+            <h4>{{ page.theme | upcase }}</h4>
+            <h1 class="has_theme">{{ page.title }}</h1>
+            {% else %}
             <h1>{{ page.title }}</h1>
+            {% endif %}
             <div class="details">
                 <time><span class="icon icon-clock"></span>{{ page.date | date: "%B %-d, %Y" }}</time>
                 <p class="tags"><span class="icon icon-tag"></span>

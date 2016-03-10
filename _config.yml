@@ -21,6 +21,7 @@ gems:
 collections:
   authors:
   projects:
+  events:
 
 defaults:
   -
