@@ -1,9 +1,8 @@
 ---
 layout: post
-title: "<b>BEYOND PRODUCTS</b>
-        <br/>
-        Creating Value, Differentiation and Impact through Service Design by Patrick Quattlebaum"
+title: "Beyond Products: Creating Value, Differentiation and Impact through Service Design by Patrick Quattlebaum"
 date: 2016-03-03 11:00:00
+theme: C1 Tech Series
 author: Capital One 
 tags: engineering blog
 category: blog
