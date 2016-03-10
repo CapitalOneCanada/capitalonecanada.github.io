@@ -1,16 +1,12 @@
 ---
 layout: page
 permalink: /events/
-title: Events
+title:
 ---
 
 <section id="oss">
-    <section id="intro">
-        We’ve got lots of opportunities for students to meet our recruiters and learn more about our company and job opportunities in person. Check out our schedule below to find out when we’ll be on your campus recruiting or holding a case competition!
-        <a href="/events_feed.xml">RSS</a>
-    </section>
     <section id="events">
-        <h2>Upcoming Events</h2>
+        <h2>Upcoming</h2>
         <div class="container">
             {% assign events = site.events | sort: 'start_date' %}
             {% assign curr_date = site.time | date: '%s' %}
@@ -23,20 +19,16 @@ title: Events
                 </header>
                 <table>
                     <tr>
-                        <td>Start Date:</td>
-                        <td>{{ event.start_date | date: "%B %-d, %Y at %l:%M %p" }}</td>
+                        <td>When:</td>
+                        <td>{{ event.start_date | date: "%A, %B %-d, %Y from %-I:%M %p" }} to {{event.end_date | date: "%-I:%M %p"}}</td>
                     </tr>
                     <tr>
-                        <td>End Date:</td>
-                        <td>{{ event.end_date | date: "%B %-d, %Y at %l:%M %p" }}</td>
-                    </tr>
-                    <tr>
-                        <td>Location:</td>
+                        <td>Where:</td>
                         <td>{{ event.location }} </td>
                     </tr>
                 </table>
                 <p class="excerpt">{{ event.content }}</p>
-                <a href="{{ event.source_url }}" class="button regressive">View on {{ event.source }}</a>
+                <a href="{{ event.source_url }}" class="button regressive">Get Tickets</a>
                 </article>
                 {% endif %}
                 {% endfor %}

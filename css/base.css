@@ -141,8 +141,8 @@ footer img								{ float:right; width:111px; height:auto; margin-bottom:10px; m
 .page aside:last-child					{ margin-bottom:20px; }
 .page em								{ font-style: italic; }
 .page h1								{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; color:#000; font-size:42px; line-height:48px; }
-.page h2								{ font-family:"ProxSemibold","Helvetica Neue",Arial,sans-serif; font-size:32px; line-height:32px; color:#022E46; border-bottom:1px solid #c2c0c5; margin-bottom:20px; }
-.page h3								{ font-size: 28px; font-weight: bold; }
+.page h2								{ font-family:"ProxSemibold","Helvetica Neue",Arial,sans-serif; font-size:32px; line-height:32px; color:#022E46; margin-bottom:20px; }
+.page h3								{ font-size: 28px; }
 .page ul, ol 							{ margin-bottom: 20px; }
 .page ul li, ol li 						{ padding-left: 1em; text-indent: -1em; } 
 .page ul li								{ list-style: disc inside;  }
