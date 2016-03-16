@@ -199,7 +199,9 @@ table tr:last-child 					{ border: 0px; }
 	body								{ font-size:18px; }
 	footer .wrap.cf				{ max-width: 90%; min-width: 90%}
 
-	#top_header .content				{ padding: 20px; padding-top: 60px; }
+	#top_header .content				{ padding: 20px; padding-top: 40px; }
+    #top_header .logo                   { content: url(/assets/img/c1_tech_logo_sml.png) no-repeat; width: 150px; }
+    #top_header .logo_sml img			{ content: url(/assets/img/c1_tech_logo_sml.png) no-repeat; width: 150px; }
 
 	#main_nav a							{ display:none; }
 	#main_nav a.menu					{ display:block; float:left; margin-left:-15px; }
@@ -214,7 +216,6 @@ table tr:last-child 					{ border: 0px; }
 	#post_list article h3				{ font-size:24px; line-height:28px; }
 
 
-#top_header .logo_sml img				{ margin:0 auto; display:block; width:90%; max-width: 620px; height:auto; }
 	.post .author .lefty,
 	.post .author .righty				{ width:100%; float:none; text-align:center; padding-top:5px; }
 	.post .author .pic					{ float:none; margin:0 auto; }
@@ -228,7 +229,7 @@ table tr:last-child 					{ border: 0px; }
 
 	#mobile_nav							{ display:none; position:fixed; top:0; left:0; bottom:0; right:0; background:rgba(52,70,85,0.97); z-index:999; transition:all ease-out 200ms; }
 	#mobile_nav.show					{ display:block; }
-        #mobile_nav .logo					{ margin:0 auto; padding-top:35px; display:block; width:90%; height:auto; margin-bottom:32px; }
+    #mobile_nav .logo					{ margin:0 auto; padding-top:35px; display:block; width: auto; height: 150px; margin-bottom:32px; }
 	#mobile_nav a						{ display:block; width:80%; margin:0 auto; color:#fff; font-size:18px; line-height:50px; border-top:1px solid rgba(255,255,255,0.2); text-align:center; }
 	#mobile_nav a:first-child			{ border-top:none; }
 	#mobile_nav a.button				{ border:none; line-height:24px; margin-top:5px; }
@@ -250,8 +251,8 @@ table tr:last-child 					{ border: 0px; }
 }
 
 @media screen and (max-width:400px) {
-    #top_header .logo                       { width:280px; }
-    #top_header .logo_sml img               { width:280px; }
+    #top_header .logo                       { width:150px; }
+    #top_header .logo_sml img               { width:150px; }
 	.post #top_header .details time			{ display:block; }
 	.post #top_header .details .tags		{ padding-left:0; display:block; }
 }
