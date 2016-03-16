@@ -16,8 +16,10 @@ footer .wrap.cf                         { max-width: 75%; min-width: 620px; }
 
 #top_header								{ height:205px; /*height:204px;*/ background:#003362 url(../assets/img/hero_bg.jpg) center top no-repeat; background-size:cover; position:relative; padding-bottom:45px; }
 #top_header .content					{ padding: 20px; padding-top: 60px; }
-#top_header .logo						{ margin:0 auto; display:block; width:90%; max-width: 620px; height:auto; }
+#top_header .logo						{ display: block; margin:0 auto; width:90%; max-width: 620px; height:auto; }
+#top_header .mobileLogo					{ display: none ;margin:0 auto; width:90%; max-width: 620px; height:auto; }
 #top_header .logo_sml img				{ margin:0 auto; display:block; width:90%; max-width: 620px; height:auto; }
+#top_header .mobileLogo_sml img			{ margin:0 auto; display:none; width:90%; max-width: 620px; height:auto; }
 
 #main_nav								{ position:absolute; bottom:0; left:0; width:100%; background:rgba(218,209,214,1); }
 #main_nav a								{ display:block; float:left; font-size:18px; line-height:45px; color:#2c3a48; padding:0 15px; transition:all ease-out 200ms; }
@@ -200,8 +202,10 @@ table tr:last-child 					{ border: 0px; }
 	footer .wrap.cf				{ max-width: 90%; min-width: 90%}
 
 	#top_header .content				{ padding: 20px; padding-top: 40px; }
-    #top_header .logo                   { content: url(/assets/img/c1_tech_logo_sml.png) no-repeat; width: 150px; }
-    #top_header .logo_sml img			{ content: url(/assets/img/c1_tech_logo_sml.png) no-repeat; width: 150px; }
+    #top_header .logo                   { display: none; width: 150px; }
+    #top_header .mobileLogo             { display: block; width: 150px; }
+    #top_header .logo_sml img			{ display:none; width: 150px; }
+    #top_header .mobileLogo_sml img		{ display: block; width: 150px; }
 
 	#main_nav a							{ display:none; }
 	#main_nav a.menu					{ display:block; float:left; margin-left:-15px; }
@@ -251,8 +255,6 @@ table tr:last-child 					{ border: 0px; }
 }
 
 @media screen and (max-width:400px) {
-    #top_header .logo                       { width:150px; }
-    #top_header .logo_sml img               { width:150px; }
 	.post #top_header .details time			{ display:block; }
 	.post #top_header .details .tags		{ padding-left:0; display:block; }
 }
