@@ -10,29 +10,34 @@ title:
         <div class="container">
             {% assign events = site.events | sort: 'start_date' %}
             {% assign curr_date = site.time | date: '%s' %}
+            {% assign no_upcoming_events = true %}
             {% for event in events %}
             {% assign end_date = event.end_date | date: '%s' %}
-            {% if curr_date <= end_date %}
-                <article>
-                <header>
-                    <h3>{{ event.title }}</h3>
-                </header>
-                <table>
-                    <tr>
-                        <td>When:</td>
-                        <td>{{ event.start_date | date: "%A, %B %-d, %Y from %-I:%M %p" }} to {{event.end_date | date: "%-I:%M %p"}}</td>
-                    </tr>
-                    <tr>
-                        <td>Where:</td>
-                        <td>{{ event.location }} </td>
-                    </tr>
-                </table>
-                <p class="excerpt">{{ event.content }}</p>
-                <a href="{{ event.source_url }}" class="button regressive" target="_blank">Get Tickets</a>
-                </article>
+                {% if curr_date <= end_date %}
+                    {% assign no_upcoming_events = false %}
+                    <article>
+                    <header>
+                        <h3>{{ event.title }}</h3>
+                    </header>
+                    <table>
+                        <tr>
+                            <td>When:</td>
+                            <td>{{ event.start_date | date: "%A, %B %-d, %Y from %-I:%M %p" }} to {{event.end_date | date: "%-I:%M %p"}}</td>
+                        </tr>
+                        <tr>
+                            <td>Where:</td>
+                            <td>{{ event.location }} </td>
+                        </tr>
+                    </table>
+                    <p class="excerpt">{{ event.content }}</p>
+                    <a href="{{ event.source_url }}" class="button regressive" target="_blank">Get Tickets</a>
+                    </article>
                 {% endif %}
-                {% endfor %}
-                </div>
+            {% endfor %}
+            {% if no_upcoming_events %}
+                <p>There are no events at this time. Please check back at a later date.</p>
+            {% endif %}
+        </div>
     </section>
     
 </section>
