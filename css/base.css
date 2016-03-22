@@ -16,8 +16,10 @@ footer .wrap.cf                         { max-width: 75%; min-width: 620px; }
 
 #top_header								{ height:205px; /*height:204px;*/ background:#003362 url(../assets/img/hero_bg.jpg) center top no-repeat; background-size:cover; position:relative; padding-bottom:45px; }
 #top_header .content					{ padding: 20px; padding-top: 60px; }
-#top_header .logo						{ margin:0 auto; display:block; width:90%; max-width: 620px; height:auto; }
+#top_header .logo						{ display: block; margin:0 auto; width:90%; max-width: 620px; height:auto; }
+#top_header .mobileLogo					{ display: none ;margin:0 auto; width:90%; max-width: 620px; height:auto; }
 #top_header .logo_sml img				{ margin:0 auto; display:block; width:90%; max-width: 620px; height:auto; }
+#top_header .mobileLogo_sml img			{ margin:0 auto; display:none; width:90%; max-width: 620px; height:auto; }
 
 #main_nav								{ position:absolute; bottom:0; left:0; width:100%; background:rgba(218,209,214,1); }
 #main_nav a								{ display:block; float:left; font-size:18px; line-height:45px; color:#2c3a48; padding:0 15px; transition:all ease-out 200ms; }
@@ -36,7 +38,7 @@ footer .wrap.cf                         { max-width: 75%; min-width: 620px; }
 h1										{ font-family:"ProxLight","Helvetica Neue Light","Helvetica Neue",Arial,sans-serif; font-size:40px; line-height:48px; margin:0 0 8px -2px; }
 h2										{ font-family:"ProxLight","Helvetica Neue Light","Helvetica Neue",Arial,sans-serif; font-size:20px; line-height:28px; color:#8C99A3; margin:0; }
 
-#post_list                              { margin: 30px auto; }
+#post_list                              { margin: 0 auto; }
 
 #post_list .sorting						{ border-bottom:1px solid #c2c0c5; position:relative; }
 #post_list .sorting a					{ display:block; float:left; font-size:20px; line-height:32px; color:#99A1A9; border-bottom:1px solid transparent; margin:0 30px -1px 0; transition:all ease-out 200ms; }
@@ -65,7 +67,7 @@ h2										{ font-family:"ProxLight","Helvetica Neue Light","Helvetica Neue",Ar
 #post_list article .author				{ margin-bottom:20px; transition:all ease-out 200ms; }
 #post_list article .author .pic			{ width:56px; height:56px; display:block; border-radius:50%; overflow:hidden; position:relative; z-index:4; float:left; }
 #post_list article .author .pic img		{ width:100%; height:auto; }
-#post_list article .author p			{ display:block; padding-top:12px; position:relative; float:left; margin-left:15px; }
+#post_list article .author p			{ display:block; padding-top:8.5px; position:relative; float:left; margin-left:15px; }
 #post_list article .author p strong		{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; font-size:20px; line-height:20px; }
 #post_list article .author p span		{ display:block; font-size:11px; line-height:11px; text-transform:uppercase; letter-spacing:1px; color:#67747F; }
 
@@ -89,7 +91,7 @@ footer img								{ float:left; width:111px; height:auto; margin-bottom:10px; ma
 .post #top_header .read_more			{ font-family:"ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; }
 /*.post #top_header .content              { padding: 0 0; }*/
 
-.post #main								{ padding: 20px 0; }
+.post #main								{ padding: 0 0; }
 .post #main .details                    { font-size: 11px; line-height: 20px; text-transform: uppercase; letter-spacing: 1px; color: #67747F; margin-bottom: 13px; }
 .post #main .details p					{ display:inline-block; padding-left:25px}
 .post #main img							{ width:auto; max-width:100%; height:auto; display:block; margin:0 auto 20px; }
@@ -199,7 +201,11 @@ table tr:last-child 					{ border: 0px; }
 	body								{ font-size:18px; }
 	footer .wrap.cf				{ max-width: 90%; min-width: 90%}
 
-	#top_header .content				{ padding: 20px; padding-top: 60px; }
+	#top_header .content				{ padding: 20px; padding-top: 40px; }
+    #top_header .logo                   { display: none; width: 150px; }
+    #top_header .mobileLogo             { display: block; width: 150px; }
+    #top_header .logo_sml img			{ display:none; width: 150px; }
+    #top_header .mobileLogo_sml img		{ display: block; width: 150px; }
 
 	#main_nav a							{ display:none; }
 	#main_nav a.menu					{ display:block; float:left; margin-left:-15px; }
@@ -214,7 +220,6 @@ table tr:last-child 					{ border: 0px; }
 	#post_list article h3				{ font-size:24px; line-height:28px; }
 
 
-#top_header .logo_sml img				{ margin:0 auto; display:block; width:90%; max-width: 620px; height:auto; }
 	.post .author .lefty,
 	.post .author .righty				{ width:100%; float:none; text-align:center; padding-top:5px; }
 	.post .author .pic					{ float:none; margin:0 auto; }
@@ -228,7 +233,7 @@ table tr:last-child 					{ border: 0px; }
 
 	#mobile_nav							{ display:none; position:fixed; top:0; left:0; bottom:0; right:0; background:rgba(52,70,85,0.97); z-index:999; transition:all ease-out 200ms; }
 	#mobile_nav.show					{ display:block; }
-        #mobile_nav .logo					{ margin:0 auto; padding-top:35px; display:block; width:90%; height:auto; margin-bottom:32px; }
+    #mobile_nav .logo					{ margin:0 auto; padding-top:35px; display:block; width: auto; height: 150px; margin-bottom:32px; }
 	#mobile_nav a						{ display:block; width:80%; margin:0 auto; color:#fff; font-size:18px; line-height:50px; border-top:1px solid rgba(255,255,255,0.2); text-align:center; }
 	#mobile_nav a:first-child			{ border-top:none; }
 	#mobile_nav a.button				{ border:none; line-height:24px; margin-top:5px; }
@@ -250,8 +255,6 @@ table tr:last-child 					{ border: 0px; }
 }
 
 @media screen and (max-width:400px) {
-    #top_header .logo                       { width:280px; }
-    #top_header .logo_sml img               { width:280px; }
 	.post #top_header .details time			{ display:block; }
 	.post #top_header .details .tags		{ padding-left:0; display:block; }
 }
