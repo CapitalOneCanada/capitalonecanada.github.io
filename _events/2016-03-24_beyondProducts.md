@@ -6,6 +6,7 @@ end_date: 2016-03-24 20:00:00
 
 xmlLocation: "MaRS Discovery District,\n101 College St,\nToronto, ON  M5G 1L7\nCanada"
 location: "MaRS Discovery District <br>101 College St<br>Toronto, ON &#0020 M5G 1L7<br>Canada"
+who: "Patrick Quattlebaum, Head of Experience Design at Capital One and Managing Director at Adaptive Path"
 
 source: "EventBrite"
 source_url: https://www.eventbrite.ca/e/c1-tech-series-designing-digital-tickets-22285207656

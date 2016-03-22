@@ -21,6 +21,10 @@ title:
                     </header>
                     <table>
                         <tr>
+                            <td>Who:</td>
+                            <td>{{ event.who }}</td>
+                        </tr>
+                        <tr>
                             <td>When:</td>
                             <td>{{ event.start_date | date: "%A, %B %-d, %Y from %-I:%M %p" }} to {{event.end_date | date: "%-I:%M %p"}}</td>
                         </tr>
