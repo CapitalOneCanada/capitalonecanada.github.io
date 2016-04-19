@@ -16,9 +16,6 @@ layout: null
     {% assign no_upcoming_events = true %}
     {% for event in events %}
         {% assign end_date = event.end_date | date: '%s' %}
-        {% comment %}
-        {% if curr_date <= end_date %}
-        {% endcomment %}
           {% assign no_upcoming_events = false %}
           <item>
             <title>{{ event.title | xml_escape }}</title>
@@ -40,9 +37,6 @@ layout: null
             <category>{{ cat | xml_escape }}</category>
             {% endfor %}
           </item>
-        {% comment %}
-        {% endif %}
-        {% endcomment %}
     {% endfor %}
 <!--    {% if no_upcoming_events %}-->
 <!--        <item>-->
