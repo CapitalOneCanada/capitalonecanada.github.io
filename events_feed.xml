@@ -51,6 +51,6 @@ layout: null
 <!--    {% endif %}-->
   </channel>
   <xhtml:script xmlns:xhtml="http://www.w3.org/1999/xhtml"
-  src="utils/filterOutOldEvents.js"
+  src="assets/js/filterOutOldEvents.js"
   type="application/javascript"/>
 </rss>
