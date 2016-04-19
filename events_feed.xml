@@ -16,7 +16,9 @@ layout: null
     {% assign no_upcoming_events = true %}
     {% for event in events %}
         {% assign end_date = event.end_date | date: '%s' %}
+        {% comment %}
         {% if curr_date <= end_date %}
+        {% endcomment %}
           {% assign no_upcoming_events = false %}
           <item>
             <title>{{ event.title | xml_escape }}</title>
@@ -38,18 +40,23 @@ layout: null
             <category>{{ cat | xml_escape }}</category>
             {% endfor %}
           </item>
+        {% comment %}
         {% endif %}
+        {% endcomment %}
     {% endfor %}
-    {% if no_upcoming_events %}
-        <item>
-            <title>There are no upcoming events at this time.</title>
-            <description></description>
-            <startDate>{{ "2016-04-18 04:01:08" | date_to_rfc822 }}</startDate>
-            <endDate>{{ "2016-04-18 04:18:00" | date_to_rfc822 }}</endDate>
-            <location>Please check again at a later time.</location>
-            <link>{{ "events" | prepend: site.baseurl | prepend: site.url }}</link>
-            <guid isPermaLink="true">{{ "events" | prepend: site.baseurl | prepend: site.url }}</guid>
-        </item>
-    {% endif %}
+<!--    {% if no_upcoming_events %}-->
+<!--        <item>-->
+<!--            <title>There are no upcoming events at this time.</title>-->
+<!--            <description></description>-->
+<!--            <startDate>{{ "2016-04-18 04:01:08" | date_to_rfc822 }}</startDate>-->
+<!--            <endDate>{{ "2016-04-18 04:18:00" | date_to_rfc822 }}</endDate>-->
+<!--            <location>Please check again at a later time.</location>-->
+<!--            <link>{{ "events" | prepend: site.baseurl | prepend: site.url }}</link>-->
+<!--            <guid isPermaLink="true">{{ "events" | prepend: site.baseurl | prepend: site.url }}</guid>-->
+<!--        </item>-->
+<!--    {% endif %}-->
   </channel>
+  <xhtml:script xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  src="utils/filterOutOldEvents.js"
+  type="application/javascript"/>
 </rss>
