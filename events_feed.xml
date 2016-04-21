@@ -44,8 +44,8 @@ layout: null
         <item>
             <title>There are no upcoming events at this time.</title>
             <description></description>
-            <startDate>{{ "2016-04-18 04:01:08" | date_to_rfc822 }}</startDate>
-            <endDate>{{ "2016-04-18 04:18:00" | date_to_rfc822 }}</endDate>
+            <startDate></startDate>
+            <endDate></endDate>
             <location>Please check again at a later time.</location>
             <link>{{ "events" | prepend: site.baseurl | prepend: site.url }}</link>
             <guid isPermaLink="true">{{ "events" | prepend: site.baseurl | prepend: site.url }}</guid>

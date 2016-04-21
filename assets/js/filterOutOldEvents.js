@@ -14,7 +14,7 @@
     }
   }
   
-  // Add a deafult event if events list is empty
+  // Add a default event if events list is empty
   if (events.length == 0) {
     // Create XML tags
     var item = document.createElement("item")
