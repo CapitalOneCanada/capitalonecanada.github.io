@@ -26,4 +26,4 @@ if needbuild:
     print "Commiting"
     subprocess.call("git commit -m 'Rebuilding site to update RSS feeds' --allow-empty")
     print "Pushing to github.com/capitalonecanada/capitalonecanada.github.io"
-    subprocess.call("git push")
+    subprocess.call("git push origin dev:dev")
