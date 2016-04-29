@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Open Source Power"
-date: 2016-04-27 15:00:00
+date: 2016-04-27 15:00:01
 theme: 
-author: Capital One 
+author: John Cavan
 tags: engineering blog
 category: blog
 images:
