@@ -14,10 +14,16 @@ else:
 
 if arg == "internal":
     url = os.environ["INTERNAL"]
+    local = False
+    branch = "gh-pages"
 elif arg == "localhost":
     url = "localhost:4000"
+    local = True
+    branch = ""
 else:
     url = "tech.capitalone.ca"
+    local = False
+    branch = "master"
 
 print "[INFO] Using build environment %s" % arg
 print "[INFO] Checking URL %s" % url
@@ -50,11 +56,13 @@ for d in eventDates:
 
 # Build if needed
 
-if needbuild:
+if needbuild and not local:
     print "[INFO] There is an event that has passed. Will update RSS feeds."
-    print "[INFO] Commiting"
-    subprocess.call("git commit -m 'Rebuilding site to update RSS feeds' --allow-empty", shell=True)
-    print "[INFO] Pushing to github.com/capitalonecanada/capitalonecanada.github.io"
-    subprocess.call("git push origin dev:dev", shell=True)
+    print "[INFO] Commiting to %s branch" % branch
+    subprocess.call("git fetch origin")
+    subprocess.call("git checkout -b %s" % branch)
+    subprocess.call("git commit -m 'Rebuilding site to update RSS feeds' --allow-empty")
+    print "[INFO] Pushing to remote branch %s" % branch
+    subprocess.call("git push origin %s:%s" % (branch, branch))
 else:
     print "[INFO] No rebuild needed. Commit was not made."
