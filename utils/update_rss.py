@@ -53,8 +53,8 @@ for d in eventDates:
 if needbuild:
     print "[INFO] There is an event that has passed. Will update RSS feeds."
     print "[INFO] Commiting"
-    subprocess.call("git commit -m 'Rebuilding site to update RSS feeds' --allow-empty")
+    subprocess.call("git commit -m 'Rebuilding site to update RSS feeds' --allow-empty", shell=True)
     print "[INFO] Pushing to github.com/capitalonecanada/capitalonecanada.github.io"
-    subprocess.call("git push origin dev:dev")
+    subprocess.call("git push origin dev:dev", shell=True)
 else:
     print "[INFO] No rebuild needed. Commit was not made."
