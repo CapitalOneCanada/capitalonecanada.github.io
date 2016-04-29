@@ -1,4 +1,6 @@
-## CapitalOne.io
+## tech.capitalone.ca
+
+See wiki for instructions on how to update external site. (Internal wiki only)
 
 Welcome to Capital One's Engineering Site. We have a ton planned so stay tuned.
 
