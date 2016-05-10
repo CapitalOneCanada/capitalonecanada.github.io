@@ -5,7 +5,7 @@ title:
 ---
 
 <section id="oss">
-    <section id="events">
+    <section id="events" onload="filter()">
         <h2>Upcoming Events</h2>
         <div class="container">
             {% assign events = site.events | sort: 'start_date' %}
@@ -15,7 +15,7 @@ title:
             {% assign end_date = event.end_date | date: '%s' %}
                 {% if curr_date <= end_date %}
                     {% assign no_upcoming_events = false %}
-                    <article>
+                    <article class="event">
                     <header>
                         <h3>{{ event.title }}</h3>
                     </header>
@@ -26,7 +26,7 @@ title:
                         </tr>
                         <tr>
                             <td>When:</td>
-                            <td>{{ event.start_date | date: "%A, %B %-d, %Y from %-I:%M %p" }} to {{event.end_date | date: "%-I:%M %p"}}</td>
+                            <td class="endDate">{{ event.start_date | date: "%A, %B %-d, %Y from %-I:%M %p" }} to {{event.end_date | date: "%-I:%M %p"}}</td>
                         </tr>
                         <tr>
                             <td>Where:</td>
@@ -39,9 +39,9 @@ title:
                 {% endif %}
             {% endfor %}
             {% if no_upcoming_events %}
-                <p>There are no events at this time. Please check back at a later date.</p>
+                <p>There are no upcoming events at this time. Please check back at a later date.</p>
             {% endif %}
         </div>
     </section>
-    
 </section>
+<script type="text/javascript" src="/assets/js/filterOutOldEventsDisplayed.js"></script>

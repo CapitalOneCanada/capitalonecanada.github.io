@@ -3,33 +3,33 @@ layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>{{ site.title | xml_escape }} Events</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/events_feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% assign events = site.events | sort: 'start_date' %}
-    {% assign curr_date = site.time | date: '%s' %}
-    {% assign no_upcoming_events = true %}
-    {% for event in events %}
+    <channel>
+        <title>{{ site.title | xml_escape }} Events</title>
+        <description>{{ site.description | xml_escape }}</description>
+        <link>{{ site.url }}{{ site.baseurl }}/</link>
+        <atom:link href="{{ "/events_feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
+        <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+        <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+        <generator>Jekyll v{{ jekyll.version }}</generator>
+        {% assign events = site.events | sort: 'start_date' %}
+        {% assign curr_date = site.time | date: '%s' %}
+        {% assign no_upcoming_events = true %}
+        {% for event in events %}
         {% assign end_date = event.end_date | date: '%s' %}
         {% if curr_date <= end_date %}
-          {% assign no_upcoming_events = false %}
-          <item>
+            {% assign no_upcoming_events = false %}
+            <item>
             <title>{{ event.title | xml_escape }}</title>
             <description>{{ event.content | xml_escape }}</description>
             <startDate>{{ event.start_date | date_to_rfc822 }}</startDate>
             <endDate>{{ event.end_date | date_to_rfc822 }}</endDate>
             <location>{{ event.xmlLocation }}</location>
             {% if event.source_url == blank %}
-                <link>{{ "events" | prepend: site.baseurl | prepend: site.url }}</link>
-                <guid isPermaLink="true">{{ "events" | prepend: site.baseurl | prepend: site.url }}</guid>
+            <link>{{ "events" | prepend: site.baseurl | prepend: site.url }}</link>
+            <guid isPermaLink="true">{{ "events" | prepend: site.baseurl | prepend: site.url }}</guid>
             {% else %}
-                <link>{{ event.source_url }}</link>
-                <guid isPermaLink="true">{{ event.source_url }}</guid>
+            <link>{{ event.source_url }}</link>
+            <guid isPermaLink="true">{{ event.source_url }}</guid>
             {% endif %}
             {% for tag in event.tags %}
             <tag>{{ tag | xml_escape }}</tag>
@@ -37,19 +37,19 @@ layout: null
             {% for cat in event.categories %}
             <category>{{ cat | xml_escape }}</category>
             {% endfor %}
-          </item>
+        </item>
         {% endif %}
-    {% endfor %}
-    {% if no_upcoming_events %}
+        {% endfor %}
+        {% if no_upcoming_events %}
         <item>
             <title>There are no upcoming events at this time.</title>
             <description></description>
-            <startDate>{{ "2016-04-18 04:01:08" | date_to_rfc822 }}</startDate>
-            <endDate>{{ "2016-04-18 04:18:00" | date_to_rfc822 }}</endDate>
+            <startDate></startDate>
+            <endDate></endDate>
             <location>Please check again at a later time.</location>
             <link>{{ "events" | prepend: site.baseurl | prepend: site.url }}</link>
             <guid isPermaLink="true">{{ "events" | prepend: site.baseurl | prepend: site.url }}</guid>
         </item>
-    {% endif %}
-  </channel>
+        {% endif %}
+    </channel>
 </rss>
