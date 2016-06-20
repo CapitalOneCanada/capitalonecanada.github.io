@@ -16,42 +16,42 @@ var employees = [
 		/* NON-BREAKING HYPHEN: ‑ */
 		"role":"Scrum Master",
 		"iconURL":baseURL + "/assets/img/tss/Vesna-V.jpg",
-		"biography1":"I am very observant and intuitive. My role is to make sure that everybody on the team understands the work that’s to be done – but I go further! By reading people and situations, I can pick up on tensions and prevent outbursts from occurring, and work proactively instead.",
-		"biography2":"I love music, especially jazz; when people crunch ice I cringe."
+		"biography1":"I am very observant and intuitive. My role is to make sure that everybody on the team understands the work that’s to be done – but I go further! By reading people and situations, I can pick up on tensions and prevent outbursts from occurring – I work pro-actively.",
+		"biography2":"I love music, especially jazz. And I cringe when people crunch ice with their teeth."
 	},
 	{
 		"name":"John Cavan",
 		"role":"Team Lead",
 		"iconURL":baseURL + "/assets/img/tss/John-C.jpg",
-		"biography1":"I help my teams make stuff happen. It’s about enabling: skills, equipment, information, access, strategy. The business is committed to an Agile journey and I get everyone engaged, emotionally engaged.",
+		"biography1":"I help my teams make stuff happen. It’s about enabling – that is, providing skills, equipment, information, access and strategy. The business is committed to an agile journey and I get everyone engaged, emotionally engaged.",
 		"biography2":"Despite my appearance, I’ve never been in a rock band. I did, however, spend some time in the army. My chili is famous or infamous, depending on your tolerance for spices."
 	},
 	{
 		"name":"Joe Moscatielo",
 		"role":"Senior Software Engineer",
 		"iconURL":baseURL + "/assets/img/tss/Joe-M.jpg",
-		"biography1":"Technology excites me – that’s what makes a geek. I’m knowledgeable. I read and follow a lot what’s going on in the field, so I’m amongst the first to know. It’s pretty useful here because we can initiate projects using new developments we see fit.",
-		"biography2":"Geek moment: I recently found in my closet my incomplete card collection of the 90s favourite fictional species (you know, the Japanese ones). I immediately went online to order the missing cards. $400 later, it was complete!"
+		"biography1":"Technology excites me – that’s what makes a geek. I’m knowledgeable. I read and follow what’s going on in the field, so I’m among the first to know. It’s pretty useful here because we can initiate projects using new developments as we see fit.",
+		"biography2":"Geek moment: I recently found my incomplete 90s fictional species card collection in my closet (you know, the Japanese ones). I immediately went online to order the missing cards. $400 later, the collection was complete."
 	},
 	{
 		"name":"Tahmina Khan",
 		"role":"Senior Software Engineer",
 		"iconURL":baseURL + "/assets/img/tss/Tahmina-K.jpg",
-		"biography1":"I turn challenges and pressure – that may scare others off – into exciting opportunities. We love to take on big projects, like creating an app from scratch that is now being used by tons of customers.",
+		"biography1":"I turn challenges and pressure – that may scare others off – into exciting opportunities. We love to take on big projects, like creating an app from scratch and making it accessible for tons of our customers.",
 		"biography2":"In my personal life, I like eating authentic food and I love photography. One of my best shots was taken from my balcony – an HDR of Toronto’s skyline."
 	},
 	{
 		"name":"Damjan Pelemis",
 		"role":"Team Lead",
 		"iconURL":baseURL + "/assets/img/tss/Damjan-P.jpg",
-		"biography1":"I bring conceptual thinking to the team. I like to look beyond the immediate, dig further and take a step back at the same time, so I can think of creative solutions that would not be as visible to those working closely on something.",
-		"biography2":"Also, I have a super sense of balance. I’m not really sportive but I love to ski and to surf."
+		"biography1":"I bring conceptual thinking to the team. I like to look beyond the present – I dig deeper and take a step back at the same time – this allows me to think of creative solutions that others working too closely on a project might miss.",
+		"biography2":"Also, I have a super sense of balance. I’m not really sporty but I love to ski and surf."
 	},
 	{
 		"name":"Irina Courante",
 		"role":"Senior Software Engineer",
 		"iconURL":baseURL + "/assets/img/tss/Irina-C.jpg",
-		"biography1":"I like to provide a voice to the things that other people are thinking. It’s usually a great starting point to a discussion – it helps us share our different points of view and come up with ways to improve a situation.",
+		"biography1":"I like to provide a voice to the things that other people are thinking. It’s usually a great starting point to a discussion – it helps us share our different points of view and come up with ways to improve situations.",
 		"biography2":"Speaking of talking, I used to be very shy. Now I’m making up for it by speaking extra loudly and at double the speed!"
 	},
 	{
@@ -59,7 +59,7 @@ var employees = [
 		"role":"Senior Software Engineer",
 		"iconURL":baseURL + "/assets/img/tss/Damon-S.jpg",
 		"biography1":"It turns out that I’m a good teacher. People tell me they can learn easily when I’m around. It’s a lot of fun! Everyone in the studio is so keen on learning and self-improvement.",
-		"biography2":"Good thing we like each other, because I often ping the wrong person at work and then get mad at them for being confused, when I’m the one confused :-S"
+		"biography2":"It’s a good thing we like each other, because I often send an instant message to the wrong person at work and then get mad at them for being confused ... when I'm the one who was confused :-S"
 	},
 	{
 		"name":"Jae Hee Roh",
@@ -199,5 +199,5 @@ $(document).ready(function() {
 			showLightbox($(this));
 		});
 	}
-	
+
 }); // end $(document).ready(...)
