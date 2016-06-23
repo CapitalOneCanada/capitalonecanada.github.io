@@ -7,7 +7,7 @@ author: Capital One
 tags: engineering blog
 category: blog
 images:
-    Azat-Mardan: /assets/posts/designing-digital/Azat-Marzan.jpeg
+    Azat-Mardan: /assets/posts/designing-digital/Azat-Mardan.jpeg
 ---
 Do you use Node tools such as Grunt, Gulp or Webpack to build your front-end assets? Do you use an HTTP server built with Express? Do you generate code using Yeoman? How well do you really know Node? 
 Node.js is quickly capturing the programming world – not just in web, but in IoT, drones, robots and embedded systems. Join us for a sneak peek of the most interesting and powerful Node.js features.
