@@ -197,7 +197,7 @@
 	background-color:#FFF;
 	max-width:700px;
 	position:fixed;
-	top:-1000px;
+	top:calc(100% + 1000px);
 	margin-left:auto; /* margin left/right and left/right:0 does not work on IE if a max-width is specified */
 	margin-right:auto;
 	left:0;
@@ -209,6 +209,12 @@
 	-webkit-transition: top 0.6s ease-in-out;
 	-moz-transition: top 0.6s ease-in-out;
 	-o-transition: top 0.6s ease-in-out;
+}
+#tss-container .profile-lightbox.show.disable-transition {
+  transition:none !important;
+  -webkit-transition:none !important;
+	-moz-transition:none !important;
+	-o-transition:none !important;
 }
 #tss-container .profile-lightbox hr {
 	margin:5px 20px 5px 20px;
@@ -247,11 +253,10 @@
 	text-align:center;
 }
 #tss-container .profile-lightbox.show {
-	top:125px;
 	z-index:15;
 }
 #tss-container .profile-lightbox.hide {
-	top:-1000px;
+	top:calc(100% + 1000px);
 	z-index:11;
 }
 
@@ -347,6 +352,9 @@
 	#tss-container .profile-lightbox {
 		width:100%;
 	}
+	#tss-container .profile-lightbox.show {
+  	top:125px;
+  }
 	#tss-container .profile-lightbox .lb-image {
 		width:100%;
 	}
@@ -427,7 +435,7 @@
 		max-height:calc(100% - 20px) !important;
 	}
 	#tss-container .profile-lightbox.show {
-		top:10px !important;
+		top:10px;
 	}
 	#tss-container .profile-lightbox span#lb-close span.close { /* hide the word "CLOSE" to save space */
 		display:none;
