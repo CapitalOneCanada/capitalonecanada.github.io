@@ -1,30 +1,30 @@
-#kwlabs-container {
+#kwlab-container {
 	width:100%;
 }
-.kwlabs.top-banner {
+.kwlab.top-banner {
 	background-color:#004977;
 	text-align:center;
 	padding:30px;
 }
-.kwlabs.top-banner img.large-logo {
+.kwlab.top-banner img.large-logo {
 	width:500px;
 	height:auto;
 }
-.kwlabs.top-banner img.mobileLogo {
+.kwlab.top-banner img.mobileLogo {
     display: none;
     margin: 0 auto;
     width: 90%;
     max-width: 620px;
     height: auto;
 }
-.kwlabs.top-banner .kw-lab {
+.kwlab.top-banner .kw-lab {
 	color:#FFF;
-	letter-spacing:5px;
+	letter-spacing:4px;
 	font-size:22px;
   font-family: "ProxReg","Helvetica Neue",Arial,sans-serif;
   padding: 0px 0px 30px 0px;
 }
-.kwlabs.top-banner .text {
+.kwlab.top-banner .text {
     /*font-size: 36px;*/
     line-height: 32px;
     /*margin:13px 0px 0px 0px;*/
@@ -33,55 +33,54 @@
     letter-spacing:0.1px;
 }
 
-#kwlabs-container section { /* common section styles */
+#kwlab-container section { /* common section styles */
 	overflow:hidden;
 	text-align:center;
 }
-#kwlabs-container section h3 { /* section title text */
+#kwlab-container section h3 { /* section title text */
 	text-align:center;
 	margin-top:0px;
 	margin-bottom:0px;
 }
-#kwlabs-container section .description { /* smaller text in sections */
+#kwlab-container section .description { /* smaller text in sections */
 	font-size:20px;
 	line-height:24px;
 }
-#kwlabs-container section div.content p {
+#kwlab-container section div.content p {
   margin-top:20px;
 }
-#kwlabs-container img {
+#kwlab-container img {
 	vertical-align:bottom;
 }
-#kwlabs-container img.icon {
+#kwlab-container img.icon {
 	width:80px;
 	height:80px;
 	margin-top:20px;
 	margin-bottom:20px;
 }
-#kwlabs-container .banner-image {
+#kwlab-container .banner-image {
 	width:100%;
 	height:auto;
 }
 
-#kwlabs-container .header-text { /* section title text, in case h3 is not used */
+#kwlab-container .header-text { /* section title text, in case h3 is not used */
     font-family: "ProxSemiBold","Helvetica Neue",Arial,sans-serif;
-    font-size:
     line-height: 32px;
     margin-bottom: 13px;
     letter-spacing:0.1px;
 }
-#kwlabs-container .title-text { /* section semi-title text */
+#kwlab-container .title-text { /* section semi-title text */
 	font-family: "ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif;
     font-size: 20px;
     line-height: 20px;
 }
-#kwlabs-container .caption-text { /* descriptions and smaller sub texts */
+#kwlab-container .caption-text { /* descriptions and smaller sub texts */
 	padding:10px 25px 0px 25px;
 	font-size:18px;
 	line-height:24px;
 }
 
-#kwlabs-container #intro-banner .text-banner {
+#kwlab-container #intro-banner .text-banner {
 	width:100%;
 	height:auto;
 	font-size:20px; /* orig: 22 */
@@ -90,60 +89,60 @@
 	color:#FFFFFF;
 }
 
-#kwlabs-container #our-projects .bold-caption {
+#kwlab-container #our-projects .bold-caption {
   font-weight:800;
 }
 
-#kwlabs-container #image-section .left {
+#kwlab-container #image-section .left {
     height:auto;
     width:50%;
     float:left;
 }
-#kwlabs-container #image-section .right {
+#kwlab-container #image-section .right {
     float:right;
     width:50%;
     height:auto;
 }
 
-#kwlabs-container #who-we-are .item .name {
+#kwlab-container #who-we-are .item .name {
 	font-size:18px;
 	line-height:20px;
 	margin-bottom:5px;
 }
-#kwlabs-container #who-we-are .item .role {
+#kwlab-container #who-we-are .item .role {
 	font-size:14px;
 	line-height:14px;
 	padding:0px 5px 0px 5px;
 }
-#kwlabs-container #who-we-are .item img.icon {
+#kwlab-container #who-we-are .item img.icon {
 	margin:30px 0px 15px 0px;
 }
-#kwlabs-container #who-we-are .item img.icon:hover {
+#kwlab-container #who-we-are .item img.icon:hover {
 	transform:scale(1.1);
 }
 
-#kwlabs-container #join-our-team {
+#kwlab-container #join-our-team {
 	padding-bottom:20px;
   position:relative;
 }
-#kwlabs-container #join-our-team h3 {
+#kwlab-container #join-our-team h3 {
   font-family: "ProxSemiBold","Helvetica Neue",Arial,sans-serif;
-  font-size:22px;
-  line-height: 20px;
+  font-size:24px;
+  line-height:32px;
   margin-top:20px;
   letter-spacing:0.1px;
   color:#FFF;
 }
-#kwlabs-container #join-our-team .button { /* .button class provides pre-existing button css */
+#kwlab-container #join-our-team .button { /* .button class provides pre-existing button css */
 	font-size:14px;
 	background-color:rgb(21, 140, 190);
 }
-#kwlabs-container #join-our-team div.text {
-	font-size:16px; /* orig: 18 */
-	line-height:22px; /* orig: 24 */
+#kwlab-container #join-our-team div.text {
+	font-size:20px; /* orig: 18 */
+	line-height:24px; /* orig: 24 */
   color:#FFF;
 }
-#kwlabs-container #join-our-team .button-caption {
+#kwlab-container #join-our-team .button-caption {
   font-size:16px; /* orig: 18 */
   line-height:22px; /* orig: 24 */
   color:#FFF;
@@ -168,7 +167,7 @@
 #lightbox-modal.show { /* on click, show semi-transparent, dark background */
 	z-index:10;
 }
-#kwlabs-container .profile-lightbox {
+#kwlab-container .profile-lightbox {
 	/*height:400px;*/
 	text-align:left;
 	background-color:#FFF;
@@ -187,73 +186,73 @@
 	-moz-transition: top 0.6s ease-in-out;
 	-o-transition: top 0.6s ease-in-out;
 }
-#kwlabs-container .profile-lightbox.show.disable-transition {
+#kwlab-container .profile-lightbox.show.disable-transition {
   transition:none !important;
   -webkit-transition:none !important;
 	-moz-transition:none !important;
 	-o-transition:none !important;
 }
-#kwlabs-container .profile-lightbox hr {
+#kwlab-container .profile-lightbox hr {
 	margin:5px 20px 5px 20px;
 }
-#kwlabs-container span#lb-close {
+#kwlab-container span#lb-close {
 	position:absolute;
 	top:15px;
 	right:20px;
 }
-#kwlabs-container .lb-name {
+#kwlab-container .lb-name {
 	margin:20px 0px 0px 20px;
 	font-size:26px;
 	line-height:22px;
 }
-#kwlabs-container .lb-role {
+#kwlab-container .lb-role {
 	padding:0px 0px 10px 20px;
 	font-size:16px;
 	/*line-height:12px;*/
 }
-#kwlabs-container .profile-lightbox .text-wrapper {
+#kwlab-container .profile-lightbox .text-wrapper {
 	padding:0px 0px 0px 20px;
 }
-#kwlabs-container .profile-lightbox .left {
+#kwlab-container .profile-lightbox .left {
 	float:left;
 	width:60%;
 }
-#kwlabs-container .profile-lightbox .right {
+#kwlab-container .profile-lightbox .right {
 	float:right;
 	width:40%;
 }
-#kwlabs-container .lb-bio {
+#kwlab-container .lb-bio {
 	margin-bottom:20px;
 }
-#kwlabs-container .profile-lightbox .icon-wrapper {
+#kwlab-container .profile-lightbox .icon-wrapper {
 	padding:0px 20px 20px 20px;
 	text-align:center;
 }
-#kwlabs-container .profile-lightbox.show {
+#kwlab-container .profile-lightbox.show {
 	z-index:15;
 }
-#kwlabs-container .profile-lightbox.hide {
+#kwlab-container .profile-lightbox.hide {
 	top:calc(100% + 1000px);
 	z-index:11;
 }
 
 @media screen and (min-width: 767px) { /* mobile view for who-we-are section begins earlier */
-	#kwlabs-container #who-we-are .item {
+	#kwlab-container #who-we-are .item {
 		width:33.33%;
 		float:left;
 	}
 
-  #kwlabs-container #join-our-team div.left { /* in desktop view, stack join-our-team buttons horizontally */
+  #kwlab-container #join-our-team div.left { /* in desktop view, stack join-our-team buttons horizontally */
     float:left;
     width:50%;
   }
-  #kwlabs-container #join-our-team div.right {
+  #kwlab-container #join-our-team div.right {
     width:calc(50% - 100px);
     position:absolute;
     bottom:0px;
     right:100px;
   }
-  #kwlabs-container #join-our-team div.bottom { /* container for .left and .right */
+  #kwlab-container #join-our-team div.bottom { /* container for .left and .right */
     padding: 0px 100px 0px 100px;
     position:relative;
     overflow:hidden;
@@ -261,131 +260,131 @@
 }
 
 @media screen and (max-width: 767px) { /* for who-we-are, collapse the icons earlier due to spacing issues */
-	#kwlabs-container #who-we-are .item {
+	#kwlab-container #who-we-are .item {
 		width:50%;
 		float:left;
 		height:175px;
 		/*margin-bottom:20px;*/
 	}
 
-  #kwlabs-container #join-our-team div.left { /* set the join our team buttons to stack vertically in tablet and mobile */
+  #kwlab-container #join-our-team div.left { /* set the join our team buttons to stack vertically in tablet and mobile */
     width:100%;
   }
-  #kwlabs-container #join-our-team div.right {
+  #kwlab-container #join-our-team div.right {
     width:100%;
     margin-top:10px;
   }
-  #kwlabs-container #join-our-team div.bottom { /* container for .left and .right */
+  #kwlab-container #join-our-team div.bottom { /* container for .left and .right */
     padding:0px 20px 0px 20px;
   }
-  #kwlabs-container #join-our-team .button-caption {
+  #kwlab-container #join-our-team .button-caption {
     padding:10px 40px 0px 40px;
   }
 }
 
 /* exclusive desktop view styles */
 @media screen and (min-width: 641px) {
-	#kwlabs-container .header-text {
+	#kwlab-container .header-text {
 		font-size: 24px; /* orig: 28 */
 	}
 
-	#kwlabs-container section#our-projects, section#who-we-are, section#for-you {
+	#kwlab-container section#our-projects, section#who-we-are, section#for-you {
 		padding:20px 100px 20px 100px;
 	}
 
-	#kwlabs-container #intro-banner .text-banner div {
+	#kwlab-container #intro-banner .text-banner div {
 		padding:30px 65px;
 	}
 
-	#kwlabs-container #join-our-team div.text {
+	#kwlab-container #join-our-team div.text {
 		padding:20px 100px 20px 100px;
 		letter-spacing:0.5px;
 	}
 
-	#kwlabs-container .profile-lightbox {
+	#kwlab-container .profile-lightbox {
 		width:100%;
 	}
-  #kwlabs-container .profile-lightbox.show {
+  #kwlab-container .profile-lightbox.show {
   	top:125px;
   }
-	#kwlabs-container .profile-lightbox .lb-image {
+	#kwlab-container .profile-lightbox .lb-image {
 		width:100%;
 	}
 }
 
 /* mobile view styles */
 @media screen and (max-width: 640px) {
-	#kwlabs-container .header-text {
+	#kwlab-container .header-text {
 		font-size:22px; /* orig: 24 */
 	}
 
-	#kwlabs-container .kw-lab {
+	#kwlab-container .kw-lab {
 		font-size:12px;
 		padding:0px 0px 15px 0px;
 	}
 
-	.kwlabs.top-banner img.large-logo {
+	.kwlab.top-banner img.large-logo {
 		display:none;
 	}
-	.kwlabs.top-banner img.mobileLogo {
+	.kwlab.top-banner img.mobileLogo {
 		display:block;
     	width:150px;
 	}
 
-	#kwlabs-container section#our-projects, section#who-we-are, section#for-you {
+	#kwlab-container section#our-projects, section#who-we-are, section#for-you {
 		padding:20px 20px 20px 20px;
 	}
 
-	#kwlabs-container #intro-banner .text-banner div {
+	#kwlab-container #intro-banner .text-banner div {
 		padding:30px 20px;
 	}
 
-	#kwlabs-container #our-projects .item { /* override into vertical stack */
+	#kwlab-container #our-projects .item { /* override into vertical stack */
 		width:100%;
 		float:none;
 		display:block;
 	}
 
-	#kwlabs-container #join-our-team div.text {
+	#kwlab-container #join-our-team div.text {
 		padding:20px 20px 20px 20px;
 	}
 
-	#kwlabs-container .profile-lightbox {
+	#kwlab-container .profile-lightbox {
 		width:94%;
 		max-height:calc(100% - 20px) !important;
 	}
-	#kwlabs-container .profile-lightbox.show {
+	#kwlab-container .profile-lightbox.show {
 		top:10px;
 	}
-	#kwlabs-container .profile-lightbox span#lb-close span.close { /* hide the word "CLOSE" to save space */
+	#kwlab-container .profile-lightbox span#lb-close span.close { /* hide the word "CLOSE" to save space */
 		display:none;
 	}
-	#kwlabs-container .profile-lightbox .right {
+	#kwlab-container .profile-lightbox .right {
 		float:none;
 		width:100%;
 	}
-	#kwlabs-container .lb-image {
+	#kwlab-container .lb-image {
 		width:50%;
 	}
-	#kwlabs-container .profile-lightbox .left { /* temporary: don't show profile image in mobile */
+	#kwlab-container .profile-lightbox .left { /* temporary: don't show profile image in mobile */
 		float:none;
 		width:100%;
 	}
-	#kwlabs-container .profile-lightbox .text-wrapper {
+	#kwlab-container .profile-lightbox .text-wrapper {
 		padding:0px 20px 0px 20px;
 	}
 }
 
 @media screen and (max-width: 480px) {
-	#kwlabs-container .lb-name {
+	#kwlab-container .lb-name {
 		font-size:22px;
 		line-height:22px;
 	}
-	#kwlabs-container .lb-role {
+	#kwlab-container .lb-role {
 		font-size:14px;
 		/*line-height:12px;*/
 	}
-	#kwlabs-container .lb-bio {
+	#kwlab-container .lb-bio {
 		font-size:16px;
 	}
 }

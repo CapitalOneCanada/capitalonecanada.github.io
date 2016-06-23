@@ -208,9 +208,9 @@ function showLightbox(ele) {
 			hideLightbox(index);
 		});
 
-		$(prefix + ".profile-lightbox").on('touchstart', handleTouchStart);
-		$(prefix + ".profile-lightbox").on('touchmove', handleTouchMove);
-		$(prefix + ".profile-lightbox").on('touchend', handleTouchEnd);
+		//$(prefix + ".profile-lightbox").on('touchstart', handleTouchStart);
+		//$(prefix + ".profile-lightbox").on('touchmove', handleTouchMove);
+		//$(prefix + ".profile-lightbox").on('touchend', handleTouchEnd);
 	}
 	// set the lightbox to be visible (default)
 	// async delay to ensure the lightbox is rendered (so transitions can be performed)
