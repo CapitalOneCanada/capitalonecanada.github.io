@@ -120,6 +120,9 @@
     z-index:2;
 }
 
+#tss-container #who-we-are .top, #tss-container #who-we-are .bottom {
+	overflow: hidden;
+}
 #tss-container #who-we-are .item .name {
 	font-size:18px;
 	line-height:20px;
