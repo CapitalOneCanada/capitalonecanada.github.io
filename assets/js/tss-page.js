@@ -71,6 +71,63 @@ var employees = [
 ];
 
 /*
+Handle swipe motions to close the profile lightboxes. Note: vertical swipe down to close
+Variable yCoord is used to check y-axis swipe motions
+Function handleTouchStart(e) registers the y-coordinate at the beginning of swipe.
+Funciton handleTouchMove(e) checks the new y-coordinates, and executes the commands depending on what swipe was done
+*/
+var yCoord = null;
+var xCoord = null;
+var yDelta = 0;
+var swipedClosed = false;
+var didSwipe = false;
+var enableSwipeToClose = false;
+
+function handleTouchStart(e) {
+  // flag to check if the lightbox is fully scrolled-to-top
+  // if not, then don't enable swipe-down-to-close
+  enableSwipeToClose = $(".profile-lightbox.show").scrollTop() == 0;
+  yCoord = e.originalEvent.touches[0].pageY;
+  xCoord = e.originalEvent.touches[0].pageX;
+}
+
+function handleTouchMove(e) {
+  if (!enableSwipeToClose || !yCoord || $(".profile-lightbox.show").length == 0) { // do nothing if yCoord is not originally set or not lightbox open
+    return;
+  } else {
+    $(".profile-lightbox.show").addClass("disable-transition");
+    var yNew = e.originalEvent.touches[0].pageY;
+    yDelta = yCoord - yNew;
+		didSwipe = yDelta != 0 || xCoord - e.originalEvent.touches[0].pageX != 0;
+    if (yDelta < 0) { // is swipe down
+			$(".profile-lightbox.show").css("overflow", "hidden");
+      $(".profile-lightbox.show").css("top", 10 + yDelta * -1);
+      swipedClosed = yDelta < -125;
+    }
+  }
+}
+
+function handleTouchEnd(e) {
+	if (didSwipe) {
+	  if (swipedClosed) {
+	    swipedClosed = true;
+	    $(this).addClass("hide").removeClass("show");
+	    $(this).attr("style", "");
+	    resetBackground();
+			$(".profile-lightbox").removeClass("disable-transition");
+	  } else { // reset lightbox position
+			$(".profile-lightbox.show").css("overflow", "auto");
+	    $(".profile-lightbox.show").css("top", 10);
+	  }
+	}
+  $(this).attr("style", "");
+	swipedClosed = false; // reset swipedClosed
+	yCoord = null;
+	didSwipe = false;
+	$(".profile-lightbox").removeClass("disable-transition");
+}
+
+/*
 When the lightbox close button is clicked
 Or, when any shaded area outside the lightbox is clicked
 close the lightbox
@@ -80,19 +137,22 @@ close the lightbox
 
 Note, overflow-y to disable background scroll does not work on actual iOS devices. Works on desktop browsers.
 */
+function resetBackground() {
+	$("#lightbox-modal").css("opacity", "0");
+  setTimeout(function() {
+    // hide darkened background overlay after 800ms (when lightbox finishes transition)
+    $("#lightbox-modal").removeClass("show");
+  }, 800);
+  setTimeout(function() {
+    // re-enable window scrolling after 500ms (when lightbox exists screen)
+    $("body").css("overflow-y", "visible");
+  }, 500);
+}
+
 function hideLightbox(index) {
 	var prefix = "#tss-container #who-we-are .item:eq("+index+") ";
 	$(prefix + ".profile-lightbox").addClass("hide").removeClass("show");
-	$("#lightbox-modal").css("opacity", "0");
-	// after the transition duration ends, remove show (pushes background modal backwards)
-	setTimeout(function() {
-		// hide darkened background overlay after 800ms (when lightbox finishes transition)
-		$("#lightbox-modal").removeClass("show");
-	}, 800);
-	setTimeout(function() {
-		// re-enable window scrolling after 500ms (when lightbox exists screen)
-		$("body").css("overflow-y", "visible");
-	}, 500);
+  resetBackground();
 };
 
 /*
@@ -147,6 +207,10 @@ function showLightbox(ele) {
 			e.preventDefault();
 			hideLightbox(index);
 		});
+
+		//$(prefix + ".profile-lightbox").on('touchstart', handleTouchStart);
+		//$(prefix + ".profile-lightbox").on('touchmove', handleTouchMove);
+		//$(prefix + ".profile-lightbox").on('touchend', handleTouchEnd);
 	}
 	// set the lightbox to be visible (default)
 	// async delay to ensure the lightbox is rendered (so transitions can be performed)

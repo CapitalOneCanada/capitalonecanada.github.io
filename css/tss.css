@@ -18,11 +18,11 @@
     height: auto;
 }
 .tss.top-banner .software-studio {
-	color:#FFF;
-	letter-spacing:5px;
-	font-size:22px;
-    font-family: "ProxReg","Helvetica Neue",Arial,sans-serif;
-    padding: 0px 0px 30px 0px;
+		color:#FFF;
+		letter-spacing:5px;
+		font-size:22px;
+	  font-family: "ProxReg","Helvetica Neue",Arial,sans-serif;
+	  padding: 0px 0px 30px 0px;
 }
 .tss.top-banner .text {
     /*font-size: 36px;*/
@@ -120,6 +120,9 @@
     z-index:2;
 }
 
+#tss-container #who-we-are .top, #tss-container #who-we-are .bottom {
+	overflow: hidden;
+}
 #tss-container #who-we-are .item .name {
 	font-size:18px;
 	line-height:20px;
@@ -197,7 +200,7 @@
 	background-color:#FFF;
 	max-width:700px;
 	position:fixed;
-	top:-1000px;
+	top:calc(100% + 1000px);
 	margin-left:auto; /* margin left/right and left/right:0 does not work on IE if a max-width is specified */
 	margin-right:auto;
 	left:0;
@@ -209,6 +212,12 @@
 	-webkit-transition: top 0.6s ease-in-out;
 	-moz-transition: top 0.6s ease-in-out;
 	-o-transition: top 0.6s ease-in-out;
+}
+#tss-container .profile-lightbox.show.disable-transition {
+  transition:none !important;
+  -webkit-transition:none !important;
+	-moz-transition:none !important;
+	-o-transition:none !important;
 }
 #tss-container .profile-lightbox hr {
 	margin:5px 20px 5px 20px;
@@ -247,27 +256,12 @@
 	text-align:center;
 }
 #tss-container .profile-lightbox.show {
-	top:200px;
 	z-index:15;
 }
 #tss-container .profile-lightbox.hide {
-	top:-1000px;
+	top:calc(100% + 1000px);
 	z-index:11;
 }
-
-/* .item slide-in when first scrolled to */
-/*#tss-container .item {
-	opacity:0;
-	margin-top:200px;
-	transition: opacity 0.6s linear, margin-top 0.6s linear;
-	-webkit-transition: opacity 0.6s linear, margin-top 0.6s linear;
-	-moz-transition: opacity 0.6s linear, margin-top 0.6s linear;
-	-o-transition: opacity 0.6s linear, margin-top 0.6s linear;
-}
-#tss-container .item.appeared {
-	opacity:1 !important;
-	margin-top:0px !important;
-}*/
 
 @media screen and (min-width: 767px) { /* mobile view for who-we-are section begins earlier */
 	#tss-container #who-we-are .item {
@@ -361,16 +355,15 @@
 	#tss-container .profile-lightbox {
 		width:100%;
 	}
+	#tss-container .profile-lightbox.show {
+  	top:125px;
+  }
 	#tss-container .profile-lightbox .lb-image {
 		width:100%;
 	}
 }
 /* mobile view styles */
 @media screen and (max-width: 640px) {
-	button#scroll-to-top {
-		display:none;
-	}
-
 	#tss-container .header-text {
 		font-size:26px;
 	}
@@ -445,7 +438,7 @@
 		max-height:calc(100% - 20px) !important;
 	}
 	#tss-container .profile-lightbox.show {
-		top:10px !important;
+		top:10px;
 	}
 	#tss-container .profile-lightbox span#lb-close span.close { /* hide the word "CLOSE" to save space */
 		display:none;
