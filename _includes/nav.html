@@ -16,8 +16,9 @@
                 pgurl = pgurl.slice(0,-1);
             }
             $("#main_nav a").each(function(){
-                               if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
-                               $(this).addClass("selected");
+							if ($(this).attr("href") == pgurl || $(this).attr("href") == '' || $(this).attr("href").slice(0, -1) == pgurl) {
+								$(this).addClass("selected");
+							}
             })
         })();
     </script>
