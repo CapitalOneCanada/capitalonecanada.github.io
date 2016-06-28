@@ -16,14 +16,13 @@ var employees = [
 		"role":"Senior Data Scientist",
 		"iconURL":baseURL + "/assets/img/kwlab/JB19766_KW-Joan.png",
     "biography1":"My role is to guide the projects from beginning to end&nbsp;– to act as liaison with the Capital One head office and to provide necessary support for our co-op students. It’s amazing to play such an important role in our digital journey.",
-    // italicize 1989
-    "biography2":"I bring a lot of positive energy to the team. And I love to code while listening to Taylor Swift’s music, especially \"1989\"."
+    "biography2":"I bring a lot of positive energy to the team. And I love to code while listening to Taylor Swift’s music, especially “1989.”"
   },
 	{
 		"name":"Steve Frensch",
 		"role":"Senior Manager",
 		"iconURL":baseURL + "/assets/img/kwlab/JB19766_KW-Steve.png",
-    "biography1":"My role is to take care of all areas of the Lab&nbsp;– I manage the team, project development, industry relationships and even the office supplies! However, my goal is to bring out the best in people so they can deliver the best work.",
+    "biography1":"My role is to take care of all areas of the Lab&nbsp;– I manage the team, project development, industry relationships and even the office supplies! However, my goal is to bring out the best in people, so they can deliver the best work.",
     "biography2":"Outside of work, I spend most of my time playing with my kids. My seven-month-old daughter especially enjoys the ‘slap-dad-in-the-face’ game. And she’s really good at it!"
 	},
 	{
@@ -37,21 +36,21 @@ var employees = [
 		"name":"David Tsenter",
 		"role":"Co-op Student",
 		"iconURL":baseURL + "/assets/img/kwlab/JB19766_KW-David.png",
-		"biography1":"This is my 1st co-op placement. I really enjoy working with a small team, all the while learning the development cycles of a big company like Capital One. I like that the work we do here matters!",
-		"biography2":"My twin sister is two minutes younger than me. If I can’t win an argument with her, I say, \"Respect your elders.\" Surprisingly, it works sometimes ..."
+		"biography1":"This is my 1<sup>st</sup> co-op placement. I really enjoy working with a small team, all the while learning the development cycles of a big company like Capital One. I like that the work we do here matters!",
+		"biography2":"My twin sister is two minutes younger than me. If I can’t win an argument with her, I say, “Respect your elders.” Surprisingly, it works sometimes ..."
 	},
 	{
 		"name":"Jasmine Ren",
 		"role":"Co-op Student",
 		"iconURL":baseURL + "/assets/img/kwlab/JB19766_KW-Jasmine.png",
-		"biography1":"This is my 3rd co-op placement. I was really excited about the prospect of working at the Capital One Lab as I had friends who told me that during their previous assignments here, they were really able to hone their skills. I study statistics and this co-op experience is giving me a powerful insight into how to use math in a business application. I now have a better understanding of what skills I should learn for my career development.",
+		"biography1":"This is my 3<sup>rd</sup> co-op placement. I was really excited about the prospect of working at the Capital One Lab as I had friends who told me that during their previous assignments here, they were really able to hone their skills. I study statistics and this co-op experience is giving me a powerful insight into how to use math in a business application. I now have a better understanding of what skills I should learn for my career development.",
 		"biography2":"Funny story, while in my 1st year of University&nbsp;– in between moving from one residence to another&nbsp;– I crashed in the lounge of the math building. I did this for three whole days."
 	},
 	{
 		"name":"Eric Hardy",
 		"role":"Co-op Student",
 		"iconURL":baseURL + "/assets/img/kwlab/JB19766_KW-Eric.png",
-		"biography1":"This is my 5th co-op placement. I study computer science and I’m into big data, so the Capital One Lab is the perfect opportunity for me. The infrastructure is great&nbsp;– it’s nice to collaborate with the Toronto office, yet we still work independently. It’s inspiring to know that the company will actually use our work.",
+		"biography1":"This is my 5<sup>th</sup> co-op placement. I study computer science and I’m into big data, so the Capital One Lab is the perfect opportunity for me. The infrastructure is great&nbsp;– it’s nice to collaborate with the Toronto office, yet we still work independently. It’s inspiring to know that the company will actually use our work.",
 		"biography2":"For a month or so, I’ve been teaching a robot how to play Mario Bros. Hmm, I just realized Mario has a name, but my robot doesn’t. Mario-nette?"
 	},
 ];
@@ -81,15 +80,14 @@ function handleTouchMove(e) {
   if (!enableSwipeToClose || !yCoord || $(".profile-lightbox.show").length == 0) { // do nothing if yCoord is not originally set or not lightbox open
     return;
   } else {
-    $(".profile-lightbox.show").addClass("disable-transition");
-    var yNew = e.originalEvent.touches[0].pageY;
-    yDelta = yCoord - yNew;
+    //$(".profile-lightbox.show").addClass("disable-transition");
+    yDelta = yCoord - e.originalEvent.touches[0].pageY;
 		didSwipe = yDelta != 0 || xCoord - e.originalEvent.touches[0].pageX != 0;
-    if (yDelta < 0) { // is swipe down
-			$(".profile-lightbox.show").css("overflow", "hidden");
-      $(".profile-lightbox.show").css("top", 10 + yDelta * -1);
+    //if (yDelta < 0) { // is swipe down
+			//$(".profile-lightbox.show").css("overflow", "hidden");
+      //$(".profile-lightbox.show").css("top", 10 + yDelta * -1);
       swipedClosed = yDelta < -125;
-    }
+    //}
   }
 }
 
@@ -98,19 +96,19 @@ function handleTouchEnd(e) {
 	  if (swipedClosed) {
 	    swipedClosed = true;
 	    $(this).addClass("hide").removeClass("show");
-	    $(this).attr("style", "");
+	    //$(this).attr("style", "");
 	    resetBackground();
-			$(".profile-lightbox").removeClass("disable-transition");
-	  } else { // reset lightbox position
-			$(".profile-lightbox.show").css("overflow", "auto");
-	    $(".profile-lightbox.show").css("top", 10);
-	  }
+			//$(".profile-lightbox").removeClass("disable-transition");
+	  }// } else { // reset lightbox position
+		// 	$(".profile-lightbox.show").css("overflow", "auto");
+	  //   $(".profile-lightbox.show").css("top", 10);
+	  // }
 	}
-  $(this).attr("style", "");
+  //$(this).attr("style", "");
 	swipedClosed = false; // reset swipedClosed
 	yCoord = null;
 	didSwipe = false;
-	$(".profile-lightbox").removeClass("disable-transition");
+	//$(".profile-lightbox").removeClass("disable-transition");
 }
 
 /*
@@ -194,9 +192,9 @@ function showLightbox(ele) {
 			hideLightbox(index);
 		});
 
-    //$(prefix + ".profile-lightbox").on('touchstart', handleTouchStart);
-    //$(prefix + ".profile-lightbox").on('touchmove', handleTouchMove);
-    //$(prefix + ".profile-lightbox").on('touchend', handleTouchEnd);
+    $(prefix + ".profile-lightbox").on('touchstart', handleTouchStart);
+    $(prefix + ".profile-lightbox").on('touchmove', handleTouchMove);
+    $(prefix + ".profile-lightbox").on('touchend', handleTouchEnd);
 	}
 	// set the lightbox to be visible (default)
 	// async delay to ensure the lightbox is rendered (so transitions can be performed)
