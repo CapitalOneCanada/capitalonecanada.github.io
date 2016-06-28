@@ -130,6 +130,7 @@ function resetBackground() {
   setTimeout(function() {
     // re-enable window scrolling after 500ms (when lightbox exists screen)
     $("body").css("overflow-y", "visible");
+		$('body').unbind('touchmove');
   }, 500);
 }
 
@@ -203,7 +204,9 @@ function showLightbox(ele) {
 	}, 50);
 	$("#lightbox-modal").addClass("show");
 	$("#lightbox-modal").css("opacity", "0.6");
+	// prevent background from scrolling
 	$("body").css("overflow-y", "hidden");
+	$('body').bind('touchmove', function(e) { e.preventDefault() });
 };
 
 /*
