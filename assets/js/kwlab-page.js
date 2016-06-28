@@ -44,7 +44,7 @@ var employees = [
 		"role":"Co-op Student",
 		"iconURL":baseURL + "/assets/img/kwlab/JB19766_KW-Jasmine.png",
 		"biography1":"This is my 3<sup>rd</sup> co-op placement. I was really excited about the prospect of working at the Capital One Lab as I had friends who told me that during their previous assignments here, they were really able to hone their skills. I study statistics and this co-op experience is giving me a powerful insight into how to use math in a business application. I now have a better understanding of what skills I should learn for my career development.",
-		"biography2":"Funny story, while in my 1st year of University&nbsp;– in between moving from one residence to another&nbsp;– I crashed in the lounge of the math building. I did this for three whole days."
+		"biography2":"Funny story, while in my 1<sup>st</sup> year of University&nbsp;– in between moving from one residence to another&nbsp;– I crashed in the lounge of the math building. I did this for three whole days."
 	},
 	{
 		"name":"Eric Hardy",
