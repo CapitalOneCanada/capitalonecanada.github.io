@@ -1,5 +1,6 @@
 #kwlab-container {
 	width:100%;
+	color:#222;
 }
 .kwlab.top-banner {
 	background-color:#004977;
@@ -230,6 +231,7 @@
 }
 #kwlab-container .profile-lightbox.show {
 	z-index:15;
+	overflow:scroll;
 }
 #kwlab-container .profile-lightbox.hide {
 	top:calc(100% + 1000px);
