@@ -60,55 +60,63 @@ Handle swipe motions to close the profile lightboxes. Note: vertical swipe down 
 Variable yCoord is used to check y-axis swipe motions
 Function handleTouchStart(e) registers the y-coordinate at the beginning of swipe.
 Funciton handleTouchMove(e) checks the new y-coordinates, and executes the commands depending on what swipe was done
+
+In the future: try using jQuery mobile.
 */
 var yCoord = null;
 var xCoord = null;
 var yDelta = 0;
-var swipedClosed = false;
-var didSwipe = false;
-var enableSwipeToClose = false;
+var beganAtTop = false; // true -> enable swipe-to-close
+var isSwipe = false;
+var doSwipeClose = false;
+var currentScroll = 0;
+var didntSwipeDownYet = true;
 
-function handleTouchStart(e) {
-  // flag to check if the lightbox is fully scrolled-to-top
-  // if not, then don't enable swipe-down-to-close
-  enableSwipeToClose = $(".profile-lightbox.show").scrollTop() == 0;
-  yCoord = e.originalEvent.touches[0].pageY;
-  xCoord = e.originalEvent.touches[0].pageX;
+function handleTouchStart(e) { // touchstart
+	// store original coordinates at touchstart
+	yCoord = e.originalEvent.touches[0].pageY;
+	xCoord = e.originalEvent.touches[0].pageX;
+	beganAtTop = $(".profile-lightbox.show").scrollTop() == 0;
+	currentScroll = $(".profile-lightbox.show").scrollTop();
 }
 
-function handleTouchMove(e) {
-  if (!enableSwipeToClose || !yCoord || $(".profile-lightbox.show").length == 0) { // do nothing if yCoord is not originally set or not lightbox open
-    return;
-  } else {
-    //$(".profile-lightbox.show").addClass("disable-transition");
-    yDelta = yCoord - e.originalEvent.touches[0].pageY;
-		didSwipe = yDelta != 0 || xCoord - e.originalEvent.touches[0].pageX != 0;
-    //if (yDelta < 0) { // is swipe down
-			//$(".profile-lightbox.show").css("overflow", "hidden");
-      //$(".profile-lightbox.show").css("top", 10 + yDelta * -1);
-      swipedClosed = yDelta < -125;
-    //}
-  }
-}
-
-function handleTouchEnd(e) {
-	if (didSwipe) {
-	  if (swipedClosed) {
-	    swipedClosed = true;
-	    $(this).addClass("hide").removeClass("show");
-	    //$(this).attr("style", "");
-	    resetBackground();
-			//$(".profile-lightbox").removeClass("disable-transition");
-	  }// } else { // reset lightbox position
-		// 	$(".profile-lightbox.show").css("overflow", "auto");
-	  //   $(".profile-lightbox.show").css("top", 10);
-	  // }
+function handleTouchMove(e) { // touchmove
+	yDelta = yCoord - e.originalEvent.touches[0].pageY;
+	isSwipe = yDelta != 0 || xCoord - e.originalEvent.touches[0].pageX != 0; // as long as yCoord OR xCoord is different, count as swipe
+	if (yDelta < 0) { // swipe down (small y to large y)
+		if (beganAtTop && didntSwipeDownYet) {
+			doSwipeClose = yDelta < -125;
+			// do slide up/down animation
+			$(".profile-lightbox.show").addClass("disable-transition");
+			$(".profile-lightbox.show").css("top", 10 - yDelta);
+		} else {
+			$(".profile-lightbox.show").scrollTop(yDelta - 20 + currentScroll); // scroll the div. -20 to make scroll (up) a bit faster
+		}
+	} else if (yDelta > 0) { // swipe up (large y to small y)
+		$(".profile-lightbox.show").scrollTop(yDelta + 20 + currentScroll); // scroll the div. +20 to make scroll (down) a bit faster
+		if (didntSwipeDownYet) { // try to save some code execution. Already false -> no need to set false again
+			didntSwipeDownYet = false;
+		}
 	}
-  //$(this).attr("style", "");
-	swipedClosed = false; // reset swipedClosed
+}
+
+function handleTouchEnd(e) { // touchend
+	$(this).removeClass("disable-transition");
+	if (isSwipe && doSwipeClose) { // close lightbox
+		$(this).addClass("hide").removeClass("show");
+		resetBackground();
+		$(this).attr("style", ""); // removes all inline styles. If this conflicts with any future changes, try to simply remove the inline-css "top" value
+	} else {
+		$(this).css("top", 10);
+	}
+	// reset values
 	yCoord = null;
-	didSwipe = false;
-	//$(".profile-lightbox").removeClass("disable-transition");
+	xCoord = null;
+	yDelta = 0;
+	beganAtTop = false;
+	isSwipe = false;
+	doSwipeClose = false;
+	didntSwipeDownYet = true;
 }
 
 /*
@@ -130,13 +138,14 @@ function resetBackground() {
   setTimeout(function() {
     // re-enable window scrolling after 500ms (when lightbox exists screen)
     $("body").css("overflow-y", "visible");
-		$('body').unbind('touchmove');
+		$("body, html").unbind('touchmove');
   }, 500);
 }
 
 function hideLightbox(index) {
 	var prefix = "#kwlab-container #who-we-are .item:eq("+index+") ";
 	$(prefix + ".profile-lightbox").addClass("hide").removeClass("show");
+	$(prefix + ".profile-lightbox").attr("style", ""); // clear the inline-css added by touchevent handlers
   resetBackground();
 };
 
@@ -193,6 +202,15 @@ function showLightbox(ele) {
 			hideLightbox(index);
 		});
 
+		/*
+		Attach custom handlers for touch events to the lightbox, since we disabled the default touchmove in
+		order to prevent the background from scrolling while a lightbox is open.
+		These events (see functions above) manually scroll the lightbox (if necessary) on swipe and
+		also handles the checks for whether the lightbox is swiped-down (to close it).
+
+		Note: In reality, these events should only need to be attached in mobile viewports,
+		but it shouldn't have any effect on desktop views.
+		*/
     $(prefix + ".profile-lightbox").on('touchstart', handleTouchStart);
     $(prefix + ".profile-lightbox").on('touchmove', handleTouchMove);
     $(prefix + ".profile-lightbox").on('touchend', handleTouchEnd);
@@ -206,26 +224,7 @@ function showLightbox(ele) {
 	$("#lightbox-modal").css("opacity", "0.6");
 	// prevent background from scrolling
 	$("body").css("overflow-y", "hidden");
-	$('body').bind('touchmove', function(e) { e.preventDefault() });
-};
-
-/*
-Debounce function
-*/
-function debounce(func, wait, immediate) {
-	var timeout;
-	return function() {
-		var context = this;
-		var args = arguments;
-		var later = function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		};
-		var callNow = immediate && !timeout;
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-		if (callNow) func.apply(context, args);
-	};
+	$("body, html").bind('touchmove', function(e) { e.preventDefault(); });
 };
 
 /*
