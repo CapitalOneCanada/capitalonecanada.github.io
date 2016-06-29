@@ -267,6 +267,7 @@
 		float:left;
 		height:175px;
 		/*margin-bottom:20px;*/
+		padding-bottom:5px;
 	}
 
   #kwlab-container #join-our-team div.left { /* set the join our team buttons to stack vertically in tablet and mobile */
