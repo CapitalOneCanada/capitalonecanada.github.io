@@ -206,7 +206,7 @@ function showLightbox(ele) {
 		Attach custom handlers for touch events to the lightbox, since we disabled the default touchmove in
 		order to prevent the background from scrolling while a lightbox is open.
 		These events (see functions above) manually scroll the lightbox (if necessary) on swipe and
-		also handles the checks for whether the lightbox is swiped-down (to close it).
+		also checks if the lightbox is swiped-down (to close it).
 
 		Note: In reality, these events should only need to be attached in mobile viewports,
 		but it shouldn't have any effect on desktop views.
