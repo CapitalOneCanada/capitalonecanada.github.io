@@ -241,7 +241,7 @@ table tr:last-child 					{ border: 0px; }
 	#mobile_nav a.close:hover			{ transform:scale(1.1, 1.1); transition:all 0.1s ease-out; }
 }
 
-@media screen and (max-width:640px) and (max-height:550px) {
+@media screen and (max-width:640px) and (max-height:600px) {
 	#mobile_nav							{ padding-top:50px; }
 	#mobile_nav .logo					{ display:none; }
 }
