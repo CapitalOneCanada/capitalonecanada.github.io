@@ -285,6 +285,17 @@
   }
 }
 
+/* When the screen size is wide enough, but not tall enough (e.g. mobile landscape) */
+@media screen and (min-width: 641px) and (max-height: 530px) {
+	#kwlab-container .profile-lightbox {
+		width:94% !important;
+		max-height:calc(100% - 20px) !important;
+	}
+	#kwlab-container .profile-lightbox.show {
+		top:10px !important;
+	}
+}
+
 /* exclusive desktop view styles */
 @media screen and (min-width: 641px) {
 	#kwlab-container .header-text {
