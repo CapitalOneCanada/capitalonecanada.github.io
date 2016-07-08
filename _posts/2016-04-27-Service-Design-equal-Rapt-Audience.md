@@ -3,9 +3,10 @@ layout: post
 title: "Service Design = Rapt Audience"
 date: 2016-04-27 15:00:00
 theme: C1 Tech Series
-author: Capital One 
+author: Capital One
 tags: engineering blog
 category: blog
+visible: true
 images:
     Patrick-Quattlebaum: /assets/posts/Service-Design-equal-Rapt-Audience/Patrick-Quattlebaum.jpg
     Group: /assets/posts/Service-Design-equal-Rapt-Audience/group.jpg
@@ -30,4 +31,3 @@ Patrick then drove the point home by inviting a number of audience members on st
 
 This was yet again another great evening of learning, that was held in support of a great cause. Stay tuned to this space for our next C1 Tech Series – we’re on a roll and you’re going to love it!
 <br/><br/>
-
