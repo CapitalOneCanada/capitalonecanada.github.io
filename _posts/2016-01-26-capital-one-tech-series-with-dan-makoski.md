@@ -3,9 +3,10 @@ layout: post
 title: "Capital One Tech Series with Dan Makoski"
 date: 2016-01-26 21:35:00
 theme: C1 Tech Series
-author: Capital One 
+author: Capital One
 tags: engineering blog
 category: blog
+visible: true
 images:
     Dan-Makoski-talk: /assets/posts/capital-one-tech-series-with-dan-makoski/Dan-Makoski-talk.jpg
 ---
