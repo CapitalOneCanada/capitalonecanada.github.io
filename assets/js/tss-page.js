@@ -187,13 +187,26 @@ function showLightbox(ele) {
 				'<a href="#"><span id="lb-close"><span class="close">CLOSE</span>&nbsp<strong>X</strong></span></a>',
 				'<hr></hr>',
 				'<div class="lb-role"></div>',
-				'<div class="right">',
-					'<div class="icon-wrapper"><img class="lb-image" /></div>',
+				'<div class="lb-content mobile">',
+					'<div class="right">',
+						'<div class="icon-wrapper"><img class="lb-image" /></div>',
+					'</div>',
+					'<div class="left">',
+						'<div class="text-wrapper">',
+							'<div class="lb-bio"></div>',
+							'<div class="lb-bio"></div>',
+						'</div>',
+					'</div>',
 				'</div>',
-				'<div class="left">',
-					'<div class="text-wrapper">',
-						'<div class="lb-bio"></div>',
-						'<div class="lb-bio"></div>',
+				'<div class="lb-content desktop">',
+					'<div class="left">',
+						'<div class="text-wrapper">',
+							'<div class="lb-bio"></div>',
+							'<div class="lb-bio"></div>',
+						'</div>',
+					'</div>',
+					'<div class="right">',
+						'<div class="icon-wrapper"><img class="lb-image" /></div>',
 					'</div>',
 				'</div>',
 			'</div>'
@@ -204,8 +217,10 @@ function showLightbox(ele) {
 		$(prefix + ".lb-name").text(employees[index].name);
 		$(prefix + ".lb-role").text(employees[index].role);
 		$(prefix + ".lb-image").attr("src", employees[index].iconURL);
-		$(prefix + ".lb-bio:eq(0)").text(employees[index].biography1);
+		$(prefix + ".lb-bio:eq(0)").text(employees[index].biography1); // mobile
 		$(prefix + ".lb-bio:eq(1)").text(employees[index].biography2);
+		$(prefix + ".lb-bio:eq(2)").text(employees[index].biography1); // desktop
+		$(prefix + ".lb-bio:eq(3)").text(employees[index].biography2);
 
 		// set the close button to hide the lightbox on click
 		$(prefix + ".profile-lightbox span#lb-close").click(function(e) {

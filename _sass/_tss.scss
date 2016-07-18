@@ -1,0 +1,345 @@
+#tss-container {
+	.top-banner {
+		background-color:#004977;
+		text-align:center;
+		padding:30px;
+
+		img {
+			&.large-logo { // desktop
+				width:500px;
+				height:auto;
+				
+				@include mq(mobile) { display:none; } // hide in mobile
+			}
+			&.mobileLogo { // mobile
+		    display: none;
+		    margin: 0 auto;
+		    width: 90%;
+		    max-width: 620px;
+		    height: auto;
+
+				@include mq(mobile) {
+					display:block;
+					width:150px;
+				}
+			}
+		}
+
+		.software-studio {
+				color:#FFF;
+				font-family: "ProxReg","Helvetica Neue",Arial,sans-serif;
+				letter-spacing:5px;
+
+				@include mq(mobile) {
+					font-size:12px;
+					padding:0px 0px 15px 0px;
+				}
+				@include mq(desktop) {
+					font-size:22px;
+				  padding: 0px 0px 30px 0px;
+				}
+		}
+
+		.text {
+		    line-height: 32px;
+		    margin:0px;
+		    color:#DCD8DB;
+		    letter-spacing:0.1px;
+		}
+	}
+
+	section {
+		overflow:hidden;
+		text-align:center;
+
+		h3 {
+			text-align:center;
+			margin-top:0px;
+			margin-bottom:0px;
+		}
+	}
+
+	img {
+		vertical-align:bottom;
+
+		&.icon {
+			width:80px;
+			height:80px;
+			margin-top:20px;
+			margin-bottom:20px;
+		}
+	}
+
+	.banner-image {
+		width:100%;
+		height:auto;
+	}
+
+	.header-text {
+    font-family: "ProxSemiBold","Helvetica Neue",Arial,sans-serif;
+    line-height: 32px;
+    margin-bottom: 13px;
+    letter-spacing:0.1px;
+		@include mq(desktop) { font-size:28px; }
+		@include mq(mobile) { font-size:26px; }
+	}
+	.title-text {
+		font-family: "ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif;
+		font-size: 20px;
+		line-height: 20px;
+	}
+	.caption-text {
+		padding:10px 25px 0px 25px;
+		font-size:18px;
+		line-height:24px;
+	}
+
+	section#working-with-us, section#who-we-are, section#principles {
+		@include mq(desktop) { padding:20px 30px 20px 30px; }
+		@include mq(mobile) { padding:20px 20px 20px 20px; }
+	}
+
+	section#intro-banner {
+		.text-banner {
+			width:100%;
+			height:auto;
+			font-size:22px;
+			line-height:30px;
+			background-color:rgb(17, 117, 158);
+			color:#FFFFFF;
+
+			div {
+				@include mq(desktop) { padding:30px 65px; }
+				@include mq(mobile) { padding:30px 20px; }
+			}
+		}
+	}
+
+	section#working-with-us {
+		div.caption {
+			font-weight:800;
+			padding:20px 0px 10px 0px;
+		}
+		div.article {
+			font-size:13px;
+			padding:0px 10px 0px 10px;
+		}
+		.item {
+			@include mq(desktop) {
+				&:nth-child(1) {
+					float:left;
+					width:33.33%;
+				}
+				&:nth-child(2) {
+					display:inline-block;
+					// margin:0 auto;
+					width:33.33%;
+				}
+				&:nth-child(3) {
+					float:right;
+					width:33.33%;
+				}
+			}
+			@include mq(mobile) {
+				width:100%;
+				float:none;
+				display:block;
+			}
+		}
+	}
+
+	section#image-section {
+		.dynamic-wrapper {
+			width:100%;
+			height:auto;
+			overflow:hidden;
+			position:relative;
+		}
+		.left {
+			height:auto;
+			position:absolute;
+			top:0px;
+			right:180px;
+			height:100%;
+		}
+		.right {
+			float:right;
+			width:50%;
+			position:relative;
+			z-index:2;
+
+			@include mq(mobile) { display:none; }
+			@include mq(mobile) {
+				.dynamic { display:none; }
+			}
+		}
+	}
+
+	section#who-we-are {
+		.top, .bottom {
+			overflow:hidden;
+		}
+		.item {
+			@media screen and (min-width:767px) { // semi-arbitrary value: 767px
+				width:25%;
+				float:left;
+			}
+			@media screen and (max-width:767px) {
+				width:50%;
+				float:left;
+				height:175px;
+				/*margin-bottom:20px;*/
+				padding-bottom:5px;
+			}
+
+			.name {
+				font-size:18px;
+				line-height:20px;
+				margin-bottom:5px;
+			}
+			.role {
+				font-size:14px;
+				line-height:14px;
+				padding:0px 5px 0px 5px;
+			}
+
+			img.icon {
+				margin:30px 0px 15px 0px;
+
+				&:hover {
+					transform:scale(1.1);
+				}
+			}
+		}
+	}
+
+	section#principles {
+		.item {
+			@include mq(desktop) {
+				&.left {
+					float:left;
+					width:calc(50% - 40px);
+					padding-left:40px;
+				}
+				&.right {
+					float:right;
+					width:calc(50% - 40px);
+					padding-right:40px;
+				}
+			}
+			@include mq(mobile) {
+				width:100%;
+				float:none;
+				padding:0px;
+			}
+		}
+	}
+
+	section#join-our-team {
+		width:100%;
+		background-color:#004977;
+		text-align: center;
+		margin:0px;
+		color:rgb(205, 205, 205);
+		padding-bottom:20px;
+
+		.button { /* .button class provides pre-existing button css */
+			font-size:14px;
+			background-color:rgb(0, 117, 161);
+		}
+
+		div.text {
+			@include mq(desktop) {
+				padding:20px 80px 10px 80px;
+				letter-spacing:0.5px;
+				margin-top:10px;
+			}
+			@include mq(mobile) {
+				padding:20px 20px 20px 20px;
+			}
+			font-size:18px;
+			line-height:24px;
+		}
+	}
+
+	section.sponsors {
+		padding:20px;
+
+		@include mq(desktop) {
+			display:flex;
+
+			.wrapper {
+				width:50%;
+				display:flex;
+			}
+			.icon-wrapper {
+				width:50%;
+			}
+			img {
+				width:auto;
+				max-width:100%;
+				max-height:90px;
+
+				.fourthicon { /* Pride At Work logo large with little inner-image padding. Force it to be a little smaller */
+					max-height:75px !important;
+				}
+			}
+		}
+		@include mq(mobile) {
+			.wrapper {
+				width:100%;
+				display:flex;
+			}
+			.left {
+				padding-bottom:20px;
+			}
+			.icon-wrapper {
+				width:50%;
+			}
+			img {
+				width:auto;
+				max-width:100%;
+				max-height:75px;
+
+				/* Top Employers logo is small in nature. Allow it to be a bit larger */
+				&.secondicon {
+					max-height:85px !important;
+				}
+				/* Pride At Work logo large with little inner-image padding. Force it to be a bit smaller */
+				&.fourthicon {
+					max-width:140px !important;
+				}
+			}
+		}
+
+		.icon-wrapper {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+
+		img {
+			@media screen and (max-width: 810px) and (min-width: 641px) {
+				width:auto !important;
+				height:70px !important;
+			}
+		}
+	}
+
+	section .description {
+		font-size:20px;
+		line-height:24px;
+	}
+}

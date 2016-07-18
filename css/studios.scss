@@ -1,0 +1,164 @@
+---
+---
+
+@mixin mq($point) {
+    @include bp($point) { @content; }
+}
+
+@mixin bp($point) {
+    @if ($point == desktop) {
+        @media (min-width: 641px) { @content; }
+    } @elseif ($point == mobile) {
+        @media (max-width:640px) { @content; }
+    }
+}
+
+@import "tss", "kwlab";
+
+#tss-container, #kwlab-container {
+	width:100%;
+	color:#222;
+}
+
+// lightbox and modal css are common across tss and kwlab
+#lightbox-modal {
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  background-color:#000;
+
+  z-index:-10; /* behind icons to prevent blocking clicks */
+  opacity:0;
+
+  transition: opacity 0.6s linear;
+  -webkit-transition: opacity 0.6s linear;
+  -moz-transition: opacity 0.6s linear;
+  -o-transition: opacity 0.6s linear;
+
+  &.show { /* on click, show semi-transparent, dark background */
+    z-index:10;
+  }
+}
+
+.profile-lightbox {
+  text-align:left;
+  background-color:#FFF;
+  max-width:700px;
+  position:fixed;
+  top:calc(100% + 1000px);
+  margin-left:auto; /* margin left/right and left/right:0 does not work on IE if a max-width is specified */
+  margin-right:auto;
+  left:0;
+  right:0;
+
+  overflow:auto;
+
+  transition: top 0.6s ease-in-out;
+  -webkit-transition: top 0.6s ease-in-out;
+  -moz-transition: top 0.6s ease-in-out;
+  -o-transition: top 0.6s ease-in-out;
+
+  @include mq(desktop) { width:100%; }
+  @include mq(mobile) {
+    width:94%;
+    max-height:calc(100% - 20px) !important;
+  }
+  @media screen and (min-width: 641px) and (max-height: 530px) { /* When the screen size is wide enough, but not tall enough (e.g. mobile landscape) */
+    width:94% !important;
+    max-height:calc(100% - 20px) !important; /* paddings: top:10px and bottom:10px */
+  }
+
+  &.show {
+    z-index:15;
+    @include mq(desktop) { top:125px; }
+    @include mq(mobile) { top:10px; }
+    @media screen and (min-width: 641px) and (max-height: 530px) {
+      top:10px !important;
+    }
+
+    &.disable-transition {
+      transition:none !important;
+      -webkit-transition:none !important;
+      -moz-transition:none !important;
+      -o-transition:none !important;
+    }
+  }
+  &.hide {
+    top:calc(100% + 1000px);
+    z-index:11;
+  }
+
+  hr {
+    margin:5px 20px 5px 20px;
+  }
+
+  span#lb-close {
+    position:absolute;
+    top:15px;
+    right:20px;
+
+    @include mq(mobile) {
+      span.close { display:none; } // hide the text to save space
+    }
+  }
+
+  .lb-name {
+    margin:20px 0px 0px 20px;
+
+    @media screen and (max-width: 480px) {
+      font-size:22px;
+      line-height:22px;
+    }
+    font-size:26px;
+    line-height:22px;
+  }
+  .lb-role {
+    padding:0px 0px 10px 20px;
+
+    @media screen and (max-width: 480px) {
+      font-size:14px;
+    }
+    font-size:16px;
+  }
+  .lb-bio {
+    margin-bottom:20px;
+
+    @media screen and (max-width: 480px) {
+      font-size:16px;
+    }
+  }
+  .lb-image {
+    @include mq(desktop) { width:100%; }
+    @include mq(mobile) { width:50%; }
+  }
+  .lb-content {
+    &.mobile {
+      @include mq(desktop) { display:none; } // don't show mobile on desktop view
+    }
+    &.desktop {
+      @include mq(mobile) { display:none; } // don't show desktop on mobile view
+    }
+  }
+
+  .text-wrapper {
+    @include mq(desktop) { padding:0px 0px 0px 20px; }
+    @include mq(mobile) { padding: 0px 20px 0px 20px; }
+  }
+  .left {
+    display:inline-block;
+    width:58%;
+    @include mq(mobile) { width:100%; }
+  }
+  .right {
+    vertical-align:top;
+    display:inline-block;
+    width:41%;
+    @include mq(mobile) { width:100%; }
+  }
+  .icon-wrapper {
+    padding:0px 20px 20px 20px;
+    text-align:center;
+  }
+}
