@@ -153,9 +153,6 @@
   }
 
   section#who-we-are {
-    .top, .bottom {
-      overflow:hidden;
-    }
     .item {
       @media screen and (min-width:767px) { // semi-arbitrary value: 767px
         width:33.33%;
