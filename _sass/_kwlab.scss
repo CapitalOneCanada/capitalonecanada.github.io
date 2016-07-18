@@ -1,0 +1,267 @@
+#kwlab-container {
+  .top-banner {
+  	background-color:#004977;
+  	text-align:center;
+  	padding:30px;
+
+    img {
+      &.large-logo {
+        width:500px;
+      	height:auto;
+
+        @include mq(mobile) { display:none; }
+      }
+      &.mobileLogo {
+        display: none;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 620px;
+        height: auto;
+
+        @include mq(desktop) {
+          display:block;
+          width:150px;
+        }
+      }
+    }
+
+    .kw-lab {
+    	color:#FFF;
+    	letter-spacing:4px;
+      font-family: "ProxReg","Helvetica Neue",Arial,sans-serif;
+
+      @include mq(desktop) {
+        font-size:22px;
+        padding: 0px 0px 30px 0px;
+      }
+      @include mq(mobile) {
+        font-size:12px;
+        padding:0px 0px 15px 0px;
+      }
+    }
+
+    .text {
+        line-height: 32px;
+        margin:0px;
+        color:#DCD8DB;
+        letter-spacing:0.1px;
+    }
+  }
+
+  section { /* common section styles */
+  	overflow:hidden;
+  	text-align:center;
+
+    h3 { /* section title text */
+    	text-align:center;
+    	margin-top:0px;
+    	margin-bottom:0px;
+    }
+
+    .description { /* smaller text in sections */
+    	font-size:20px;
+    	line-height:24px;
+    }
+
+    div.content p {
+      margin-top:20px;
+    }
+  }
+
+  img {
+  	vertical-align:bottom;
+
+    &.icon {
+    	width:80px;
+    	height:80px;
+    	margin-top:20px;
+    	margin-bottom:20px;
+    }
+  }
+
+  .banner-image {
+  	width:100%;
+  	height:auto;
+  }
+
+  .header-text { /* section title text, in case h3 is not used */
+    font-family: "ProxSemiBold","Helvetica Neue",Arial,sans-serif;
+    line-height: 32px;
+    margin-bottom: 13px;
+    letter-spacing:0.1px;
+
+    @include mq(mobile) { font-size:22px; }
+    @include mq(desktop) { font-size:24px; }
+  }
+  .title-text { /* section semi-title text */
+    font-family: "ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .caption-text { /* descriptions and smaller sub texts */
+  	padding:10px 25px 0px 25px;
+  	font-size:18px;
+  	line-height:24px;
+  }
+
+  section#our-projects, section#who-we-are, section#for-you {
+    @include mq(desktop) { padding:20px 100px 20px 100px; }
+    @include mq(mobile) { padding:20px 20px 20px 20px; }
+  }
+
+  section#intro-banner {
+    .text-banner {
+    	width:100%;
+    	height:auto;
+    	font-size:20px; /* orig: 22 */
+    	line-height:30px;
+    	background-color:rgb(17, 117, 158);
+    	color:#FFFFFF;
+
+      div {
+        @include mq(desktop) { padding:30px 65px; }
+        @include mq(mobile) { padding:30px 20px; }
+      }
+    }
+  }
+
+  section#our-projects {
+    .bold-caption {
+      font-weight:800;
+    }
+
+    .item {
+      @include mq(mobile) {
+        width:100%;
+        float:none;
+        display:block;
+      }
+    }
+  }
+
+  section#image-section {
+    .left {
+        height:auto;
+        width:50%;
+        float:left;
+    }
+    .right {
+        float:right;
+        width:50%;
+        height:auto;
+    }
+  }
+
+  section#who-we-are {
+    .item {
+      @media screen and (min-width:767px) { // semi-arbitrary value: 767px
+        width:33.33%;
+        float:left;
+      }
+      @media screen and (max-width:767px) {
+        width:50%;
+        float:left;
+        height:175px;
+        /*margin-bottom:20px;*/
+        padding-bottom:5px;
+      }
+
+      .name {
+      	font-size:18px;
+      	line-height:20px;
+      	margin-bottom:5px;
+      }
+      .role {
+      	font-size:14px;
+      	line-height:14px;
+      	padding:0px 5px 0px 5px;
+      }
+
+      img.icon {
+      	margin:30px 0px 15px 0px;
+
+        &:hover {
+        	transform:scale(1.1);
+        }
+      }
+    }
+  }
+
+  section#join-our-team {
+    background-color: #004977;
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+  	padding-bottom:20px;
+    position:relative;
+
+    h3 {
+      font-family: "ProxSemiBold","Helvetica Neue",Arial,sans-serif;
+      font-size:24px;
+      line-height:32px;
+      margin-top:20px;
+      letter-spacing:0.1px;
+      color:#FFF;
+    }
+
+    .button { /* .button class provides pre-existing button css */
+    	font-size:14px;
+    	background-color:rgb(21, 140, 190);
+    }
+
+    div.text {
+    	font-size:20px; /* orig: 18 */
+    	line-height:24px; /* orig: 24 */
+      color:#FFF;
+
+      @include mq(mobile) { padding:20px 20px 20px 20px; }
+      @include mq(desktop) {
+        padding:20px 100px 20px 100px;
+        letter-spacing:0.5px;
+      }
+    }
+
+    @media screen and (min-width:767px) {
+      div.left { /* in desktop view, stack join-our-team buttons horizontally */
+        float:left;
+        width:50%;
+      }
+      div.right {
+        width:calc(50% - 100px);
+        position:absolute;
+        bottom:0px;
+        right:100px;
+      }
+      div.bottom { /* container for .left and .right */
+        padding: 0px 100px 0px 100px;
+        position:relative;
+        overflow:hidden;
+      }
+    }
+    @media screen and (max-width:767px) {
+      div.left { /* set the join our team buttons to stack vertically in tablet and mobile */
+        width:100%;
+      }
+      div.right {
+        width:100%;
+        margin-top:10px;
+      }
+      div.bottom { /* container for .left and .right */
+        padding:0px 20px 0px 20px;
+      }
+    }
+
+    .button-caption {
+      font-size:16px; /* orig: 18 */
+      line-height:22px; /* orig: 24 */
+      color:#FFF;
+      letter-spacing:0.5px;
+      @media screen and (min-width:767px) {
+        padding:10px 40px 10px 40px;
+      }
+      @media screen and (max-width:767px) {
+        padding:10px 40px 0px 40px;
+      }
+    }
+  }
+}
