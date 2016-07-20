@@ -456,23 +456,26 @@ th {
 }
 
 
-
-
-/* PROXIMA NOVA -----*/
+/* OPTIMIST -------- */
 @font-face {
-	font-family: "ProxReg";
-	src: url('../assets/fonts/proximanova-regular-webfont.eot?1404762668');
-	src: url('../assets/fonts/proximanova-regular-webfont.eot?&1404762668#iefix') format('embedded-opentype'), url('../assets/fonts/proximanova-regular-webfont.woff?1404762668') format('woff'), url('../assets/fonts/proximanova-regular-webfont.ttf?1404762668') format('truetype'), url('../assets/fonts/proximanova-regular-webfont.svg?1404762668') format('svg');
+	font-family: "OptimistReg";
+	src: url('../assets/fonts/Optimist/Optimist_W_Rg.eot?1404762668');
+	src: url('../assets/fonts/Optimist/Optimist_W_Rg.eot?&1404762668#iefix') format('embedded-opentype'), url('../assets/fonts/Optimist/Optimist_W_Rg.woff?1404762668') format('woff'), url('../assets/fonts/Optimist/Optimist_W_Rg.ttf?1404762668') format('truetype'), url('../assets/fonts/Optimist/Optimist_W_Rg.svg?1404762668') format('svg');
 }
 @font-face {
-	font-family: "ProxLight";
-	src: url('../assets/fonts/proximanova-light-webfont.eot?1404921104');
-	src: url('../assets/fonts/proximanova-light-webfont.eot?&1404921104#iefix') format('embedded-opentype'), url('../assets/fonts/proximanova-light-webfont.woff?1404921104') format('woff'), url('../assets/fonts/proximanova-light-webfont.ttf?1404921104') format('truetype'), url('../assets/fonts/proximanova-light-webfont.svg?1404921104') format('svg');
+	font-family: "OptimistLt";
+	src: url('../assets/fonts/Optimist/Optimist_W_Lt.eot?1404921104');
+	src: url('../assets/fonts/Optimist/Optimist_W_Lt.eot?&1404921104#iefix') format('embedded-opentype'), url('../assets/fonts/Optimist/Optimist_W_Lt.woff?1404921104') format('woff'), url('../assets/fonts/Optimist/Optimist_W_Lt.ttf?1404921104') format('truetype'), url('../assets/fonts/Optimist/Optimist_W_Lt.svg?1404921104') format('svg');
 }
 @font-face {
-	font-family: "ProxSemibold";
-	src: url('../assets/fonts/proximanova-semibold-webfont.eot?1404919754');
-	src: url('../assets/fonts/proximanova-semibold-webfont.eot?&1404919754#iefix') format('embedded-opentype'), url('../assets/fonts/proximanova-semibold-webfont.woff?1404919754') format('woff'), url('../assets/fonts/proximanova-semibold-webfont.ttf?1404919754') format('truetype'), url('../assets/fonts/proximanova-semibold-webfont.svg?1404919754') format('svg');
+	font-family: "OptimistSBd";
+	src: url('../assets/fonts/Optimist/Optimist_W_SBd.eot?1404919754');
+	src: url('../assets/fonts/Optimist/Optimist_W_SBd.eot?&1404919754#iefix') format('embedded-opentype'), url('../assets/fonts/Optimist/Optimist_W_SBd.woff?1404919754') format('woff'), url('../assets/fonts/Optimist/Optimist_W_SBd.ttf?1404919754') format('truetype'), url('../assets/fonts/Optimist/Optimist_W_SBd.svg?1404919754') format('svg');
+}
+@font-face {
+	font-family: "OptimistXLt";
+	src: url('../assets/fonts/Optimist/Optimist_W_XLt.eot');
+	src: url('../assets/fonts/Optimist/Optimist_W_XLt.eot') format('embedded-opentype'), url('../assets/fonts/Optimist/Optimist_W_XLt.woff') format('woff'), url('../assets/fonts/Optimist/Optimist_W_XLt.ttf') format('truetype'), url('../assets/fonts/Optimist/Optimist_W_XLt.svg') format('svg');
 }
 
 /* ICON FONT -----*/
