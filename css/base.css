@@ -16,9 +16,57 @@ footer .wrap.cf                         { max-width: 75%; min-width: 620px; }
 
 #top_header								{ overflow:hidden; min-height:150px; position:relative; padding-bottom:45px; }
 #top_header .header_bg_image			{ min-width:550px; min-height:150px; width:100%; height:auto; vertical-align:bottom; }
+
+#top_header .stacked {
+	position:absolute;
+	top:-1px;
+}
+#top_header .stacked.buildings { /* buildings */
+	z-index:15;
+	left:-50px; /* try to always show the cn tower */
+}
+#top_header .cloud.transition {
+		-webkit-transition: right linear;
+		-moz-transition: right linear;
+		-ms-transition: right linear;
+		transition: right linear;
+}
+#top_header .cloud-1 {
+	width:auto;
+	height:7%;
+	position:absolute;
+	top:35%;
+	right:255px;
+	z-index:14; /* behind buildings */
+}
+#top_header .cloud-2 {
+	width:auto;
+	height:7%;
+	position:absolute;
+	top:55%;
+	right:76%;
+	z-index:16;
+}
+#top_header .cloud-3 {
+	width:auto;
+	height:6%;
+	position:absolute;
+	top:20%;
+	right:75px;
+	z-index:16;
+}
+#top_header .cloud-4 {
+	width:auto;
+	height:4%;
+	position:absolute;
+	top:49%;
+	right:400px;
+	z-index:14; /* behind buildings */
+}
+
 #top_header .content					{ padding: 0px 20px 0px 20px; }
-#top_header .headerlogo					{ position:absolute; top:0px; }
-#top_header .logo, #top_header .logo_sml img { display:block; margin:0 auto; width:100%; max-width:100%; position:absolute; left:0px; right:0px; }
+#top_header .headerlogo					{ position:absolute; top:0px; z-index:20; }
+#top_header .logo, #top_header .logo_sml img { display:block; margin:0 auto; width:60%; max-width:60%; position:absolute; left:0px; right:0px; top:18%; }
 #top_header .mobileLogo, #top_header .mobileLogo_sml img { display:none; margin:0 auto; max-width:100%; position:absolute; left:0px; right:0px; top:10px; }
 
 #main_nav								{ position:absolute; bottom:0; left:0; width:100%; background:rgba(218,209,214,1); }
@@ -117,7 +165,7 @@ footer img								{ float:left; width:111px; height:auto; margin-bottom:10px; ma
 .post #main .tags li a					{ font-size:11px; line-height:14px; padding:3px 8px; border:1px solid #c2c0c5; border-radius:4px; color:#67747F; text-transform:uppercase; letter-spacing:1px; transition:all ease-out 200ms; }
 .post #main .tags li a:hover			{ color:#008BC1; border-color:#008BC1; background:#ebf7fc; text-decoration:none; }
 
-.post .author .lefty					{ width:55%; float:left; }
+.post .author .lefty					{ width:55%; float:left; margin-bottom:20px; }
 .post .author .pic						{ width:56px; height:56px; display:block; border-radius:50%; overflow:hidden; position:relative; z-index:4; float:left; }
 .post .author .pic img					{ width:100%; height:auto; }
 .post .author p							{ display:block; position:relative; float:left; margin-left:15px; }
@@ -151,7 +199,7 @@ footer img								{ float:left; width:111px; height:auto; margin-bottom:10px; ma
 .page aside:last-child					{ margin-bottom:20px; }
 .page em								{ font-style: italic; }
 .page h1								{ font-family:"OptimistReg","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; color:#000; font-size:42px; line-height:48px; }
-.page h2								{ font-family:"OptimistReg","Helvetica Neue",Arial,sans-serif; font-size:32px; line-height:32px; color:#022E46; margin-bottom:20px; }
+.page h2								{ font-family:"OptimistLt","Helvetica Neue",Arial,sans-serif; font-size:32px; line-height:32px; color:#022E46; margin-bottom:20px; }
 .page h3								{ font-size: 28px; }
 .page ul, ol 							{ margin-bottom: 20px; }
 .page ul li, ol li 						{ padding-left: 1em; text-indent: -1em; }
@@ -202,9 +250,9 @@ table tr:last-child 					{ border: 0px; }
 
   #top_header .content 				{ padding: 0px 20px 0px 20px; }
   #top_header .logo                   { display: none; width: 200px; }
-  #top_header .mobileLogo             { display: block; width: 200px; }
+  #top_header .mobileLogo             { display: block; width: 120px; }
   #top_header .logo_sml img			{ display:none; width: 200px; }
-  #top_header .mobileLogo_sml img		{ display: block; width: 200px; }
+  #top_header .mobileLogo_sml img		{ display: block; width: 120px; }
 
 	#main_nav a							{ display:none; }
 	#main_nav a.menu					{ display:block; float:left; margin-left:-15px; }
@@ -254,6 +302,7 @@ table tr:last-child 					{ border: 0px; }
 }
 
 @media screen and (max-width:400px) {
+	#top_header .buildings { left:-50px; /* always show buildings */ }
 	.post #top_header .details time			{ display:block; }
 	.post #top_header .details .tags		{ padding-left:0; display:block; }
 }
