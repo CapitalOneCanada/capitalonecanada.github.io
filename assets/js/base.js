@@ -2,7 +2,7 @@ var startReset = [false, false, false, false];
 $(document).ready(function(){
 	// moving clouds
 	setTimeout(function() {
-		var durations = [14, 10, 6.5, 7.5]; // seconds
+		var durations = [15, 14, 6.5, 9]; // seconds
 		var pixelsPerSec = [0, 0, 0, 0]; // pixels per second ... beginning pos / duration
 		var endX = [0, 0, 0, 0];
 		$('img.cloud').each(function(i) {
