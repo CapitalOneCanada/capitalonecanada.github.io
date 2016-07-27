@@ -28,14 +28,14 @@
     .kw-lab {
     	color:#FFF;
     	letter-spacing:4px;
-      font-family: "ProxReg","Helvetica Neue",Arial,sans-serif;
+      font-family: "OptimistLt","Helvetica Neue",Arial,sans-serif;
 
       @include mq(desktop) {
         font-size:22px;
         padding: 0px 0px 30px 0px;
       }
       @include mq(mobile) {
-        font-size:12px;
+        font-size:20px;
         padding:0px 0px 15px 0px;
       }
     }
@@ -85,7 +85,7 @@
   }
 
   .header-text { /* section title text, in case h3 is not used */
-    font-family: "ProxSemiBold","Helvetica Neue",Arial,sans-serif;
+    font-family: "OptimistReg","Helvetica Neue",Arial,sans-serif;
     line-height: 32px;
     margin-bottom: 13px;
     letter-spacing:0.1px;
@@ -94,7 +94,7 @@
     @include mq(desktop) { font-size:24px; }
   }
   .title-text { /* section semi-title text */
-    font-family: "ProxSemibold","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif;
+    font-family: "OptimistReg","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif;
     font-size: 20px;
     line-height: 20px;
   }
@@ -170,6 +170,7 @@
       	font-size:18px;
       	line-height:20px;
       	margin-bottom:5px;
+        font-family:OptimistReg;
       }
       .role {
       	font-size:14px;
@@ -196,7 +197,7 @@
     position:relative;
 
     h3 {
-      font-family: "ProxSemiBold","Helvetica Neue",Arial,sans-serif;
+      font-family: "OptimistReg","Helvetica Neue",Arial,sans-serif;
       font-size:24px;
       line-height:32px;
       margin-top:20px;
