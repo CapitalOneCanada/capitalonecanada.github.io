@@ -3,8 +3,10 @@ layout: post
 title: "Mobile Orchestration and Automation"
 date: 2016-07-25 11:00:00
 theme: C1 Tech Series
-author: Capital One
-tags: engineering blog
+author: Capital One Events
+tags:
+- C1 TECH SERIES
+- event
 category: blog
 visible: true
 ---
