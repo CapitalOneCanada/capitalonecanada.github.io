@@ -6,7 +6,7 @@ theme: C1 Tech Series
 author: Capital One Events
 tags:
 - C1 TECH SERIES
-- event
+- events
 category: blog
 visible: true
 ---
