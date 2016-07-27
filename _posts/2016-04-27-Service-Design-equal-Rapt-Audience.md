@@ -3,8 +3,10 @@ layout: post
 title: "Service Design = Rapt Audience"
 date: 2016-04-27 15:00:00
 theme: C1 Tech Series
-author: Capital One
-tags: engineering blog
+author: Capital One Events
+tags:
+- C1 TECH SERIES
+- events
 category: blog
 visible: true
 images:
