@@ -4,8 +4,8 @@ title: "Mobile Orchestration and Automation"
 start_date: 2016-08-30 18:30:00
 end_date: 2016-08-30 20:30:00
 
-xmlLocation: THE 2ND FLOOR,\n461 King St W,\nToronto, ON M5V 1K4,\nCanada
-location: THE 2ND FLOOR <br>461 King St W<br>Toronto, ON &#0020 M5V 1K4<br>Canada
+xmlLocation: "THE 2ND FLOOR,\n461 King St W,\nToronto, ON M5V 1K4,\nCanada"
+location: "THE 2ND FLOOR <br>461 King St W<br>Toronto, ON &#0020 M5V 1K4<br>Canada"
 who: ""
 
 source: "EventBrite"
