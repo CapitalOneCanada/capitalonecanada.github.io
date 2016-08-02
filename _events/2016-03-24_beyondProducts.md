@@ -4,7 +4,7 @@ title: "Beyond Products: Creating Value, Differentiation, and Impact through Ser
 start_date: 2016-03-24 18:00:00
 end_date: 2016-03-24 20:00:00
 
-xmlLocation: "MaRS Discovery District,\n101 College St,\nToronto, ON  M5G 1L7\nCanada"
+xmlLocation: "MaRS Discovery District, 101 College St, Toronto, ON  M5G 1L7 Canada"
 location: "MaRS Discovery District <br>101 College St<br>Toronto, ON &#0020 M5G 1L7<br>Canada"
 who: "Patrick Quattlebaum, Head of Experience Design at Capital&#160One and Managing Director at Adaptive Path"
 
