@@ -165,14 +165,14 @@ footer img								{ float:left; width:111px; height:auto; margin-bottom:10px; ma
 .post #main .tags li a					{ font-size:11px; line-height:14px; padding:3px 8px; border:1px solid #c2c0c5; border-radius:4px; color:#67747F; text-transform:uppercase; letter-spacing:1px; transition:all ease-out 200ms; }
 .post #main .tags li a:hover			{ color:#008BC1; border-color:#008BC1; background:#ebf7fc; text-decoration:none; }
 
-.post .author .lefty					{ width:55%; float:left; margin-bottom:20px; }
+.post .author .lefty					{ width:60%; float:left; margin-bottom:20px; }
 .post .author .pic						{ width:56px; height:56px; display:block; border-radius:50%; overflow:hidden; position:relative; z-index:4; float:left; }
 .post .author .pic img					{ width:100%; height:auto; }
 .post .author p							{ display:block; position:relative; float:left; margin-left:15px; }
 .post .author p strong					{ font-family:"OptimistReg","Helvetica Neue Bold","Helvetica Neue",Arial,sans-serif; font-size:20px; line-height:20px; }
 .post .author p span					{ display:block; font-size:11px; line-height:11px; text-transform:uppercase; letter-spacing:1px; color:#67747F; }
 
-.post .author .righty					{ width:45%; float:right; text-align:right; }
+.post .author .righty					{ width:40%; float:right; text-align:right; }
 .post .author .righty li				{ display:inline-block; }
 .post .author .righty li a				{ margin-left:10px; font-size:11px; line-height:14px; text-transform:uppercase; letter-spacing:1px; }
 .post .author .righty li a:hover		{ text-decoration:none; }
