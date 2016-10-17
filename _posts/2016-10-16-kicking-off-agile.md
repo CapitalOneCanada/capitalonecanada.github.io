@@ -43,13 +43,15 @@ If you have more time before starting the project (e.g., you’re still forming 
 In his post, “<a href="http://peterschuh.com/?p=129" target="_blank">Iteration Zero</a>”, Peter Schuh recommends including the following outputs for Iteration Zero, from an organizational point of view (I added a bit more outputs, too):
 <br/><br/>
 
-* Wiki is set up
-* Issue-tracking system is set up
-* Product Vision is created and shared
-* Initial product backlog is populated; features are estimated and prioritized
-* Agreement on initial approach to the iterative process is reached between team and stakeholders
-* Initial Definition of Ready and Definition of Done checklists are agreed and shared
-* Initial product roadmap that pre-assigns each story to a release or iteration is created. This plan will most likely be changed in the future, but having a roadmap in mind helps with identifying risks, dependencies and agreeing delivery roadmap with stakeholders.
+<ul>
+<li>Wiki is set up</li>
+<li>Issue-tracking system is set up</li>
+<li>Product Vision is created and shared</li>
+<li>Initial product backlog is populated; features are estimated and prioritized</li>
+<li>Agreement on initial approach to the iterative process is reached between team and stakeholders</li>
+<li>Initial Definition of Ready and Definition of Done checklists are agreed and shared</li>
+<li>Initial product roadmap that pre-assigns each story to a release or iteration is created. This plan will most likely be changed in the future, but having a roadmap in mind helps with identifying risks, dependencies and agreeing delivery roadmap with stakeholders.</li>
+</ul>
 
 The acceptance criteria for these actions can be publishing initial artifacts to Wiki, and populating product backlog in the issue-tracking system.
 <br/><br/>
@@ -57,12 +59,14 @@ The acceptance criteria for these actions can be publishing initial artifacts to
 From a technical perspective, the Iteration Zero may include:
 <br/><br/>
 
-* Source control system is installed and configured
-* Initial build script written and checked into source control
-* Initial promotion and deployment scripts are written and checked into source control
-* Automated test framework selected and implemented with an empty test suite
-* Coding standards are agreed and shared
-* A high-level application architecture is created
+<ul>
+<li>Source control system is installed and configured</li>
+<li>Initial build script written and checked into source control</li>
+<li>Initial promotion and deployment scripts are written and checked into source control</li>
+<li>Automated test framework selected and implemented with an empty test suite</li>
+<li>Coding standards are agreed and shared</li>
+<li>A high-level application architecture is created</li>
+</ul>
 
 Peter Shuh suggests validating the delivery of these technical activities by wrapping them around a “Log In” feature. If the application doesn’t have log-in functionality, any simple and small functionality will do, even as simple as a “Hello World” screen. This simple feature can be the first piece of functionality to go through all the steps of the deployment process: pass a test in the unit test framework, run through the continuous integration process, check in to source control, promote to the testing environment, and deploy automatically.
 
