@@ -2,39 +2,137 @@
 layout: default
 ---
 
-<section id="main">
-  <section id="post_list">
-    <div class="wrap cf">
-      {% for post in site.posts %}
-      {% if post.visible == true %}
-      {% assign author = site.authors | where:"name",post.author | first %}
-      <article>
-        <header>
-          <div class="author cf">
-            <div class="pic"><img src="{{ author.image | prepend: site.baseurl }}" alt="{{ author.name }}"></div>
-            <p class="name"><strong>{{ author.title }}</strong><span>{{ author.job_title }}</span></p>
-          </div>
-          {% if post.theme != nil %}<h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.theme | upcase }}</a></h2>{% endif %}
-          <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-          <div class="details">
-            <time>
-              <span class="icon icon-clock"></span>{{ post.date | date: "%B %-d, %Y" }}
-            </time>
-            <p class="tags">
-              <span class="icon icon-tag"></span>
-              {% for tag in post.tags %}
-              {{ tag }}{% unless forloop.last %}, {% endunless %}
-              {% endfor %}
-            </p>
-          </div>
-        </header>
-        <p class="excerpt">{{ post.excerpt }}</p>
-        {% if post.content contains '<!--more-->' %}
-        <a href="{{ post.url | prepend: site.baseurl }}" class="read_more">Read More</a>
-        {% endif %}
-      </article>
-      {% endif %}
-      {% endfor %}
-    </div>
-  </section>
-</section>
+<div id="lightbox-modal" class="hide"></div>
+<div id="tss-container">
+	<div class="tss top-banner">
+		 <div class="software-studio">TORONTO SOFTWARE STUDIO</div>
+		 <h1 class="text">We’re on a mission.</h1>
+	</div>
+	<section id="intro-banner">
+		<div class="text-banner">
+			<div>It’s not just about credit cards, it’s about creating tech solutions that bring ingenuity, simplicity and humanity to an industry that’s ripe for change. With software geniuses like you, we can change the course of the game.</div>
+		</div>
+	</section>
+
+	<section id="working-with-us">
+		<h3 class="header-text">What it means to work with us.</h3>
+		<div class="content">
+			<div class="item">
+				<img class="icon" src="{{ "/assets/img/tss/Own-it.jpg" | prepend: site.baseurl }}" />
+				<div class="item-text title-text">Own it.</div>
+				<div class="item-text caption-text">We have true ownership over our work. We build, deploy and grow great projects&nbsp;– plus, we care about what we do.</div>
+			</div>
+			<div class="item">
+				<img class="icon" src="{{ "/assets/img/tss/Have-an-Impact.jpg" | prepend: site.baseurl }}" />
+				<div class="item-text title-text">Have an impact.</div>
+				<div class="item-text caption-text">The work we do here has a huge impact! We make life easier for millions of Canadians. And we do it everyday.</div>
+			</div>
+			<div class="item">
+				<img class="icon" src="{{ "/assets/img/tss/Enjoy-It.jpg" | prepend: site.baseurl }}" />
+				<div class="item-text title-text">Enjoy it.</div>
+				<div class="item-text caption-text">To be a part of our team, you must be passionate about technology. We're a bunch of problem solvers who are continuously learning and sharing&nbsp;– this is what excites us!</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="image-section">
+		<img class="top banner-image" src="{{ "/assets/img/tss/John_stickies_middle.jpg" | prepend: site.baseurl }}" />
+		<div class="dynamic-wrapper">
+			<img class="left" src="{{ "/assets/img/tss/Toronto-skyline-wide.jpg" | prepend: site.baseurl }}" />
+			<img class="right" src="{{ "/assets/img/tss/Adam-C1-Tech.jpg" | prepend: site.baseurl }}" />
+		</div>
+	</section>
+
+	<section id="who-we-are">
+		<h3 class="header-text">Who we are.</h3>
+		<div class="description">Every member of the Toronto Software Studio would agree that the people they work with are the best part of the job. Yeah, we're that fond of each other.</div>
+		<div class="top">
+			<div class="item">
+				<a href="#" class="open-lightbox"><img class="icon profile" /></a>
+				<div class="name"></div>
+				<div class="role"></div>
+			</div>
+			<div class="item">
+				<a href="#" class="open-lightbox"><img class="icon profile" /></a>
+				<div class="name"></div>
+				<div class="role"></div>
+			</div>
+			<div class="item">
+				<a href="#" class="open-lightbox"><img class="icon profile" /></a>
+				<div class="name"></div>
+				<div class="role"></div>
+			</div>
+			<div class="item">
+				<a href="#" class="open-lightbox"><img class="icon profile" /></a>
+				<div class="name"></div>
+				<div class="role"></div>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="item">
+				<a href="#" class="open-lightbox"><img class="icon profile" /></a>
+				<div class="name"></div>
+				<div class="role"></div>
+			</div>
+			<div class="item">
+				<a href="#" class="open-lightbox"><img class="icon profile" /></a>
+				<div class="name"></div>
+				<div class="role"></div>
+			</div>
+			<div class="item">
+				<a href="#" class="open-lightbox"><img class="icon profile" /></a>
+				<div class="name"></div>
+				<div class="role"></div>
+			</div>
+			<div class="item">
+				<a href="#" class="open-lightbox"><img class="icon profile" /></a>
+				<div class="name"></div>
+				<div class="role"></div>
+			</div>
+		</div>
+	</section>
+
+	<img class="banner-image" src="{{ "/assets/img/tss/Software-studio.jpg" | prepend: site.baseurl }}" />
+
+	<section id="principles">
+		<div class="content">
+			<div class="wrapper">
+				<h3 class="header-text">Our guiding principles.</h3>
+				<div class="item left">
+					<img class="icon" src="{{ "/assets/img/tss/Think-it-Code-it.jpg" | prepend: site.baseurl }}" />
+					<div class="item-text title-text">Think it. Code it.</div>
+					<div class="item-text caption-text">Do amazing work without a boss telling you what to do&nbsp;– that's how we roll. And we embrace the buzzwords too: agile framework, self-initiation, design thinking, experimentation, user testing and collaborative work.</div>
+				</div>
+				<div class="item right">
+					<img class="icon" src="{{ "/assets/img/tss/Have-Fun-Making-it-happen.jpg" | prepend: site.baseurl }}" />
+					<div class="item-text title-text">Have fun making it happen.</div>
+					<div class="item-text caption-text">We're open&nbsp;– technologically and socially. We organize hackathons, work in open source and use the cloud. We invest in ourselves and nurture a strong culture of self-improvement.</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="join-our-team">
+		<div class="text">Does this sound like your kind of workplace? If so, apply now and become a member of our Toronto Software Studio.</div>
+		<a href="/tell/" class="button">Tell Us About You</a>&nbsp;&nbsp;
+		<a href="https://jobs.capitalone.com/search-jobs/Canada?orgIds=1732&alp=6251999&alt=2" class="button" target="_blank">Join Our Team</a>
+	</section>
+
+	<section class="sponsors">
+		<div class="wrapper left">
+			<div class="icon-wrapper">
+				<a href="http://www.greatplacetowork.ca/insights-and-events/blogs-and-news/813-announcing-2016-best-workplaces-in-canada" target="_blank"><img src="{{ "/assets/img/tss/GPTW2016.jpg" | prepend: site.baseurl }}" /></a></div>
+			<div class="icon-wrapper">
+				<img src="{{ "/assets/img/tss/Top-Employ-Youth-2014.jpg" | prepend: site.baseurl }}" class="secondicon" /></div>
+
+		</div>
+		<div class="wrapper right">
+			<div class="icon-wrapper">
+				<a href="http://www.canadastop100.com/toronto/" target="_blank"><img src="{{ "/assets/img/tss/Greater-TO-2015.jpg" | prepend: site.baseurl }}" /></a></div>
+			<div class="icon-wrapper">
+				<a href="http://prideatwork.ca/" target="_blank"><img src="{{ "/assets/img/tss/Pride_at_Work.jpg" | prepend: site.baseurl }}" class="fourthicon" /></a></div>
+		</div>
+	</section>
+</div>
+
+<script type="text/javascript" src="{{ "/assets/js/tss-page.js" | prepend: site.baseurl }}"></script>
