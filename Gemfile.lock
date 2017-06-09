@@ -152,6 +152,7 @@ GEM
       gemoji (~> 3.0)
       html-pipeline (~> 2.2)
       jekyll (>= 3.0)
+    json (1.8.1)
     kramdown (1.13.2)
     liquid (3.0.6)
     listen (3.0.6)
@@ -200,6 +201,7 @@ DEPENDENCIES
   github-pages (= 138)
   jekyll
   jekyll-redirect-from
+  json
   nokogiri
   pygments.rb
   redcarpet
