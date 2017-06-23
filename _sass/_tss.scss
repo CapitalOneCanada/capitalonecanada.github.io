@@ -263,6 +263,37 @@
 			color:#fff;
 		}
 	}
+	
+	section#tell-us {
+		margin-top: 30px;
+		margin-bottom: 30px;
+		
+		h3 {
+			margin-bottom: 20px;
+		}
+		
+		input[type=text] {
+			width: 300px;
+		}
+		
+		textarea {
+			width: 300px;
+		}
+		
+		input[type=submit] {
+			border-radius: 4px;
+			font-family: OptimistLt;
+			font-size: 14px;
+			background-color: #0075a1;
+			color: #fff;
+		}
+		
+		span {
+			display:inline-block;
+			width: 200px;
+			vertical-align: top;
+		}
+	}
 
 	section.sponsors {
 		padding:20px;
