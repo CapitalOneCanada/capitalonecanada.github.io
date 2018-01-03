@@ -8,14 +8,11 @@ analyticsEnabled: true
 excerpt_separator: <!--more-->
 
 # Build settings
-markdown: redcarpet
-redcarpet:
- extensions: ["no_intra_emphasis", "fenced_code_blocks", "disable_indented_code_blocks", "autolink", "strikethrough", "highlight", "superscript", "tables", "footnotes", "with_toc_data"]
-highlighter: pygments
+markdown: kramdown
 exclude: ['utils']
 
 safe: false
-gems:
+plugins:
   - jekyll-redirect-from
 
 collections:
