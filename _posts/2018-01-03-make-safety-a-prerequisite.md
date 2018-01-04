@@ -42,6 +42,8 @@ Our team enjoyed the activity and came up with a lot of good ideas on how to imp
 <br/><br/>
 Currently, we’re thinking about our next steps: how we are going to use the input from this exercise to help our teams continuously improve. A follow-up blog post is coming. Stay tuned!
 <br/><br/>
+Sanaz Sadooghi and Dimitre Dimitrov
+<br/><br/>
 <b>References:</b> <a href="https://www.frontrowagile.com/blog/posts/109-the-fear-and-vulnerability-retrospective">An Introduction to Modern Agile by Joshua Kerievsky</a>
 <br/><br/>
 
